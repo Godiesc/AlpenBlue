@@ -1,0 +1,27 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+ 
+ 
+body {
+    background-color: #181735 !important; /*ntp*/
+    --newtab-textbox-background-color: #3c3d59aa !important; /*fondo de la barra de busqueda*/
+
+    --newtab-topsites-background-color: #3c3d59 !important; /*fondo de sitios fijados*/
+    --newtab-contextmenu-background-color: #262530 !important; /*contextual menu de tres puntos pinned*/
+
+    --newtab-element-hover-color: #5c85d650 !important; /*color al pasar el mouse sobre los items del menú tres puntos*/
+    --newtab-element-active-color: #5c85d630 !important; /*Color al hacer clic en el menú contextual de 3 puntos*/
+
+    --newtab-icon-primary-color: #eaeaea !important; /*tres puntos hover*/ 
+    --newtab-border-secondary-color: #3f3f3f !important; /*Linea separadora de items de menú contextual*/
+    --newtab-section-header-text-color: #ffffff !important;/*label principal al editar un sitio*/
+
+    --newtab-card-background-color: #3c3d59 !important; /*fondo de actividad reciente*/
+    --newtab-text-secondary-color: #ffffff !important; /*Label principal de Actividad reciente*/
+    --newtab-text-primary-color: #5c85d6 !important; /*label de actividad reciente*/
+    --newtab-border-primary-color: #5c85d6  !important;/*borde de boton de tres puntos en actividad reciente*/
+       
+    --newtab-modal-color: #201f4750 !important; /*fondo Al editar un sitio*/
+    --newtab-overlay-color: rgba(18, 18, 15, 0.8) !important; /*fondo de editar, transparente*/
+    --newtab-textbox-border: #ffffff10 !important; /*contorno de txt al editar un sitio*/    
+}
+}
