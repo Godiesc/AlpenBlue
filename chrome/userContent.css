@@ -25,3 +25,11 @@ body {
     --newtab-textbox-border: #ffffff10 !important; /*contorno de txt al editar un sitio*/    
 }
 }
+@-moz-document url('about:home'), url('about:newtab') {
+body {
+    background-image: url(images/firefoxbackground.png) !important;
+    background-repeat: repeat-y !important;
+    background-position: auto !important;
+    background-size: cover !important;
+  }
+}
