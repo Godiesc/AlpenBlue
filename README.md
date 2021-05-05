@@ -16,4 +16,4 @@ Adicionalmente debes usar el tema: https://addons.mozilla.org/es/firefox/addon/b
 Steps to apply this theme: Copy the Chrome folder and the user.js file into your Firefox profile directory and restart the browser. To find out your profile directory go to about:support or about:profiles.
 
 Additionally, you need to use this theme: https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/
-<br>PD: If you don't want the background of the New Tab page please delete the image of: chrome/images.
+<br>PD: If you don't want the background of the New Tab page please delete the image from: chrome/images.
