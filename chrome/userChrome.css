@@ -30,7 +30,7 @@
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
 
 
-  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.3),rgb(255, 74, 162,0.5),#FFBD4Fcc,rgb(255, 74, 162,0.5),rgb(144, 89, 255,0.3)) !important;
+  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.3),rgb(255, 74, 162,0.5),#FFBD4Fee,rgb(255, 74, 162,0.5),rgb(144, 89, 255,0.3)) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 4px !important;
   --tab-min-height:  27px !important;
