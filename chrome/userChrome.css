@@ -103,13 +103,13 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 .tab-icon-image:not([pinned]){ opacity: 1 !important}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
   opacity: 1 !important; border-radius: 9px !important; top: -4px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important; color: #e6fcff !important;
-  background-color: #00000000 !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
+  background-color: #1d1d38bb !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
   {opacity: 1 !important; border-radius: 9px !important; top: -4px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important;  color: #ffffff !important;
-  background-color: #00000000 !important; fill-opacity: 0.7 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
+  background-color: #1d1d38bb !important; fill-opacity: 0.8 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
  stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important}
-.tab-icon-overlay:is([pinned]){padding: 0px !important; height: 14px !important; width: 14px !important; stroke: rgba(0,0,0,.1) !important; color: white !important;
+.tab-icon-overlay:is([pinned]){padding: 0px !important; height: 14px !important; width: 14px !important; stroke: #1d1d3870 !important; color: white !important;
  margin-left: 3px !important;}
 
 /*Regla para visualizar mejor el seleccionar varias pestañas*/
