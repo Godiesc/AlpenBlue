@@ -5,7 +5,7 @@ body {
     background-color: #181735 !important; /*ntp*/
     --newtab-textbox-background-color: #3c3d59aa !important; /*fondo de la barra de busqueda*/
 
-    --newtab-topsites-background-color: #3c3d59 !important; /*fondo de sitios fijados*/
+    --newtab-topsites-background-color: #3c3d59aa !important; /*fondo de sitios fijados*/
     --newtab-contextmenu-background-color: #262530 !important; /*contextual menu de tres puntos pinned*/
 
     --newtab-element-hover-color: #5c85d650 !important; /*color al pasar el mouse sobre los items del menú tres puntos*/
@@ -15,12 +15,12 @@ body {
     --newtab-border-secondary-color: #3f3f3f !important; /*Linea separadora de items de menú contextual*/
     --newtab-section-header-text-color: #ffffff !important;/*label principal al editar un sitio*/
 
-    --newtab-card-background-color: #3c3d59 !important; /*fondo de actividad reciente*/
+    --newtab-card-background-color: #292750 !important; /*fondo de actividad reciente*/
     --newtab-text-secondary-color: #ffffff !important; /*Label principal de Actividad reciente*/
     --newtab-text-primary-color: #5c85d6 !important; /*label de actividad reciente*/
     --newtab-border-primary-color: #5c85d6  !important;/*borde de boton de tres puntos en actividad reciente*/
        
-    --newtab-modal-color: #201f4750 !important; /*fondo Al editar un sitio*/
+    --newtab-modal-color: #201f40a0 !important; /*fondo Al editar un sitio*/
     --newtab-overlay-color: rgba(18, 18, 15, 0.8) !important; /*fondo de editar, transparente*/
     --newtab-textbox-border: #ffffff10 !important; /*contorno de txt al editar un sitio*/    
 }
@@ -28,8 +28,35 @@ body {
 @-moz-document url('about:home'), url('about:newtab') {
 body {
     background-image: url(images/firefoxbackground.png) !important;
-    background-repeat: repeat-y !important;
+    background-repeat: repeat-y  !important;
     background-position: auto !important;
     background-size: cover !important;
   }
+
+.personalize-button {
+  background-color: #3c3d5970 !important;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
+  color: #5c85d6 !important;
+}
+.personalize-button:hover{
+  background-color: #3c3d59b0 !important;
+}
+.activity-stream {
+  background-color:#181735 !important; /*ntp*/
+}
+/*Forma del contenedor de los sitios top*/
+.outer-wrapper.newtab-experience .top-site-outer .tile{
+  background-color: #3c3d5960 !important;
+}
+
+.outer-wrapper.newtab-experience .top-site-outer:hover .tile{
+  background-color: #3c3d5900 !important;
+  box-shadow: none !important;
+}
+.top-site-outer .tile .icon-wrapper{
+  background-color: transparent !important;
+}
+.top-site-outer .top-site-icon{
+  background-color: transparent !important; /*favicon de los top sites*/
+}
 }
