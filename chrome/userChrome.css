@@ -29,7 +29,7 @@
   --toolbarbutton-active-background: #5524db80 !important;         /*"button_background_active": "#131217"*/
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
 
-  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.3),rgb(255, 74, 162,0.5),#FFBD4Fee,rgb(255, 74, 162,0.5),rgb(144, 89, 255,0.3)) !important;
+  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.4),rgb(255, 74, 162,0.7),#FFBD4Fee,rgb(255, 74, 162,0.7),rgb(144, 89, 255,0.4)) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 4px !important;
   --tab-min-height:  27px !important;
@@ -38,9 +38,9 @@
   --arrowpanel-menuitem-padding: 6px !important;
   --panel-font-size: 1.1em !important;
   --arrowpanel-padding: 0.8em !important;
-  --arrowpanel-dimmed: color-mix(in srgb, #3399ff 40%, transparent) !important;
-  --arrowpanel-dimmed-further: color-mix(in srgb, #3399ff 50%, transparent) !important;
-  --arrowpanel-dimmed-even-further: color-mix(in srgb, #3399ff 60%, transparent) !important;
+  --button-bgcolor: color-mix(in srgb, #3399ff 15%, transparent) !important;
+  --button-hover-bgcolor: color-mix(in srgb, #3399ff 50%, transparent) !important;
+  --button-active-bgcolor: color-mix(in srgb, #3399ff 60%, transparent) !important;
   --urlbar-icon-padding: 4px !important;
   --panel-separator-color: #3d3762 !important;
 }
@@ -101,11 +101,11 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
 .tab-icon-image:not([pinned]){ opacity: 1 !important}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  opacity: 1 !important; border-radius: 9px !important; top: -4px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important; color: #e6fcff !important;
+  opacity: 1 !important; border-radius: 9px !important; top: -5px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important; color: #e6fcff !important;
   background-color: #1d1d3860 !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
-  {opacity: 1 !important; border-radius: 9px !important; top: -4px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important;  color: #ffffff !important;
-  background-color: #1d1d3860 !important; fill-opacity: 0.8 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
+  {opacity: 1 !important; border-radius: 9px !important; top: -5px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important;  color: #ffffff !important;
+  background-color: #1d1d3860 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
  stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important}
 .tab-icon-overlay:is([pinned]){padding: 0px !important; height: 14px !important; width: 14px !important; stroke: #1d1d3870 !important; color: white !important;
@@ -152,18 +152,15 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #urlbar-zoom-button {padding: 0px 2px !important;}
 
 /*Linea gradiente*/
-.tab-background {	position: relative !important;}
+.tab-background {position: relative !important;}
 .tab-background::after { width: 100% !important;margin-block: 0px !important; background: var(--panel-separator-zap-gradient);  position: absolute;
-	content: '';	height: 2px;	left: 0;		right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
-	transform-origin: center center;  opacity: 1 !important;}
-.tab-background[selected="true"]::after {	transform: scale(1, 1);}
+ content: '';	height: 2px;left: 0;right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
+ transform-origin: center center;  opacity: 1 !important;}
+.tab-background[selected="true"]::after {transform: scale(1, 1);}
 
 /*Brillo de pestaña activa*/
 .tab-content[selected="true"] {background-color:color-mix(in srgb, #4d4dfe 7%, transparent) !important; text-shadow: none !important;
   border-radius:0px 0px 4px 4px !important; margin-top: 3px !important; margin-bottom: 3px !important;}
-
-/*Quitar sombras del label de la pestaña seleccionada*/
-.tab-content:not([selected="true"]) {text-shadow: none !important; opacity: 1 !important;}
 
 /*Fondo de hover del mouse al pasar por pestañas no seleccionadas*/
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {background-color: #4d4dfe50  !important;}
@@ -172,3 +169,6 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 menuseparator {border-top: 1px solid #3d3762 !important; padding: 0 !important; margin: 2px 0.5em !important;}
 .menupopup-arrowscrollbox {background-color: #1d1d38 !important; border: 1px solid #3d3762 !important; border-radius: 4px !important; padding-block: 0px !important;
   border-color: #2d2762 !important;}
+
+/*Mover el label de las pestañas al centro vertical de la pestaña*/
+.tab-label {margin-top: -3px !important;}
