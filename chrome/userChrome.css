@@ -172,4 +172,4 @@ menuseparator {border-top: 1px solid #3d3762 !important; padding: 0 !important; 
   border-color: #2d2762 !important;}
 
 /*Mover el label de las pestañas al centro vertical de la pestaña*/
-.tab-label {margin-top: -3px !important;}
+.tab-label {margin-top: -3px !important; text-shadow: none !important;}
