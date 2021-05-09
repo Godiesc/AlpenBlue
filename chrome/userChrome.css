@@ -29,7 +29,7 @@
   --toolbarbutton-active-background: #5524db80 !important;         /*"button_background_active": "#131217"*/
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
 
-  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.4),rgb(255, 74, 162,0.7),#FFBD4Fee,rgb(255, 74, 162,0.7),rgb(144, 89, 255,0.4)) !important;
+  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.3),rgb(255, 74, 162,0.8),#FFBD4Fee,rgb(255, 74, 162,0.8),rgb(144, 89, 255,0.3)) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 4px !important;
   --tab-min-height:  27px !important;
@@ -89,8 +89,8 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #searchbar {min-height: 26px !important;text-shadow: none !important; font-size: 1.12em !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
-.tab-context-line{max-width: 17px !important; max-height: 1px !important; margin-left: 8px !important;margin-bottom: -1px !important;}
-.tab-context-line{-moz-box-ordinal-group: 2 !important; opacity: 1 !important;transition: none !important;}
+.tab-context-line  {max-width: 17px !important; max-height: 1px !important; margin-left: 8px !important;margin-bottom: -1px !important;
+  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; transition: none !important;}
 
 /*Label de medios "Reproduciendo" modifiado*/
 .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important; margin-top: -2px !important; opacity: 1 !important; text-shadow: none !important;
@@ -99,27 +99,28 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important; animation-duration: 0s !important;}
 
 /*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
-.tab-icon-image:not([pinned]){ opacity: 1 !important}
+.tab-icon-image:not([pinned]){ opacity: 1 !important;  margin-top: -3px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  opacity: 1 !important; border-radius: 9px !important; top: -5px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important; color: #e6fcff !important;
-  background-color: #1d1d3860 !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
+  opacity: 1 !important; border-radius: 9px !important; top: -2px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important; color: #e6fcff !important;
+  background-color: #1d1d3800 !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
-  {opacity: 1 !important; border-radius: 9px !important; top: -5px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important;  color: #ffffff !important;
-  background-color: #1d1d3860 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
+  {opacity: 1 !important; border-radius: 9px !important; top: -2px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important;  color: #ffffff !important;
+  background-color: #1d1d3800 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
  stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important}
 .tab-icon-overlay:is([pinned]){padding: 0px !important; height: 14px !important; width: 14px !important; stroke: #1d1d3870 !important; color: white !important;
  margin-left: 3px !important;}
 
 /*Regla para visualizar mejor el seleccionar varias pestañas*/
-.tabbrowser-tab[multiselected]:-moz-lwtheme{border-radius: 15px 15px !important; background-color:  color-mix(in srgb, #005866 10%, transparent) !important;
-    color: #33e4ff !important; --tab-line-color:#295170 !important;}
+.tabbrowser-tab[multiselected]:-moz-lwtheme{color: #ffffff !important; --tab-line-color:#4d4dfeff !important;}
+.tabbrowser-tab> .tab-stack > .tab-background:is([multiselected]) {background-color: #4d4dfeff  !important;}
 
 /*Color de las flechas de menús desplegables*/
-#identity-popup, #permission-popup, #protections-popup, .panel-header, .subviewbutton-back, .PanelUI-subView, .subviewbutton-nav::after{ fill: #3399ff !important}
+#identity-popup, #permission-popup, #protections-popup, .panel-header, .subviewbutton-back, .PanelUI-subView, .subviewbutton-nav::after{ fill: #3399ff !important; 
+  fill-opacity: 1 !important;}
 
 /*Personalización de colores y presentación de pestañas en contenedores*//*Personalización de colores y presentación de pestañas en contenedores*/
-.identity-color-blue {--identity-tab-color: #2574A7 !important; --identity-icon-color: #2574A7 !important;--tab-line-color:#295170 !important;}
+.identity-color-blue {--identity-tab-color: #2574A7 !important; --identity-icon-color: #2574A7 !important;--tab-line-color:#0057cb !important;}
 .identity-color-green {--identity-tab-color: #1E934F !important; --identity-icon-color: #1E934F !important;--tab-line-color:#28a45e !important;}
 .identity-color-orange {--identity-tab-color: #e67e22 !important; --identity-icon-color: #e67e22 !important;--tab-line-color:#a9642c !important;}
 .identity-color-red {--identity-tab-color: #ff392b !important; --identity-icon-color: #ff392b !important; --tab-line-color:#cc372f !important;}
@@ -152,11 +153,11 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #urlbar-zoom-button {padding: 0px 2px !important;}
 
 /*Linea gradiente*/
-.tab-background {position: relative !important;}
+.tab-background {	position: relative !important;}
 .tab-background::after { width: 100% !important;margin-block: 0px !important; background: var(--panel-separator-zap-gradient);  position: absolute;
- content: '';	height: 2px;left: 0;right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
- transform-origin: center center;  opacity: 1 !important;}
-.tab-background[selected="true"]::after {transform: scale(1, 1);}
+	content: '';	height: 2px;	left: 0;		right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
+	transform-origin: center center;  opacity: 1 !important;}
+.tab-background[selected="true"]::after {	transform: scale(1, 1);}
 
 /*Brillo de pestaña activa*/
 .tab-content[selected="true"] {background-color:color-mix(in srgb, #4d4dfe 7%, transparent) !important; text-shadow: none !important;
