@@ -94,7 +94,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 
 /*Label de medios "Reproduciendo" modifiado*/
 .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important; margin-top: -2px !important; opacity: 1 !important; text-shadow: none !important;
-  font-weight: bold !important; background: linear-gradient(0.25turn,rgb(144, 89, 255,1),rgb(255, 74, 162),#ffa200); -webkit-background-clip: text; padding-left: 12px !important;
+  font-weight: bold !important; background: linear-gradient(0.25turn,rgb(144, 89, 255,1),rgb(255, 74, 162),#ffa200); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important; animation-duration: 0s !important;}
 
