@@ -1,18 +1,16 @@
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
- 
- 
-body {
+ body {
     background-color: #181735 !important; /*ntp*/
     --newtab-textbox-background-color: #3c3d59aa !important; /*fondo de la barra de busqueda*/
 
     --newtab-topsites-background-color: #3c3d59aa !important; /*fondo de sitios fijados*/
     --newtab-contextmenu-background-color: #262530 !important; /*contextual menu de tres puntos pinned*/
 
-    --newtab-element-hover-color: #5c85d650 !important; /*color al pasar el mouse sobre los items del menú tres puntos*/
+    --newtab-element-hover-color: #5c85d650 !important; /*color al pasar el mouse sobre los items del menÃº tres puntos*/
     --newtab-element-active-color: #5c85d630 !important; /*Color al hacer clic en el menú contextual de 3 puntos*/
 
     --newtab-icon-primary-color: #eaeaea !important; /*tres puntos hover*/ 
-    --newtab-border-secondary-color: #3f3f3f !important; /*Linea separadora de items de menú contextual*/
+    --newtab-border-secondary-color: #3f3f3f !important; /*Linea separadora de items de menÃº contextual*/
     --newtab-section-header-text-color: #ffffff !important;/*label principal al editar un sitio*/
 
     --newtab-card-background-color: #292750 !important; /*fondo de actividad reciente*/
@@ -32,7 +30,6 @@ body {
     background-position: auto !important;
     background-size: cover !important;
   }
-
 .personalize-button {
   background-color: #3c3d5970 !important;
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
@@ -47,16 +44,18 @@ body {
 /*Forma del contenedor de los sitios top*/
 .outer-wrapper.newtab-experience .top-site-outer .tile{
   background-color: #3c3d5960 !important;
+  border-radius: 50% !important;
 }
 
 .outer-wrapper.newtab-experience .top-site-outer:hover .tile{
-  background-color: #3c3d5900 !important;
+  background-color: linear-gradient(to right,rgb(144, 89, 255,0.4),rgb(255, 74, 162,0.6),#FFBD4F,rgb(255, 74, 162,0.6),rgb(144, 89, 255,0.4)) !important;
   box-shadow: none !important;
+  border-radius: 4px !important;
 }
 .top-site-outer .tile .icon-wrapper{
   background-color: transparent !important;
 }
 .top-site-outer .top-site-icon{
-  background-color: transparent !important; /*favicon de los top sites*/
+  background-color: transparent !important; /*faVICON de los top sites*/
 }
 }
