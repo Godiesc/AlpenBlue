@@ -34,7 +34,7 @@
   --proton-tab-block-margin: 2px 4px !important;
   --tab-min-height:  27px !important;
   --tabs-shadow-size: 0px !important;
-  --tab-border-radius: 0px 0px 4px 4px !important;
+  --tab-border-radius: 1px 1px 4px 4px !important;
   --arrowpanel-menuitem-padding: 6px !important;
   --panel-font-size: 1.1em !important;
   --arrowpanel-padding: 0.8em !important;
@@ -43,16 +43,17 @@
   --button-active-bgcolor: color-mix(in srgb, #3399ff 60%, transparent) !important;
   --urlbar-icon-padding: 4px !important;
   --panel-separator-color: #3d3762 !important;
+  --toolbarbutton-outer-padding: 3px !important;
 }
 
 #navigator-toolbox{--tabs-border-color: #4d4dfe70 !important; }              /*"toolbar_top_separator": "#17161c"*/
-#tabbrowser-tabs {--tab-line-color: #4d4dfeff  !important;}                   /*"tab_line": "#126e82"*/
-.browser-toolbar:not(.titlebar-color) {color: #d3d3d3 !important;}        /*"bookmark_text": "#b3d9ff"*/
+#tabbrowser-tabs {--tab-line-color: #4d4dfeff  !important;}                  /*"tab_line": "#126e82"*/
+.browser-toolbar:not(.titlebar-color) {color: #d3d3d3 !important;}           /*"bookmark_text": "#b3d9ff"*/
 
 /*"personalizar barra de busqueda"*/
 .browserContainer > findbar:-moz-lwtheme {color: #d3d3d3 !important;}     
 .findbar-find-status[status="notfound"] {color: #00dbfd !important;}
-#customization-container {color: #d3d3d3 !important;}                     /*"Color de texto e iconos de "Perzonalizar barra de herramientas"*/
+#customization-container {color: #d3d3d3 !important;}                        /*"Color de texto e iconos de "Perzonalizar barra de herramientas"*/
 
 /*"popup_highlight"*/
 .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
@@ -67,6 +68,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*"Botón de cerrar pestaña"*/
 .tab-close-button{margin-inline-start: -2px !important;width: 15px !important;height: 15px !important;padding: 3px !important; margin-inline-end:-6px !important; }
 .tabbrowser-tab > .tab-stack > .tab-content >.tab-close-button{border-radius: 8px !important;}
+.tab-close-button:hover{background-color: #4d4dfe90 !important;}
 
 /*"Medidas menores para scroll de pestañas"*/
 #tabbrowser-tabs{ --uc-tabs-scrollbutton-border: 2px }
@@ -74,19 +76,19 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 
 /*"Íconos de la urlbar más pequeños"*/
 .sharing-icon, #permissions-granted-icon, #tracking-protection-icon, .notification-anchor-icon, #blocked-permissions-container 
-  > .blocked-permission-icon {  height: 14px !important; width :14px !important; margin: 1px !important; padding: 0px !mportant}
+  > .blocked-permission-icon {  height: 15px !important; width :15px !important; margin: 1px !important; padding: 0px !mportant}
 
 /*"Color verde del ícono de candado de web segura"*/
 #identity-icon {color: #2cf62c !important; height: 14px !important; width :14px !important;}
 
 /*"ícono de marcadores y vista de lectura más pequeños"*/
-.urlbar-icon {padding: 4px !important}
+.urlbar-icon {padding: 3px !important}
 
 /*"Urlbar y Search-bar más pequeñas"*/
-#urlbar{min-height: 26px !important; margin-block: 0px 0px!important;font-size: 1.12em !important;text-shadow: none !important;}
+#urlbar{min-height: 26px !important; margin-block: 0px 0px !important; text-shadow: none !important;}
 #urlbar-background{margin-block: 0px 0px; !important;}
 #urlbar-container{margin-block: 0px 0px;}
-#searchbar {min-height: 26px !important;text-shadow: none !important; font-size: 1.12em !important; margin-block: -3px !important;}
+#searchbar {min-height: 26px !important;text-shadow: none !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
 .tab-context-line  {max-width: 17px !important; max-height: 1px !important; margin-left: 8px !important;margin-bottom: -1px !important;
