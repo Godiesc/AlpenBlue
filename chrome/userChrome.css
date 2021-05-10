@@ -101,12 +101,12 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important; animation-duration: 0s !important;}
 
 /*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
-.tab-icon-image:not([pinned]){ opacity: 1 !important;  margin-top: -3px !important;}
+.tab-icon-image:not([pinned]){ opacity: 1 !important; margin-top: -1px !important}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  opacity: 1 !important; border-radius: 9px !important; top: -3px; inset-inline-end: -15px;z-index: 1;margin-right: 16px !important; color: #e6fcff !important;
+  opacity: 1 !important; border-radius: 9px !important; top: -1px; inset-inline-end: -15px; z-index: 1;margin-right: 16px !important; color: #e6fcff !important;
   background-color: #1d1d38bb !important; fill-opacity: 1 !important; padding: 0px !important; height: 15px !important; width: 15px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
-  {opacity: 1 !important; border-radius: 9px !important; top: -3px; inset-inline-end: -15px;z-index: 1;margin-right: 16px !important;  color: #ffffff !important;
+  {opacity: 1 !important; border-radius: 9px !important; top: -1px; inset-inline-end: -15px;z-index: 1;margin-right: 16px !important;  color: #ffffff !important;
   background-color: #1d1d3850 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 15px !important; width: 15px !important;}
 .tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
  stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 15px !important; width: 15px !important}
