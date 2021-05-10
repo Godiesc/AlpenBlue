@@ -24,12 +24,12 @@
   --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
   --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
   --toolbarbutton-icon-fill: #d8d8d9 !important;                 /*"icons": "#00dbfd"*/
-    --lwt-toolbarbutton-icon-fill-attention: #4d7afe !important; /*"icons_attention": "#00dbfd"*/
+  --lwt-toolbarbutton-icon-fill-attention: #4d7afe !important; /*"icons_attention": "#00dbfd"*/
   --toolbarbutton-hover-background: #5524dbaa !important;          /*"button_background_hover": "#26242e"*/
   --toolbarbutton-active-background: #5524db80 !important;         /*"button_background_active": "#131217"*/
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
 
-  --panel-separator-zap-gradient: linear-gradient(to right,rgb(144, 89, 255,0.3),rgb(255, 74, 162,0.8),#FFBD4Fee,rgb(255, 74, 162,0.8),rgb(144, 89, 255,0.3)) !important;
+  --panel-separator-zap-gradient: linear-gradient(to right,#9059FF7a, #FF4AA2,#FFBD4Fdd, #aa00ff7a) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 4px !important;
   --tab-min-height:  27px !important;
@@ -85,7 +85,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*"Urlbar y Search-bar más pequeñas"*/
 #urlbar{min-height: 26px !important; margin-block: 0px 0px!important;font-size: 1.12em !important;text-shadow: none !important;}
 #urlbar-background{margin-block: 0px 0px; !important;}
-#urlbar-container{margin-block: 0px -2px;}
+#urlbar-container{margin-block: 0px 0px;}
 #searchbar {min-height: 26px !important;text-shadow: none !important; font-size: 1.12em !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
@@ -101,11 +101,11 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
 .tab-icon-image:not([pinned]){ opacity: 1 !important;  margin-top: -3px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  opacity: 1 !important; border-radius: 9px !important; top: -2px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important; color: #e6fcff !important;
-  background-color: #1d1d3800 !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
+  opacity: 1 !important; border-radius: 9px !important; top: -2px; inset-inline-end: -13px;z-index: 1;margin-right: 13px !important; color: #e6fcff !important;
+  background-color: #1d1d38ff !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
-  {opacity: 1 !important; border-radius: 9px !important; top: -2px; inset-inline-end: -12px;z-index: 1;margin-right: 12px !important;  color: #ffffff !important;
-  background-color: #1d1d3800 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
+  {opacity: 1 !important; border-radius: 9px !important; top: -2px; inset-inline-end: -13px;z-index: 1;margin-right: 13px !important;  color: #ffffff !important;
+  background-color: #1d1d3850 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
  stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important}
 .tab-icon-overlay:is([pinned]){padding: 0px !important; height: 14px !important; width: 14px !important; stroke: #1d1d3870 !important; color: white !important;
@@ -155,7 +155,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*Linea gradiente*/
 .tab-background {	position: relative !important;}
 .tab-background::after { width: 100% !important;margin-block: 0px !important; background: var(--panel-separator-zap-gradient);  position: absolute;
-	content: '';	height: 2px;	left: 0;		right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
+	content: '';	height: 1px;	left: 0;		right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
 	transform-origin: center center;  opacity: 1 !important;}
 .tab-background[selected="true"]::after {	transform: scale(1, 1);}
 
