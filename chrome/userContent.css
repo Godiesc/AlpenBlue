@@ -1,5 +1,14 @@
+/*new tab page coloring*/
+:root{ scrollbar-color: #383755cc #18173530 !important; }
+*{ scrollbar-width: thin !important}
+
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
- body {
+.search-inner-wrapper{ display: none !important; }
+  .outer-wrapper.newtab-experience .search-wrapper {
+    padding-bottom: 0px !important;
+}
+  
+body {
     background-color: #181735 !important; /*ntp*/
     --newtab-textbox-background-color: #3c3d59aa !important; /*fondo de la barra de busqueda*/
 
@@ -25,8 +34,8 @@
 }
 @-moz-document url('about:home'), url('about:newtab') {
 body {
-    background-image: url(images/firefoxbackground.png) !important;
-    background-repeat: repeat-y  !important;
+    background-image: url(images/firefoxbackground.jpg) !important;
+    background-repeat: repeat  !important;
     background-position: auto !important;
     background-size: cover !important;
   }
@@ -35,6 +44,9 @@ body {
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
   color: #5c85d6 !important;
 }
+
+/**{ scrollbar-width: none !important }*/
+
 .personalize-button:hover{
   background-color: #3c3d59b0 !important;
 }
@@ -44,18 +56,22 @@ body {
 /*Forma del contenedor de los sitios top*/
 .outer-wrapper.newtab-experience .top-site-outer .tile{
   background-color: #3c3d5960 !important;
-  border-radius: 50% !important;
 }
 
 .outer-wrapper.newtab-experience .top-site-outer:hover .tile{
-  background-color: linear-gradient(to right,rgb(144, 89, 255,0.4),rgb(255, 74, 162,0.6),#FFBD4F,rgb(255, 74, 162,0.6),rgb(144, 89, 255,0.4)) !important;
+  background-color: #3c3dbb00 !important;
   box-shadow: none !important;
   border-radius: 4px !important;
 }
+ .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    background: #3c3dbb60 !important;
+}
+  
 .top-site-outer .tile .icon-wrapper{
   background-color: transparent !important;
 }
 .top-site-outer .top-site-icon{
   background-color: transparent !important; /*faVICON de los top sites*/
 }
+
 }
