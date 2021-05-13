@@ -53,7 +53,7 @@
 /*"personalizar barra de busqueda"*/
 .browserContainer > findbar:-moz-lwtheme {color: #d3d3d3 !important;}     
 .findbar-find-status[status="notfound"] {color: #00dbfd !important;}
-#customization-container {color: #d3d3d3 !important;}                        /*"Color de texto e iconos de "Perzonalizar barra de herramientas"*/
+#customization-container {color: #eaeaea !important; background-color: #1d1d38 !important;} /*"Color de texto e iconos de "Perzonalizar barra de herramientas"*/
 
 /*"popup_highlight"*/
 .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
