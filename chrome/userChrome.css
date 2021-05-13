@@ -18,8 +18,8 @@
   --lwt-tab-text: #ffffff !important;                            /*"tab_text": "#ffffff"*/
   --lwt-selected-tab-background-color: #11092300 !important;       /*"tab_selected":"#363540"*/
   --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
-  --toolbar-bgcolor: #1e2035bC !important;                         /*"toolbar":"#131118", "Color de la toolbar"*/
-  --toolbar-color: #1e2035bC !important;                           /*"toolbar":"#1a1b25"*/
+  --toolbar-bgcolor: #1e20406C !important;                         /*"toolbar":"#131118", "Color de la toolbar"*/
+  --toolbar-color: #1e2040bC !important;                           /*"toolbar":"#1a1b25"*/
   --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
   --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
   --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
@@ -29,12 +29,12 @@
   --toolbarbutton-active-background: #5524db80 !important;         /*"button_background_active": "#131217"*/
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
 
-  --panel-separator-zap-gradient: linear-gradient(to right,#9059FF7a, #FF4AA2,#FFBD4Fdd, #aa00ff7a) !important;
+  --panel-separator-zap-gradient: linear-gradient(90deg, #00ffff90 ,  #9059FF 30%, #FF4AA2 85.08%, #FFBD4Fcc 100%) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 4px !important;
   --tab-min-height:  27px !important;
   --tabs-shadow-size: 0px !important;
-  --tab-border-radius: 1px 1px 4px 4px !important;
+  --tab-border-radius: 4px !important;
   --arrowpanel-menuitem-padding: 6px !important;
   --panel-font-size: 1.1em !important;
   --arrowpanel-padding: 0.8em !important;
@@ -96,7 +96,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 
 /*Label de medios "Reproduciendo" modifiado*/
 .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important; margin-top: -2px !important; opacity: 1 !important; text-shadow: none !important;
-  font-weight: bold !important; background: linear-gradient(0.25turn,rgb(144, 89, 255,1),rgb(255, 74, 162),#ffa200); -webkit-background-clip: text;
+  font-weight: bold !important; background: linear-gradient(to left ,rgb(144, 89, 255,1),rgb(255, 74, 162),#FFBD4F); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important; animation-duration: 0s !important;}
 
@@ -104,7 +104,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 .tab-icon-image:not([pinned]){ opacity: 1 !important; margin-top: -1px !important}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
   opacity: 1 !important; border-radius: 9px !important; top: -1px; inset-inline-end: -15px; z-index: 1;margin-right: 16px !important; color: #e6fcff !important;
-  background-color: #1d1d38bb !important; fill-opacity: 1 !important; padding: 0px !important; height: 15px !important; width: 15px !important;}
+  background-color: #1d1d3800 !important; fill-opacity: 1 !important; padding: 0px !important; height: 15px !important; width: 15px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
   {opacity: 1 !important; border-radius: 9px !important; top: -1px; inset-inline-end: -15px;z-index: 1;margin-right: 16px !important;  color: #ffffff !important;
   background-color: #1d1d3850 !important; fill-opacity: 0.9 !important;padding: 0px !important; height: 15px !important; width: 15px !important;}
@@ -155,10 +155,20 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 
 /*Linea gradiente*/
 .tab-background {	position: relative !important;}
-.tab-background::after { width: 100% !important;margin-block: 0px !important; background: var(--panel-separator-zap-gradient);  position: absolute;
-	content: '';	height: 1px;	left: 0;		right: 6;	top: 0;  margin-top: -1px !important;  margin-left: px !important;	transform: scale(0, 1);
+.tab-background::after { width: -moz-available !important;margin-block: 0px !important; 
+    background-image: linear-gradient(to right,#9059FF3a, #FF4AA2 42%, #FFBD4Fee 85%,#FF4AA2, #aa00ff3a) !important;     
+  position: absolute;
+	content: '';	height: 1px;	left: 4px; top: 0;  margin-top: -1px !important;  margin-right: 4px !important; !important;	transform: scale(0, 1);
 	transform-origin: center center;  opacity: 1 !important;}
 .tab-background[selected="true"]::after {	transform: scale(1, 1);}
+
+.tab-content {	position: relative !important;}
+.tab-content::after { width: -moz-available !important; margin-block: 0px !important;  
+     background-image: linear-gradient(to left,#9059FF3a, #FF4AA2 42%, #FFBD4Fee 85%,#FF4AA2, #aa00ff3a) !important;
+  position: absolute;
+	content: '';	height: 1px;	left: 5px; bottom: 0;  margin-right: 2px !important;  margin-left: 0px !important;	transform: scale(0, 1);
+	transform-origin: center center;  opacity: 1 !important;}
+.tab-content[selected="true"]::after {	transform: scale(1, 1);}
 
 /*Brillo de pestaña activa*/
 .tab-content[selected="true"] {background-color:color-mix(in srgb, #4d4dfe 7%, transparent) !important; text-shadow: none !important;
@@ -174,4 +184,3 @@ menuseparator {border-top: 1px solid #3d3762 !important; padding: 0 !important; 
 
 /*Mover el label de las pestañas al centro vertical de la pestaña*/
 .tab-label {margin-top: -3px !important; text-shadow: none !important;}
-
