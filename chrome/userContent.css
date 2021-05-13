@@ -1,6 +1,5 @@
 /*new tab page coloring*/
 :root{ scrollbar-color: #383755cc #18173530 !important; }
-*{ scrollbar-width: thin !important}
 
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 .search-inner-wrapper{ display: none !important; }
@@ -45,7 +44,7 @@ body {
   color: #5c85d6 !important;
 }
 
-/**{ scrollbar-width: none !important }*/
+*{ scrollbar-width: none !important }
 
 .personalize-button:hover{
   background-color: #3c3d59b0 !important;
