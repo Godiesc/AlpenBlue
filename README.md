@@ -2,7 +2,7 @@
 
 ![splashAlpen](https://user-images.githubusercontent.com/22057609/118164357-a3fd4080-b3e8-11eb-8cda-be85363349fa.png)
 
-Theme to blue lovers
+Theme to Blue Lovers. 89+ versions of the browser.
 
 (ES) Reglas Css para vestir de AlpenBLue a Firefox
 
