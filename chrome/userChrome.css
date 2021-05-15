@@ -1,6 +1,6 @@
 :root{
   --lwt-accent-color: #0c0b0f !important;                        /*"frame": "#17161c" */
-  --lwt-text-color: #b3b3b3 !important;                          /*"tab_background_text": "#c3c3c3"*/
+  --lwt-text-color: #c3c3c3 !important;                          /*"tab_background_text": "#c3c3c3"*/
   --arrowpanel-background: #1d1d38fA !important;                 /*"popup": "#1c1b22Fa"*/
   --arrowpanel-color: #ffffff !important;                        /*"popup_text": "#dfdfdf"*/
   --arrowpanel-border-color: #4d4dfe50 !important;                 /*"popup_border": "#304f60"*/
