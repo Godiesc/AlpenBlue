@@ -79,7 +79,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 
 /*"Íconos de la urlbar más pequeños"*/
 .sharing-icon, #permissions-granted-icon, #tracking-protection-icon, .notification-anchor-icon, #blocked-permissions-container 
-  > .blocked-permission-icon {  height: 15px !important; width :15px !important; margin: 1px !important; padding: 0px !mportant}
+  > .blocked-permission-icon { margin: 1px !important; padding: 0px !mportant}
 
 /*"Color verde del ícono de candado de web segura"*/
 #identity-icon {color: #2cf62c !important; height: 14px !important; width :14px !important;}
