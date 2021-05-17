@@ -2,14 +2,12 @@
 :root{ scrollbar-color: #383755cc #18173530 !important; }
 
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-.search-inner-wrapper{ display: none !important; }
-  .outer-wrapper.newtab-experience .search-wrapper {
-    padding-bottom: 0px !important;
-}
+  .search-inner-wrapper{ display: none !important; }
+  .outer-wrapper.newtab-experience .search-wrapper {padding-bottom: 0px !important;}
   
 body {
     background-color: #181735 !important; /*ntp*/
-    --newtab-textbox-background-color: #3c3d59aa !important; /*fondo de la barra de busqueda*/
+    --newtab-textbox-background-color: #3c3d79aa !important; /*fondo de la barra de busqueda*/
 
     --newtab-topsites-background-color: #3c3d59aa !important; /*fondo de sitios fijados*/
     --newtab-contextmenu-background-color: #262530 !important; /*contextual menu de tres puntos pinned*/
@@ -32,45 +30,34 @@ body {
 }
 }
 @-moz-document url('about:home'), url('about:newtab') {
-body {
-    background-image: url(images/firefoxbackground.jpg) !important;
-    background-repeat: repeat  !important;
-    background-position: auto !important;
-    background-size: cover !important;
-  }
-.personalize-button {
-  background-color: #3c3d5970 !important;
-  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
-  color: #5c85d6 !important;
-}
+body {background-image: url(images/firefoxbackground.jpg) !important;
+      background-repeat: repeat  !important;
+      background-position: auto !important;
+      background-size: cover !important;}
+.personalize-button {background-color: #3c3d9970 !important;
+                     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
+                     color: #5c85d6 !important;}
+.personalize-button:hover{background-color: #3c3d99b0 !important;}
 
-*{ scrollbar-width: none !important }
+*{scrollbar-width: none !important }
 
-.personalize-button:hover{
-  background-color: #3c3d59b0 !important;
-}
-.activity-stream {
-  background-color:#181735 !important; /*ntp*/
-}
-/*Forma del contenedor de los sitios top*/
-.outer-wrapper.newtab-experience .top-site-outer .tile{
-  background-color: #3c3d5960 !important;
-}
-
-.outer-wrapper.newtab-experience .top-site-outer:hover .tile{
-  background-color: #3c3dbb00 !important;
-  box-shadow: none !important;
-  border-radius: 4px !important;
-}
- .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-    background: #3c3dbb60 !important;
-}
+/*ntp*/
+.activity-stream {background-color:#181735 !important;}
   
-.top-site-outer .tile .icon-wrapper{
-  background-color: transparent !important;
-}
-.top-site-outer .top-site-icon{
-  background-color: transparent !important; /*faVICON de los top sites*/
-}
+/*Forma del contenedor de los sitios top*/
+.outer-wrapper.newtab-experience .top-site-outer .tile{background-color: #3c3d8970 !important;}
+  
+/*colores al pasar el mouse sobre los sitios anclados*/
+.outer-wrapper.newtab-experience .top-site-outer:hover .tile{background-color: #3c3dbb00 !important;box-shadow: none !important;border-radius: 4px !important;}
+  
+/*colores al pasar el mouse sobre los sitios anclados (fondo más grande)*/
+ .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+   border-color: blue !important;
+   background: #3c3dbbaa !important;
+   box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;}
+  
+.top-site-outer .tile .icon-wrapper{background-color: transparent !important;}
 
+/*fondo de los faVICON de los sitios anclados*/
+.top-site-outer .top-site-icon{background-color: transparent !important;}
 }
