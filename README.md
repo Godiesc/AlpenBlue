@@ -1,6 +1,6 @@
 # Alpen Blue to Firefox CSS
 
-![splashAlpen](https://user-images.githubusercontent.com/22057609/118545896-d5457b80-b71c-11eb-85dd-cefdcfb5d0b9.png)
+![splashAlpen](https://user-images.githubusercontent.com/22057609/118546112-1d649e00-b71d-11eb-90ba-f2c8f9c23d00.png)
 
 Theme to Blue Lovers. 89+ versions of the browser.
 
