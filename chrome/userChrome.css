@@ -18,8 +18,8 @@
   --lwt-tab-text: #ffffff !important;                            /*"tab_text": "#ffffff"*/
   --lwt-selected-tab-background-color: #11092300 !important;       /*"tab_selected":"#363540"*/
   --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
-  --toolbar-bgcolor: #1e20409C !important;                         /*"toolbar":"#131118", "Color de la toolbar"*/
-  --toolbar-color: #1e2040bC !important;                           /*"toolbar":"#1a1b25"*/
+  --toolbar-bgcolor: #1e2040aC !important;                         /*"toolbar":"#131118", "Color de la toolbar"*/
+  --toolbar-color: #1e2040aC !important;                           /*"toolbar":"#1a1b25"*/
   --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
   --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
   --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
@@ -29,9 +29,9 @@
   --toolbarbutton-active-background: #3e3bdc !important;         /*"button_background_active": "#131217"*/
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
 
-  --panel-separator-zap-gradient: linear-gradient(90deg, #00ffff90 ,  #9059FF 30%, #FF4AA2 85.08%, #FFBD4Fcc 100%) !important;
+  --panel-separator-zap-gradient: linear-gradient(90deg, #9059FF90, #FF4AA2, #FFBD4Fbb,#FF4AA2, #aa00ff90) !important;
   --toolbarbutton-inner-padding: 5px !important;
-  --proton-tab-block-margin: 2px 4px !important;
+  --proton-tab-block-margin: 3px 4px !important;
   --tab-min-height:  27px !important;
   --tabs-shadow-size: 0px !important;
   --tab-border-radius: 4px !important;
@@ -69,8 +69,8 @@
 menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;} 
 
 /*"Botón de cerrar pestaña"*/
-.tab-close-button{margin-inline-start: -2px !important;width: 15px !important;height: 15px !important;padding: 3px !important; margin-inline-end:-6px !important; }
-.tabbrowser-tab > .tab-stack > .tab-content >.tab-close-button{border-radius: 8px !important;}
+.tab-close-button{margin-inline-start: 0px !important;width: 16px !important;height: 16px !important;padding: 3px !important; margin-inline-end:-6px !important; }
+.tabbrowser-tab > .tab-stack > .tab-content >.tab-close-button{border-radius: 2x !important; margin-top: 0px !important}
 .tab-close-button:hover{background-color: #4d4dfe90 !important;}
 
 /*"Medidas menores para scroll de pestañas"*/
