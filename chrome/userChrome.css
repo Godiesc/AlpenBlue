@@ -42,10 +42,10 @@
   --button-hover-bgcolor: color-mix(in srgb, #4e6bfd 50%, transparent) !important;
   --button-active-bgcolor: color-mix(in srgb, #4e6bfd 65%, transparent) !important;
   --urlbar-icon-padding: 4px !important;
-  --panel-separator-color: #3d3762 !important;
+  --panel-separator-color: #3d3772 !important;
   --toolbarbutton-outer-padding: 3px !important;
   --urlbar-popup-url-color: #3399ff !important;
-  --autocomplete-popup-hover-background: color-mix(in srgb, #4e6bfd85 70%, transparent) !important;
+  --autocomplete-popup-hover-background: #3e4cff95 !important;
   --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
 }
 
@@ -85,7 +85,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #identity-icon {color: #2cf62c !important; height: 14px !important; width :14px !important;}
 
 /*"ícono de marcadores y vista de lectura más pequeños"*/
-.urlbar-icon {padding: 3px !important}
+.urlbar-icon {padding: 3px !important;}
 
 /*"Urlbar y Search-bar más pequeñas"*/
 #urlbar{min-height: 26px !important; margin-block: 0px 0px !important; text-shadow: none !important;}
@@ -106,14 +106,14 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
 .tab-icon-image:not([pinned]){ opacity: 1 !important; margin-top: -1px !important}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  opacity: 1 !important; border-radius: 9px !important; top: -1px; inset-inline-end: -15px; z-index: 1;margin-right: 16px !important; color: #e6fcff !important;
-  background-color: #1d1d3800 !important; fill-opacity: 1 !important; padding: 0px !important; height: 15px !important; width: 15px !important;}
+  opacity: 1 !important; border-radius: 9px !important; top: 0px; inset-inline-end: -15px; z-index: 1;margin-right: 15px !important; color: #ffffff !important;
+  background-color: #00000010 !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important; }
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
-  {opacity: 1 !important; border-radius: 9px !important; top: -1px; inset-inline-end: -15px;z-index: 1;margin-right: 16px !important;  color: #ffffff !important;
-  background-color: #1d1d3800 !important; fill-opacity: 1 !important;padding: 0px !important; height: 15px !important; width: 15px !important;}
+  {opacity: 1 !important; border-radius: 9px !important; top: 0px; inset-inline-end: -15px;z-index: 1;margin-right: 15px !important;  color: #ffffff !important;
+  background-color: #1d1d3800 !important; fill-opacity: 1 !important;padding: 0px !important; height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
- stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 15px !important; width: 15px !important}
-.tab-icon-overlay:is([pinned]){padding: 0px !important; stroke: #1d1d3870 !important; color: white !important; height: 15px !important; width: 15px !important;}
+ stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; height: 14px !important; width: 14px !important}
+.tab-icon-overlay:is([pinned]){padding: 0px !important; stroke: #1d1d3870 !important; color: white !important; height: 14px !important; width: 14px !important;}
 
 /*Regla para visualizar mejor el seleccionar varias pestañas*/
 .tabbrowser-tab[multiselected]:-moz-lwtheme{color: #ffffff !important; --tab-line-color:#4d4dfeff !important;}
