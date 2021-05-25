@@ -1,10 +1,7 @@
 /*new tab page coloring*/
 :root{ scrollbar-color: #383755cc #18173530 !important; }
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-  .search-inner-wrapper{ display: none !important; }
-  .outer-wrapper.newtab-experience .search-wrapper {padding-bottom: 0px !important;}
-  
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {  
 body {
     background-color: #181735 !important; /*ntp*/
     --newtab-textbox-background-color: #3c3d79aa !important; /*fondo de la barra de busqueda*/
