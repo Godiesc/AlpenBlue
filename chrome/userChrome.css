@@ -112,9 +112,11 @@ tab:is([pinned]):not([selected]) .tab-context-line {max-width: 17px !important; 
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
 
 /*Label de medios "Reproduciendo" modifiado*/
-.tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -2px !important; margin-bottom: 2px !important; opacity: 1 !important; 
+tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -2px !important; margin-bottom: 2px !important; opacity: 1 !important; 
   text-shadow: none !important;  font-weight: bold !important; background: linear-gradient(to right, #00bbff 0%, #6b6bff 40%, #dd4AA2 100%);
   -webkit-background-clip: text;  -webkit-text-fill-color: transparent;}
+tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -2px !important; margin-bottom: 2px !important; 
+  text-shadow: none !important;  font-weight: bold !important;}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important;}
 
 /*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
