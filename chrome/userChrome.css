@@ -47,12 +47,6 @@
   --urlbar-popup-url-color: #3399ff !important;
   --autocomplete-popup-hover-background: #3e4cff95 !important;
   --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
-  
-  --lwt-additional-images: url("moz-extension://7bc9a917-8649-46a3-911c-98385a94d4a2/images/derecha.svg"),
-    url("moz-extension://7bc9a917-8649-46a3-911c-98385a94d4a2/images/izquierda.svg"),
-    url("moz-extension://7bc9a917-8649-46a3-911c-98385a94d4a2/images/middle.png") !important;
-  --lwt-background-alignment: right top,left top ,right top !important;
-  --lwt-background-tiling: no-repeat,no-repeat,repeat-x !important;
 }
 
 #navigator-toolbox{--tabs-border-color: #4d4dfe70 !important; }              /*"toolbar_top_separator": "#17161c"*/
