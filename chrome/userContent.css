@@ -179,3 +179,5 @@ body{background-color: #181735 !important; background-image: url(images/firefoxb
 .search-wrapper .logo-and-wordmark {margin-top: 28px !important; margin-left:  -80px !important;}
 .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}
 }
+@-moz-document url(about:privatebrowsing){
+.wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}}
