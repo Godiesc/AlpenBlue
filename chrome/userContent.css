@@ -137,16 +137,15 @@ body {
 .outer-wrapper.newtab-experience .top-site-outer .tile:not(.active, :focus, :hover){background: linear-gradient(to bottom, #2f2f65 ,#26255e , #202075)}  
   
 /*colores al pasar el mouse sobre los sitios anclados en :hover*/
-.outer-wrapper.newtab-experience .top-site-outer:hover .tile{background-color: transparent !important;box-shadow: none !important; 
-  background:transparent}
+.outer-wrapper.newtab-experience .top-site-outer:hover .tile{background:
+      linear-gradient(147deg, rgba(250, 25, 50,.7), rgba(255,0,0,0) 50.71%),
+      linear-gradient(247deg, rgba(100, 39, 255,.8), rgba(0,255,0,0) 91.71%),
+      linear-gradient(30deg, rgba(20, 32, 252,.4), rgba(0,0,255,0) 99.71%) !important}
   
 /*colores al pasar el mouse sobre los sitios anclados (fondo más grande)*/
 .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
   box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
-  background:
-      linear-gradient(147deg, rgba(250, 25, 50,.7), rgba(255,0,0,0) 50.71%),
-      linear-gradient(247deg, rgba(100, 39, 255,.8), rgba(0,255,0,0) 91.71%),
-      linear-gradient(30deg, rgba(20, 32, 252,.4), rgba(0,0,255,0) 99.71%) !important}
+  background: linear-gradient(to bottom, #2f2f65 ,#26255e , #202075) !important;}
 
 /*Color de label the sitio anclado :hover*/
 .outer-wrapper.newtab-experience .top-site-outer:is(.active, :focus, :hover)  .title{color: #ffffff !important;}
@@ -180,4 +179,11 @@ body{background-color: #181735 !important; background-image: url(images/firefoxb
 .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}
 }
 @-moz-document url(about:privatebrowsing){
-.wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}}
+    .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}
+}
+@-moz-document url('https://www.facebook.com/watch') , url('https://www.facebook.com/watch/'), url('https://www.facebook.com/groups/feed/')
+    , url('https://www.facebook.com/'), url('https://www.facebook.com'){
+  .o36gj0jk {width:221px !important;}
+  .f9o22wc5 {margin-left: 0px !important;}
+  .grtyclo8 {max-width: 754px !important;}
+}
