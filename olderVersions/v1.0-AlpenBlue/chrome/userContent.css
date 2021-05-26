@@ -1,0 +1,95 @@
+/*new tab page coloring*/
+:root{ scrollbar-color: #38375580 #18173530 !important; }
+*{ scrollbar-width: thin !important}
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+ /* .search-inner-wrapper{ display: none !important; }
+  .outer-wrapper.newtab-experience .search-wrapper {padding-bottom: 0px !important;}*/
+  
+body {
+    background-color: #181735 !important; /*ntp*/
+    --newtab-textbox-background-color: #3c3d79aa !important; /*fondo de la barra de busqueda*/
+
+    --newtab-topsites-background-color: #3c3d59aa !important; /*fondo de sitios fijados*/
+    --newtab-contextmenu-background-color: #262530 !important; /*contextual menu de tres puntos pinned*/
+
+    --newtab-element-hover-color: #5c85d650 !important; /*color al pasar el mouse sobre los items del menÃº tres puntos*/
+    --newtab-element-active-color: #5c85d630 !important; /*Color al hacer clic en el menú contextual de 3 puntos*/
+
+    --newtab-icon-primary-color: #eaeaea !important; /*tres puntos hover*/ 
+    --newtab-border-secondary-color: #3f3f3f !important; /*Linea separadora de items de menÃº contextual*/
+    --newtab-section-header-text-color: #ffffff !important;/*label principal al editar un sitio*/
+
+    --newtab-card-background-color: #292750 !important; /*fondo de actividad reciente*/
+    --newtab-text-secondary-color: #ffffff !important; /*Label principal de Actividad reciente*/
+    --newtab-text-primary-color: #5c85d6 !important; /*label de actividad reciente*/
+    --newtab-border-primary-color: #5c85d6  !important;/*borde de boton de tres puntos en actividad reciente*/
+       
+    --newtab-modal-color: #201f40a0 !important; /*fondo Al editar un sitio*/
+    --newtab-overlay-color: rgba(18, 18, 15, 0.8) !important; /*fondo de editar, transparente*/
+    --newtab-textbox-border: #ffffff10 !important; /*contorno de txt al editar un sitio*/    
+}
+}
+@-moz-document url('about:home'), url('about:newtab') {
+body {background-image: url(images/firefoxbackground.jpg) !important;
+      background-repeat: repeat  !important;
+      background-position: auto !important;
+      background-size: cover !important;}
+.personalize-button {background-color: #3c3d9970 !important;
+                     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%) !important;
+                     color: #5c85d6 !important;}
+.personalize-button:hover{background-color: #3c3d99b0 !important;}
+
+*{scrollbar-width: none !important }
+
+/*ntp*/
+.activity-stream {background-color:#181735 !important;}
+  
+/*Forma del contenedor de los sitios top*/
+.outer-wrapper.newtab-experience .top-site-outer .tile{background-color: #3c3d8970 !important;}
+  
+/*colores al pasar el mouse sobre los sitios anclados*/
+.outer-wrapper.newtab-experience .top-site-outer:hover .tile{background-color: #3c3dbb00 !important;box-shadow: none !important;border-radius: 4px !important;}
+  
+/*colores al pasar el mouse sobre los sitios anclados (fondo más grande)*/
+ .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+   border-color: blue !important;
+   background: #3c3dbbaa !important;
+   box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;}
+  
+.top-site-outer .tile .icon-wrapper{background-color: transparent !important;}
+
+/*fondo de los faVICON de los sitios anclados*/
+.top-site-outer .top-site-icon{background-color: transparent !important;}
+}
+@-moz-document url(https://www.facebook.com/watch){
+  .o36gj0jk {width:221px !important;}
+  .f9o22wc5 {margin-left: 0px !important;}
+  .grtyclo8 {max-width: 754px !important;}
+}
+@-moz-document url(https://www.facebook.com/watch/){
+  .o36gj0jk {width:221px !important;}
+  .f9o22wc5 {margin-left: 0px !important;}
+  .grtyclo8 {max-width: 754px !important;}
+}
+
+@-moz-document url(https://www.facebook.com/groups/feed/){
+  .ecyo15nh {width: 1108px !important;}
+  .o36gj0jk {width:250px !important;}
+  .f9o22wc5 {margin-left: 0px !important;}
+  .grtyclo8 {max-width: 754px !important;}
+}
+@-moz-document url(https://www.facebook.com/){
+ .rirtxc74 {max-width: 250px !important;}
+ .fjf4s8hc {padding-left: 0px !important; margin-left: -16px !important;}
+ .fer614ym {min-width: 225px !important;}
+  .fjf4s8hc {padding-left: 0px !important;}
+  .f7vcsfb0 {padding-right: 190px !important;}
+}
+@-moz-document url(https://www.facebook.com){
+ .rirtxc74 {max-width: 250px !important;}
+ .fjf4s8hc {padding-left: 0px !important; margin-left: -16px !important;}
+ .fer614ym {min-width: 225px !important;}
+  .fjf4s8hc {padding-left: 0px !important;}
+  .f7vcsfb0 {padding-right: 190px !important;}
+}
