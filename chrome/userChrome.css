@@ -18,8 +18,8 @@
   --lwt-tab-text: #ffffff !important;                            /*"tab_text": "#ffffff"*/
   --lwt-selected-tab-background-color: #11092300 !important;     /*"tab_selected":"#363540"*/
   --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
-  --toolbar-bgcolor: #1e2045bc !important;                       /*"toolbar":"#131118", "Color de la toolbar"*/
-  --toolbar-color: #1e2045bc !important;                         /*"toolbar":"#1a1b25"*/
+  --toolbar-bgcolor: #1e20457c !important;                       /*"toolbar":"#131118", "Color de la toolbar"*/
+  --toolbar-color: #1e204500 !important;                         /*"toolbar":"#1a1b25"*/
   --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
   --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
   --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
@@ -47,7 +47,14 @@
   --urlbar-popup-url-color: #3399ff !important;
   --autocomplete-popup-hover-background: #3e4cff95 !important;
   --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
+  
+  --lwt-additional-images: url("images/derecha.svg"), url("images/middle.png") !important;
+  --lwt-background-alignment: right top,right top !important;
+  --lwt-background-tiling: no-repeat,repeat-x !important;
 }
+/*Imagenes superiores*/
+#navigator-toolbox { background-image:  var(--lwt-additional-images) !important; background-repeat: var(--lwt-background-tiling) !important;
+ background-position: var(--lwt-background-alignment) !important;}
 
 #navigator-toolbox{--tabs-border-color: #4d4dfe70 !important; }              /*"toolbar_top_separator": "#17161c"*/
 #tabbrowser-tabs {--tab-line-color: #4d4dfe00  !important;}                  /*"tab_line": "#126e82"*/
@@ -168,7 +175,7 @@ tab:not([pinned])[selected="true"] .tab-content {background-image:  url(images/t
 
 tab:is([pinned])[selected="true"] .tab-background {background-image: linear-gradient(90deg,#551dfc,#1293dd, #551dfc) !important;
   border-radius: 4px !important;height: 30px !important;}
-tab:is([pinned])[selected="true"] .tab-content {background-color: #1f1e6a !important;
+tab:is([pinned])[selected="true"] .tab-content {background-image:  url(images/tabbackground.png);background-color: #161742 !important;
   margin-top: 3px !important;margin-left: 1px !important; margin-right: 1px !important; height: 28px !important;}
 
 tab:is([pinned]):not([selected="true"]) .tab-content {margin-top: 3px !important;margin-left: 1px !important; margin-right: 1px !important; height: 28px !important;}
