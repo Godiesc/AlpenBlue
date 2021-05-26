@@ -102,7 +102,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #searchbar {min-height: 26px !important;text-shadow: none !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
-.tab-context-line  {max-width: 17px !important; max-height: 1px !important; margin-left: 8px !important;margin-bottom: -1px !important;
+.tab-context-line  {max-width: 17px !important; max-height: 2px !important; margin-left: 8px !important;margin-bottom: -1px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; transition: none !important;}
 
 /*Label de medios "Reproduciendo" modifiado*/
@@ -135,15 +135,6 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
   fill-opacity: 1 !important;}
 
 /*Personalización de colores y presentación de pestañas en contenedores*//*Personalización de colores y presentación de pestañas en contenedores*/
-.identity-color-blue {--identity-tab-color: #2574A7 !important; --identity-icon-color: #2574A7 !important;--tab-line-color:#0057cb !important;}
-.identity-color-green {--identity-tab-color: #1E934F !important; --identity-icon-color: #1E934F !important;--tab-line-color:#28a45e !important;}
-.identity-color-orange {--identity-tab-color: #e67e22 !important; --identity-icon-color: #e67e22 !important;--tab-line-color:#a9642c !important;}
-.identity-color-red {--identity-tab-color: #ff392b !important; --identity-icon-color: #ff392b !important; --tab-line-color:#cc372f !important;}
-.identity-color-pink {--identity-tab-color: #ff33bb !important; --identity-icon-color: #ff33bb !important;--tab-line-color:#e22fa7 !important;}
-.identity-color-purple {--identity-tab-color: #813E9D !important; --identity-icon-color: #813E9D !important;--tab-line-color:#703988 !important;}
-.identity-color-yellow {--identity-tab-color: #e6b803 !important; --identity-icon-color: #e6b803 !important;--tab-line-color:#b08d03 !important;}
-.identity-color-turquoise {--identity-tab-color: #03b48d !important; --identity-icon-color: #03b48d !important;--tab-line-color:#03b48d !important;}
-
 .identity-color-blue {--identity-tab-color: #2574A7 !important; --identity-icon-color: #2574A7 !important;}
 .identity-color-green {--identity-tab-color: #1E934F !important; --identity-icon-color: #1E934F !important;}
 .identity-color-orange {--identity-tab-color: #e67e22 !important; --identity-icon-color: #e67e22 !important;}
