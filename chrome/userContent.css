@@ -2,7 +2,7 @@
 /**{ scrollbar-width: thin !important}*/                               /*Barra de desplazamiento delgada*/
 
 window, dialog {                                                       /*Colores varios de paginas de about:addons y about:settings*/
-    background-color: #202050 !important;
+    background-color: #1d1d3bfA !important;
     --in-content-primary-button-background: #3080dc !important;
     --in-content-primary-button-text-color: #192045 !important;
     --in-content-primary-button-background-hover: #1080ff !important;   /*color de los radiobutton (fondo) :hover*/  
@@ -162,7 +162,7 @@ body {
 
 /*Colores varios de la interfaz de complementos y configuración*/
 @-moz-document url('about:preferences'), url('about:addons') {
-.dialogBox {--in-content-page-background: #202050 !important;}        /*COlor de background de dialogWindow*/
+.dialogBox {--in-content-page-background: #1d1d3bfA !important;}        /*COlor de background de dialogWindow*/
 button {border-color: #7171af40 !important; box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 0px 0px 2px 1px rgb(0 0 0 / 23%) !important;} /*color de botones */
 #categories button {box-shadow: none !important;}
 #categories> .category[selected]> .category-name {background: linear-gradient(to right, #00bbff 0%, #6b6bff 22%, #fd4AA2 100%); 
