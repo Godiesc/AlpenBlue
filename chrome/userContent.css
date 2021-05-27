@@ -172,7 +172,7 @@ button {border-color: #7171af40 !important; box-shadow: 5px 3px 6px rgb(1 1 1 / 
 
 @-moz-document url('about:home'), url('about:newtab') {
  /*Personalizacion de la página newtab*/
-body{background-color: #181735 !important; background-image: url(images/firefoxbackground.jpg); background-repeat: no-repeat  !important; 
+body{background-color: #181735 !important; background-image: url(images/firefoxbackground1.jpg); background-repeat: no-repeat  !important; 
  background-position: center top !important; background-size: cover !important;}    
 .logo-and-wordmark .logo { background: none !important; background-size: auto !important; background-size: 82px !important; display: inline-block !important;}   
 .search-wrapper .logo-and-wordmark {margin-top: 28px !important; margin-left:  -80px !important;}
