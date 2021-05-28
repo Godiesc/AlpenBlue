@@ -173,13 +173,11 @@ button.primary { color: #cacaca !important;}
 
 @-moz-document url('about:home'), url('about:newtab') {
  /*Personalizacion de la página newtab*/    
-.logo-and-wordmark .logo { background: url("images/foxlogo.png") no-repeat !important; background-size: cover !important; display: inline-block !important;}   
-.search-wrapper .logo-and-wordmark {margin-top: 28px !important; }
+.logo-and-wordmark .logo { background: url("images/foxlogo.png") no-repeat !important; background-size: cover !important; display: inline-block !important;}
 .logo {height: 110px !important; width: 120px !important; }    
 .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;-moz-context-properties: fill !important;
 display: inline-block !important; height: 82px !important; margin-inline-start: 16px !important; width: 134px !important;}
-.ds-outer-wrapper-breakpoint-override main {margin-top: 0px !important;  min-width: 366px !important;}   
-.outer-wrapper.newtab-experience .search-wrapper {padding-bottom: 0px !important;}
+.ds-outer-wrapper-breakpoint-override main {min-width: 366px !important;}
 }
 @-moz-document url(about:privatebrowsing){
     .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}}
