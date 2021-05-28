@@ -180,11 +180,4 @@ body{background-color: #181735 !important; background-image: url(images/firefoxb
 .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}
 }
 @-moz-document url(about:privatebrowsing){
-    .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}
-}
-@-moz-document url('https://www.facebook.com/watch') , url('https://www.facebook.com/watch/'), url('https://www.facebook.com/groups/feed/')
-    , url('https://www.facebook.com/'), url('https://www.facebook.com'){
-  .o36gj0jk {width:221px !important;}
-  .f9o22wc5 {margin-left: 0px !important;}
-  .grtyclo8 {max-width: 754px !important;}
-}
+    .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;}}
