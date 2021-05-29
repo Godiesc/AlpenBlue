@@ -17,7 +17,3 @@ Steps to apply this theme: Copy the Chrome folder and the user.js file into your
 
 Additionally, you need to use this theme: https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/
 <br>PD: If you don't want the background of the New Tab page please delete the image from: chrome/images.
-
-![splash2](https://user-images.githubusercontent.com/22057609/119582505-3eb33300-bd8a-11eb-8eb5-87ecac49f0e3.png)
-![splash3](https://user-images.githubusercontent.com/22057609/119582508-41158d00-bd8a-11eb-8e01-6e6e0c4a3752.png)
-![splash4](https://user-images.githubusercontent.com/22057609/119582510-42df5080-bd8a-11eb-9766-de38e55454fc.png)
