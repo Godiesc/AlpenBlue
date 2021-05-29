@@ -210,7 +210,7 @@ description#identity-popup-content-owner-label, description#identity-popup-conte
   color: #2cf62c !important;}
 
 /*Páginas seguras de firefox"*/
-#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button{background-color: #3e3b8d !important;}
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button{background-color: #2e3075 !important;}
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:not([open]),#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:not([open]){
   background-color: #3e3bad !important;}
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button[open="true"],#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open="true"]{
