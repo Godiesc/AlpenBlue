@@ -124,7 +124,7 @@ tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinp
 .tab-icon-image:is([pinned]):not([selected]){ margin-left: 0px !important; margin-top:0px !important;}
 .tab-icon-overlay{height: 14px !important; width: 14px !important;}
 .tab-icon-overlay:not([pinned],[crashed])[soundplaying]{transition-duration: 300ms !important;
-  opacity: 1 !important; border-radius: 9px !important; top: 0px; inset-inline-end: -12px; z-index: 1;margin-right: 12px !important; color: #ffffff !important;
+  opacity: 1 !important; border-radius: 9px !important; top: 0px; inset-inline-end: -15px; z-index: 1;margin-right: 15px !important; color: #ffffff !important;
   background-color: #140d2d00 !important; fill-opacity: 1 !important; padding: 0px !important; }
 .tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
   {opacity: 1 !important; border-radius: 9px !important; top: -6px; inset-inline-end: -7px;z-index: 1;margin-right: 8px !important;  color: #ffffff !important;
