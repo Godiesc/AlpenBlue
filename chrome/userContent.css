@@ -72,7 +72,7 @@ window, dialog {                                                       /*Colores
 }
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {  
 body {     
-    --newtab-textbox-background-color: #2c2d77aa !important;            /*fondo de la barra de busqueda*/
+    --newtab-textbox-background-color: #3c3d975a !important;            /*fondo de la barra de busqueda*/
 
     --newtab-topsites-background-color: #3c3d59aa !important;           /*fondo de sitios fijados*/
     --newtab-contextmenu-background-color: #262530 !important;          /*contextual menu de tres puntos pinned*/
@@ -112,10 +112,11 @@ body {
   .home-section .section .slider {border: 1px solid #4546c0 !important;}
     
 /*Colores del botón "Perzonalizar"*/
-.personalize-button{background: linear-gradient(to bottom, #2f2f65 , #202085);box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 2px 2px 2px rgb(0 0 0 / 23%) !important;}
-.personalize-button:hover{background:linear-gradient(147deg, rgba(250, 25, 20, 0.7), rgba(255,0,0,0) 71.71%),
-                                     linear-gradient(247deg, rgba(100, 39, 255,1), rgba(0,255,0,0) 91.71%),
-                                     linear-gradient( 30deg, rgba( 20, 32, 252,1), rgba(0,0,255,0) 71.71%) !important;}
+.personalize-button{background-color: #181735 !important; -webkit-text-fill-color: #bfbfbf !important;box-shadow: none !important;border: 1px solid #4a4a9b3a !important;
+    font-weight: bold !important;}
+.personalize-button:hover {
+    font-weight: bold !important; background: linear-gradient(to right, #00bbff 0%, #6b6bff 40%, #dd4AA2 100%); box-shadow: none !important;
+  -webkit-background-clip: text !important;  -webkit-text-fill-color: transparent !important; border: 1px solid #4a4a9b5a !important}
   
 /*Colores de la interfaz para Personalizar la NewTab*/
 .customize-menu {color: white !important;background-color: #292759 !important;}
@@ -124,28 +125,23 @@ body {
 /*Color del botón "Cerrar"*/
   .customize-menu .close-button {background: linear-gradient(to bottom, #3f3f95 , #2020a5) ;border: 0px !important; box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 2px 2px 2px rgb(0 0 0 / 23%) !important;}
   .customize-menu .close-button:hover {background:
-      linear-gradient(147deg, rgba(250, 25, 50,0.7), rgba(255,0,0,0) 71.71%),
-      linear-gradient(247deg, rgba(100, 39, 255,1), rgba(0,255,0,0) 91.71%),
-      linear-gradient(30deg, rgba(20, 32, 252,1), rgba(0,0,255,0) 71.71%) !important;}
+      linear-gradient(to bottom, #202085 , #202085); !important;}
   
 *{scrollbar-width: none !important }
-
-/*ntp*/
-.activity-stream {background-color:#16143c !important;}
-  
+ 
 /*colores de los sitios anclados*/
-.outer-wrapper.newtab-experience .top-site-outer .tile:not(.active, :focus, :hover){background: linear-gradient(to bottom, #2f2f65 ,#26255e , #202075)}  
+.outer-wrapper.newtab-experience .top-site-outer .tile:not(.active, :focus, :hover){background: linear-gradient(to bottom, #2f2f65 ,#26255e);
+    box-shadow: none !important;}  
   
 /*colores al pasar el mouse sobre los sitios anclados en :hover*/
-.outer-wrapper.newtab-experience .top-site-outer:hover .tile{background:
-      linear-gradient(147deg, rgba(250, 25, 50,.7), rgba(255,0,0,0) 50.71%),
-      linear-gradient(247deg, rgba(100, 39, 255,.8), rgba(0,255,0,0) 91.71%),
-      linear-gradient(30deg, rgba(20, 32, 252,.4), rgba(0,0,255,0) 99.71%) !important}
+.outer-wrapper.newtab-experience .top-site-outer:hover .tile{ box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important; background:
+      linear-gradient(140deg, #b40780, rgba(255,0,0,0) 60.71%),      
+      linear-gradient(334deg, #2121c3, rgba(0,0,255,0) 99.71%); !important; border-radius: 7px !important;}
   
 /*colores al pasar el mouse sobre los sitios anclados (fondo más grande)*/
 .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-  box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important;
-  background: linear-gradient(to bottom, #2f2f65 ,#26255e , #202075) !important;}
+  box-shadow: none !important;
+  background: transparent !important;}
 
 /*Color de label the sitio anclado :hover*/
 .outer-wrapper.newtab-experience .top-site-outer:is(.active, :focus, :hover)  .title{color: #ffffff !important;}
@@ -158,6 +154,9 @@ body {
   
 /*fondo de los favICON de los sitios anclados*/
 .top-site-outer .top-site-icon{background-color: #00000000 !important; }
+    
+/*ntp*/
+.activity-stream {background-color: #181735 !important;}
 }
 
 /*Colores varios de la interfaz de complementos y configuración*/
