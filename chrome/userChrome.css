@@ -133,7 +133,7 @@ tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinp
  stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; 
  transform: scale(1.1) !important; transition-duration: 100ms !important;}
 .tab-icon-overlay:is([pinned]){padding: 0px !important; stroke: #1d1d3870 !important; color: white !important;transition-duration: 200ms !important;}
-.tab-icon-overlay:is([pinned])[soundplaying]:hover{stroke: white !important; color: black !important;}
+.tab-icon-overlay:is([pinned]):hover{stroke: white !important; color: black !important;}
 
 /*Regla para visualizar mejor el seleccionar varias pestañas*/
 .tabbrowser-tab[multiselected]:-moz-lwtheme{color: #ffffff !important; --tab-line-color:#4d4dfeff !important;}
