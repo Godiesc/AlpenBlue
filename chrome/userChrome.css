@@ -102,13 +102,13 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #searchbar {min-height: 26px !important;text-shadow: none !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
-tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; max-height: 2px !important; margin-left: 3px !important; margin-bottom: -1px !important;
+tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; max-height: 1px !important; margin-left: 3px !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:not([pinned],[selected]) .tab-context-line {max-width: 27px !important; max-height: 3px !important; margin-left: 3px !important; margin-bottom: -1px !important;
+tab:not([pinned],[selected]) .tab-context-line {max-width: 27px !important; max-height: 1px !important; margin-left: 3px !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; max-height: 3px !important; margin-bottom: -1px !important;
+tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; max-height: 1px !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned]):not([selected]) .tab-context-line {max-width: 17px !important; max-height: 3px !important; margin-left: 11px !important;margin-bottom: -1px !important;
+tab:is([pinned]):not([selected]) .tab-context-line {max-width: 17px !important; max-height: 1px !important; margin-left: 11px !important;margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
 
 /*Label de medios "Reproduciendo" modifiado*/
