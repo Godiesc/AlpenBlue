@@ -164,7 +164,7 @@ body {
 .dialogBox {--in-content-page-background: #1d1d3bfA !important;}        /*COlor de background de dialogWindow*/
 button {border-color: #7171af40 !important; box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 0px 0px 2px 1px rgb(0 0 0 / 23%) !important;} /*color de botones */
 #categories button {box-shadow: none !important;}
-#categories> .category[selected]> .category-name {background: linear-gradient(to right, #00bbff 0%, #6b6bff 22%, #fd4AA2 100%); 
+#categories> .category[selected]> .category-name {background: linear-gradient(to right, #00bbff 0%, #6b8bff 22%, #fd4AA2 100%); 
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: -1px !important;}
 #categories > .category[selected] {color: #23a9ff !important;}
 button.primary { color: #cacaca !important;}
