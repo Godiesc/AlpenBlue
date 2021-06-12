@@ -136,7 +136,7 @@ body {
 /*colores al pasar el mouse sobre los sitios anclados en :hover*/
 .outer-wrapper.newtab-experience .top-site-outer:hover .tile{ box-shadow: 5px 3px 6px rgb(1 1 1 / 16%), 4px 4px 2px rgb(0 0 0 / 23%) !important; background:
       linear-gradient(140deg, #b40780, rgba(255,0,0,0) 60.71%),      
-      linear-gradient(334deg, #2121c3, rgba(0,0,255,0) 99.71%); !important; border-radius: 7px !important;}
+      linear-gradient(334deg, #2121c3, rgba(0,0,255,0) 99.71%) !important; border-radius: 7px !important;}
   
 /*colores al pasar el mouse sobre los sitios anclados (fondo más grande)*/
 .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
