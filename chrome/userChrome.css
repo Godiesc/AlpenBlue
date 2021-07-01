@@ -32,6 +32,7 @@
   --panel-separator-zap-gradient: linear-gradient(to left, #fa00ff90,#551dfc,#2525ff, #1293bd) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 3px !important;
+  --tab-block-margin: 2px 3px !important;
   --tab-min-height:  30px !important;
   --tabs-shadow-size: 0px !important;
   --tab-border-radius: 4px !important;
