@@ -103,13 +103,13 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #searchbar {min-height: 26px !important;text-shadow: none !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
-tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; max-height: 1px !important; margin-left: 3px !important; margin-bottom: 0px !important;
+tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 30px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important; border-radius: 4px !important;
+  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; transition-duration: 150ms !important}
+tab:not([pinned],[selected]) .tab-context-line {max-width: 8px !important; height: 3px !important; margin-left: 12px !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:not([pinned],[selected]) .tab-context-line {max-width: 27px !important; max-height: 1px !important; margin-left: 3px !important; margin-bottom: 0px !important;
+tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 30px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important;border-radius: 4px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; max-height: 1px !important; margin-bottom: 0px !important;
-  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned]):not([selected]) .tab-context-line {max-width: 17px !important; max-height: 1px !important; margin-left: 11px !important;margin-bottom: 0px !important;
+tab:is([pinned]):not([selected]) .tab-context-line {max-width: 8px !important; height: 3px !important; margin-left: 15px !important; !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
 
 /*Label de medios "Reproduciendo" modifiado*/
@@ -188,11 +188,17 @@ tab:is([pinned]):not([selected="true"]) .tab-content {margin-top: 3px !important
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {background-color: #4d4dfe50  !important;transition-duration: 0ms !important;}
 
 /*colores del Menú contextual*/
-menuseparator {border-top: 1px solid #3d3762 !important; padding: 0 !important; margin: 2px 0.5em !important;}
-.menupopup-arrowscrollbox {background-color:#1f1f38 !important; border: 1px solid !important; padding-block: 0px !important; border-color: #4d4dbe50 !important;}
+/* Menu items border and padding */
+  menu, menuitem {border-radius: 4px !important; margin-left: 4px !important; margin-right: 4px !important;
+  padding-inline-start: 0.5em !important}
+/*borde izquierda y derecha del menú contextual*/
+  menugroup > menuitem:first-child {padding-left: 4px !important;} 
+  menugroup > menuitem:last-child { padding-right: 4px !important;}
+
+menuseparator {border-top: 1px solid #3d3762 !important; padding: 0 !important; margin: 2px 5px !important;}
+.menupopup-arrowscrollbox {background-color:#1f1f38 !important; border: 1px solid !important;  border-color: #4d4dbe50 !important;}
 menu[_moz-menuactive="true"]:not([disabled="true"]), menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
- background-color: #3949aa !important; color: #eaeaea !important; 
-  --menuitem-hover-background-color: #3949aa !important;}
+ background-color: #3949aa !important; color: #eaeaea !important; --menuitem-hover-background-color: #3949aa !important;}
 
 /*botones de la pagina de Personalizar Toolbar*/
 .customizationmode-button {background-color: #4e6bfd65 !important; border-color: #4e6bfd85 !important; color: #ccc !important;font-weight: 700 !important;}
