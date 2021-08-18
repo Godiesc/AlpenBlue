@@ -113,10 +113,10 @@ tab:is([pinned]):not([selected]) .tab-context-line {max-width: 8px !important; h
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
 
 /*Label de medios "Reproduciendo" modifiado*/
-tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -2px !important; margin-bottom: 2px !important; opacity: 1 !important; 
+tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -4px !important; margin-bottom: 2px !important; opacity: 1 !important; 
   text-shadow: none !important;  font-weight: bold !important; background: linear-gradient(to right, #00aaff 0%, #906bff 40%, #cd4AA2 100%);
   -webkit-background-clip: text;  -webkit-text-fill-color: transparent}
-tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -2px !important; margin-bottom: 2px !important; 
+tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -4px !important; margin-bottom: 2px !important; 
   text-shadow: none !important;  font-weight: bold !important;transition-duration:  0ms !important}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important; transition-duration: 0ms !important}
 
