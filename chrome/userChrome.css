@@ -7,11 +7,11 @@
   --lwt-popup-brighttext-url-color: #4da6ff !important;          /*"color de label: El sitio no funciona?"*/
   --panel-disabled-color: #99999990 !important;                  /*"label de popup label-deshabilitado"*/
   --panel-description-color: #3399ff !important;                 /*"Color de letras de: correo de la cuenta, y dispositivos conectados"*/
-  --lwt-toolbar-field-background-color: #2f2a3c00 !important;    /*"toolbar_field":"#1a1b25"*/
-  --lwt-toolbar-field-color: #e5e5e6 !important;                 /*"toolbar_field_text":"#e2e9e9"*/
-  --lwt-toolbar-field-border-color: #4d4dfe40 !important;        /*"toolbar_field_border": "#363540"*/
+  --toolbar-field-background-color: #2f2a3c00 !important;    /*"toolbar_field":"#1a1b25"*/
+  --toolbar-field-color: #e5e5e6 !important;                 /*"toolbar_field_text":"#e2e9e9"*/
+  --toolbar-field-border-color: #4d4dfe40 !important;        /*"toolbar_field_border": "#363540"*/
   --lwt-toolbar-field-focus: #242343fc !important;               /*"toolbar_field_focus": "#1a1b25FB"*/
-  --lwt-toolbar-field-focus-color: #ffffff !important;           /*"toolbar_field_text_focus": "#e5e5e6"*/
+  --toolbar-field-focus-color: #ffffff !important;           /*"toolbar_field_text_focus": "#e5e5e6"*/
   --toolbar-field-focus-border-color: #4d4dfe !important;        /*"toolbar_field_border_focus": "#005F66"*/
   --lwt-toolbar-field-highlight: #3b439b !important;             /*"toolbar_field_highlight": "#006f80"*/
   --lwt-toolbar-field-highlight-text: #eaeaea !important;        /*"toolbar_field_highlight_text": "#eaeaea"*/
@@ -94,7 +94,9 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #identity-icon {color: #2cf62c !important; height: 14px !important; width :14px !important;}
 
 /*"ícono de marcadores y vista de lectura más pequeños"*/
-.urlbar-icon {padding: 3px !important;}
+.urlbar-page-action:not([disabled]):hover, #urlbar-go-button:focus, .search-go-button:focus {
+    background-color: #3920cc !important;}
+.urlbar-icon {margin-left: 2px !important}
 
 /*"Urlbar y Search-bar más pequeñas"*/
 #urlbar{min-height: 26px !important; margin-block: 0px 0px !important; text-shadow: none !important;}
