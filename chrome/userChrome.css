@@ -12,7 +12,7 @@
   --toolbar-field-border-color: #4d4dfe40 !important;        /*"toolbar_field_border": "#363540"*/
   --lwt-toolbar-field-focus: #242343fc !important;               /*"toolbar_field_focus": "#1a1b25FB"*/
   --toolbar-field-focus-color: #ffffff !important;           /*"toolbar_field_text_focus": "#e5e5e6"*/
-  --toolbar-field-focus-border-color: #4d4dfe !important;        /*"toolbar_field_border_focus": "#005F66"*/
+  --toolbar-field-focus-border-color: transparent !important;        /*"toolbar_field_border_focus": "#005F66"*/
   --lwt-toolbar-field-highlight: #3b439b !important;             /*"toolbar_field_highlight": "#006f80"*/
   --lwt-toolbar-field-highlight-text: #eaeaea !important;        /*"toolbar_field_highlight_text": "#eaeaea"*/
   --lwt-tab-text: #ffffff !important;                            /*"tab_text": "#ffffff"*/
