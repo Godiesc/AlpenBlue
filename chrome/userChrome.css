@@ -58,7 +58,7 @@
  background-position: var(--lwt-background-alignment) !important;}
 
 #navigator-toolbox{--tabs-border-color: #4d4dfe70 !important; }                 /*"toolbar_top_separator": "#17161c"*/
-#tabbrowser-tabs {--tab-line-color: (var(--gradient), transparent) !important}  /*"tab_line": "#126e82"*/
+#tabbrowser-tabs {--tab-line-color: (var(--panel-separator-zap-gradient), transparent) !important}  /*"tab_line": "#126e82"*/
 .browser-toolbar:not(.titlebar-color) {color: #d3d3d3 !important;}              /*"bookmark_text": "#b3d9ff"*/
 
 /*"personalizar barra de busqueda"*/
