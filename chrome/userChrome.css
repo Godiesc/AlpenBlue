@@ -105,11 +105,11 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 #searchbar {min-height: 26px !important;text-shadow: none !important; margin-block: -3px !important;}
 
 /*rework en la Linea de Contenedores*/
-tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 30px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important; border-radius: 4px !important;
+tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 30px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important; border-radius: 5px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
 tab:not([pinned],[selected]) .tab-context-line {max-width: 8px !important; height: 3px !important; margin-left: 12px !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 30px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important;border-radius: 4px !important;
+tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 30px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important;border-radius: 5px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
 tab:is([pinned]):not([selected]) .tab-context-line {max-width: 8px !important; height: 3px !important; margin-left: 15px !important; !important; margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
@@ -171,12 +171,12 @@ tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinp
 
 /*Linea gradiente en pestaña activa*/
 tab:not([pinned])[selected="true"] .tab-background {background-image: linear-gradient(160deg, #7f00bf 0%,#551dfc,#2525ff, #105fff,#2525ff, #551dfc, #7f00bf 100%) !important;
-  border-radius: 4px !important; height: 30px !important }
+  border-radius: 5px !important; height: 30px !important }
 tab:not([pinned])[selected="true"] .tab-content {background-image:  url(images/tabbackground.png);background-color: #161742 !important;
   margin-top: 3px !important; margin-left: 1px !important; margin-right: 1px !important; height: 28px !important;padding-left: 7px !important;transition-duration: 0ms !important;}
 
 tab:is([pinned])[selected="true"] .tab-background {background-image: linear-gradient(90deg,#551dfc,#1293dd, #551dfc) !important;
-  border-radius: 4px !important;}
+  border-radius: 5px !important;}
 tab:is([pinned])[selected="true"] .tab-content {background-image:  url(images/tabbackground.png);background-color: #161742 !important;
   margin-top: 3px !important;margin-left: 1px !important; margin-right: 1px !important; height: 28px !important;}
 
