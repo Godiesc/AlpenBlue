@@ -19,7 +19,7 @@
   --lwt-selected-tab-background-color: #11092300 !important;     /*"tab_selected":"#363540"*/
   --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
   --toolbar-bgcolor: #1e20358c !important;                       /*"toolbar":"#131118", "Color de la toolbar"*/
-  --toolbar-color: #1e20358c !important;                         /*"toolbar":"#1a1b25"*/
+  --toolbar-color: #8e8085 !important;                           /*"ColorLabelMarcadores":"#1a1b25"*/
   --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
   --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
   --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
