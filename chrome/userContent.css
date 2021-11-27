@@ -1,6 +1,32 @@
 :root{ scrollbar-color: #38375580 #18173530 !important; }              /*Color de la barra de desplazamiento*/
+/**{ scrollbar-width: thin !important}*/                               /*Barra de desplazamiento delgada*/
 
+window, dialog {                                                       /*Colores varios de paginas de about:addons y about:settings*/
+    background-color: #1d1d3bfA !important;
+    --in-content-primary-button-background: #3080dc !important;
+    --in-content-primary-button-text-color: #192045 !important;
+    --in-content-primary-button-background-hover: #1080ff !important;   /*color de los radiobutton (fondo) :hover*/  
+    --in-content-primary-button-background-active: #3399f0 !important;  /*color de los radiobutton (clic) con check*/    
+    
+    --checkbox-unchecked-bgcolor: #46466f !important;                   /*color de los checkbox vacíos*/
+    --checkbox-unchecked-hover-bgcolor: #4050ee !important;             /*color de los checkbox hover*/
+    --checkbox-unchecked-active-bgcolor: #26264f !important;            /*color de los checkbox al darle clic*/  
+    --checkbox-checked-bgcolor: #1040bc !important;                     /*color de los checkbox con check*/
+    --checkbox-checked-color: #fff !important;                          /*color de la palomita check*/
+    --checkbox-checked-hover-bgcolor: #cc3535 !important;               /*color de los checkbox con check hover*/
+    
+    --in-content-box-background: #1d1d38  !important;
+    --in-content-box-border-color: #3d3d88  !important;
+    
+    --in-content-button-background: #2B2A4f !important;                 /*color de botones*/
+    --in-content-button-background-hover: #2d2db0 !important;           /*color de botones :hover*/
+    --in-content-button-background-active: #2d2db0 !important;          /*color de botones al darle clic*/    
+}
 :host, :root {                                                          /*Colores varios de paginas de about:addons y about:settings*/
+    --in-content-page-background: #1c1b32 !important;                   /*Fondo general*/
+    --in-content-text-color: #fff !important;                           /*Color general de label*/
+    --in-content-page-color: #fff !important;                           /*color de texto general*/
+    --checkbox-unchecked-bgcolor: #36364f !important;                   /*color de los checkbox vacíos*/
     --checkbox-unchecked-hover-bgcolor: #4050ee !important;             /*color de los checkbox hover*/
     --checkbox-unchecked-active-bgcolor: #26264f !important;            /*color de los checkbox al darle clic*/
   
@@ -12,19 +38,30 @@
     --in-content-primary-button-background-hover: #1080ff !important;   /*color de los radiobutton (fondo) :hover*/  
     --in-content-primary-button-background-active: #3399f0 !important;  /*color de los radiobutton (clic) con check*/
                       
+    --in-content-box-background: #2B2A5f !important;                    /*color de los textbox*/
+    --in-content-box-border-color: #6060f0 !important;                  /*color del borde de los textbox*/
     --in-content-box-background-odd: #35355f !important;                /*color destinción entre filas de una tabla-atajos de busqueda*/
+    --in-content-box-info-background: #30306f !important;               /*color de la caja de elementos que se sincronizan*/
   
-    --in-content-primary-button-background: #3070ff !important;         /*color de la label colorida y de enlaces*/
-
-    --in-content-button-background-hover: #1050ff !important;           /*color de botones :hover*/
-    --in-content-button-background-active: #1050ff !important;          /*color de botones al darle clic*/
+    --in-content-primary-button-background: #1050ff !important;         /*color de la label colorida y de enlaces*/
+    --in-content-deemphasized-text: #fff !important;                    /*color de la descripción  de los temas y extensiones*/
+  
+    --in-content-border-color:  #253690 !important;                     /*Linea separadora en la configuración*/                    
+  
+    --in-content-button-background: #2B2A4f !important;                 /*color de botones*/
+    --in-content-button-background-hover: #2d2db0 !important;           /*color de botones :hover*/
+    --in-content-button-background-active: #2d2db0 !important;          /*color de botones al darle clic*/
   
     --in-content-link-color: #0099ff !important;                        /*color de links*/
     --in-content-link-color-hover: #00ccff !important;                     /*color de links*/
     --in-content-link-color-active:  #0099ff !important;                /*color de links*/
     --in-content-link-color-visited: #0099ff !important;                /*color de links*/
   
-    --card-outline-color: #2d5d90 !important;                           /*Color de borde al pasar por elementos de addons*/
+    --in-content-accent-color:  #4040fb !important;                     /*color de label del menú izquiero seleccionado*/
+    --in-content-accent-color-active: #5089ff !important;               /*color de label del menú izquiero seleccionado (al dar clic)*/
+    --card-outline-color: #2d2de0 !important;                           /*Color de borde al pasar por elementos de addons*/
+    
+    --in-content-table-background: #131424 !important;                  /*Color de fondo de tablas de "about:support"*/
     
     --in-content-item-hover: #2d4db0 !important;                        /*Color de fondo al pasar por los items de un combobox"*/
     --in-content-item-hover-text: #ffffff !important;                   /*Color de label del item hover del combobox"*/
@@ -38,9 +75,9 @@ body {
     /*-------------------------------eliminar la linea 39 al usar temas incompletos-----------------------------------------------------------------*/
     --newtab-background-color: #181735 !important;          
     
-    --newtab-textbox-background-color: color-mix( in srgb, var(--newtab-background-color) 87%, var(--newtab-wordmark-color) ) !important;  /*fondo de la barra de busqueda*/
+    --newtab-textbox-background-color: color-mix( in srgb, var(--newtab-background-color) 92%, var(--newtab-wordmark-color) ) !important;  /*fondo de la barra de busqueda*/
 
-    --newtab-background-color-secondary: #3c3d59aa !important;                                                                  /*fondo de sitios fijados*/
+    --newtab-background-color-secondary: var(--newtab-textbox-background-color) !important;                                                                  /*fondo de sitios fijados*/
     --newtab-contextmenu-background-color: red !important;                                                                      /*contextual menu de tres puntos pinned*/
     
     --newtab-element-hover-color: var(--newtab-background-color-secondary) !important;                                          /*color de fondo al hacer clic al menú 3 puntos*/
@@ -148,16 +185,14 @@ button.primary:hover {background-color: #3070ffbb !important;  color: var(--in-c
 th.column{color: #eaeaea !important; background-color: #2040df  !important;}
 panel-list {background:color-mix(in srgb, var(--in-content-page-background)90%, var(--in-content-text-color)) !important;}
 }
-
-@-moz-document url('about:home'), url('about:newtab'),url(about:privatebrowsing) {
- /*Personalizacion de la página newtab  */
-.logo-and-wordmark .logo { background: url("images/foxlogo.svg") no-repeat !important; background-size: cover !important; display: inline-block !important;}
-.logo {height: 75px !important; width: 75px !important; }    
+@-moz-document url('about:home'), url('about:newtab') {
+ /*Personalizacion de la página newtab*/    
+.logo-and-wordmark .logo { background: url("images/foxlogo.png") no-repeat !important; background-size: cover !important; display: inline-block !important;}
+.logo {height: 110px !important; width: 120px !important; }    
 .wordmark { background: url("images/firefox-wordmark.svg") no-repeat center center !important; background-size: 134px !important;-moz-context-properties: fill !important;
- display: inline-block !important; height: 82px !important; margin-inline-start: 16px !important; width: 134px !important;}
+display: inline-block !important; height: 82px !important; margin-inline-start: 16px !important; width: 134px !important;}
 .ds-outer-wrapper-breakpoint-override main {min-width: 366px !important;}
-.search-wrapper .logo-and-wordmark {margin-bottom: 0px !important;}
-.promo-cta .button { color: #cacaca !important;}}
+}
 
 @-moz-document url('about:config'), regexp("^about:(neterror|certerror).*") {
 .button[autofocus], .button[type="submit"], .button[default], button.primary {
