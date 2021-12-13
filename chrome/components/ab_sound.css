@@ -1,0 +1,26 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+/*Label de medios "Reproduciendo" modifiado*/
+tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -4px !important; margin-bottom: 2px !important; opacity: 1 !important; 
+  text-shadow: none !important;  font-weight: bold !important; background: linear-gradient(to right, #00aaff 0%, #906bff 40%, #cd4AA2 100%);
+  -webkit-background-clip: text;  -webkit-text-fill-color: transparent}
+tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important;margin-top: -4px !important; margin-bottom: 2px !important; 
+  text-shadow: none !important;  font-weight: bold !important;transition-duration:  0ms !important}
+.tab-secondary-label:is([muted], [activemedia-blocked]) {display: none !important; transition-duration: 0ms !important}
+
+/*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
+.tab-icon-image:not([pinned]){ opacity: 1 !important; margin-top: -1px !important}
+.tab-icon-image:is([pinned]):not([selected]){ margin-left: 0px !important; margin-top:0px !important;}
+.tab-icon-overlay{height: 13px !important; width: 14px !important;}
+.tab-icon-overlay:not([pinned],[crashed])[soundplaying]{transition-duration: 300ms !important;
+  opacity: 1 !important; border-radius: 9px !important; top: 1px; inset-inline-end: -15px; z-index: 1;margin-right: 16px !important; color: #ffffff !important;
+  background-color: #1d1d3800 !important; fill-opacity: 1 !important; padding: 0px !important; }
+.tab-icon-overlay:not([pinned],[crashed])[muted], .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked] 
+  {opacity: 1 !important; border-radius: 9px !important; top: -6px; inset-inline-end: -7px;z-index: 1;margin-right: 8px !important;  color: #ffffff !important;
+  background-color: #140d2d00 !important; fill-opacity: 1 !important; padding: 0px !important;}
+.tab-icon-overlay:not([crashed],[pinned])[soundplaying]:hover, .tab-icon-overlay:not([crashed],[pinned])[muted]:hover, .tab-icon-overlay:not([crashed],[pinned])[activemedia-blocked]:hover { 
+ stroke: white !important; color: black !important; fill-opacity: 1 !important; padding: 0px !important; 
+ transform: scale(1.1) !important; transition-duration: 100ms !important;}
+.tab-icon-overlay:is([pinned]){padding: 0px !important; stroke: #1d1d3870 !important; color: white !important;transition-duration: 200ms !important;}
+.tab-icon-overlay:is([pinned]):hover{stroke: white !important; color: black !important;}

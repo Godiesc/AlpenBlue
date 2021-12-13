@@ -1,0 +1,90 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+:root{
+  --lwt-accent-color: #0c0b0f !important;                        /*"frame": "#17161c" */
+  --lwt-text-color: #b3b3b3 !important;                          /*"tab_background_text": "#c3c3c3"*/
+  --arrowpanel-background: #1d1d38fa !important;                 /*"popup": "#1c1b22Fa"*/
+  --arrowpanel-color: #ffffff !important;                        /*"popup_text": "#dfdfdf"*/
+  --arrowpanel-border-color: #4d4dbe50 !important;               /*"popup_border": "#304f60"*/
+  --lwt-popup-brighttext-url-color: #4da6ff !important;          /*"color de label: El sitio no funciona?"*/
+  --panel-disabled-color: #99999990 !important;                  /*"label de popup label-deshabilitado"*/
+  --panel-description-color: #3399ff !important;                 /*"Color de letras de: correo de la cuenta, y dispositivos conectados"*/
+  --toolbar-field-background-color: #2f2a3c00 !important;        /*"toolbar_field":"#1a1b25"*/
+  --toolbar-field-color: #e5e5e6 !important;                     /*"toolbar_field_text":"#e2e9e9"*/
+  --toolbar-field-border-color: #4d4dfe40 !important;            /*"toolbar_field_border": "#363540"*/
+  --lwt-toolbar-field-focus: #242343fc !important;               /*"toolbar_field_focus": "#1a1b25FB"*/
+  --toolbar-field-focus-color: #ffffff !important;               /*"toolbar_field_text_focus": "#e5e5e6"*/
+  --toolbar-field-focus-border-color: transparent !important;    /*"toolbar_field_border_focus": "#005F66"*/
+  --lwt-toolbar-field-highlight: #304af1 !important;             /*"toolbar_field_highlight": "#006f80"*/
+  --lwt-toolbar-field-highlight-text: #eaeaea !important;        /*"toolbar_field_highlight_text": "#eaeaea"*/
+  --lwt-tab-text: #ffffff !important;                            /*"tab_text": "#ffffff"*/
+  --lwt-selected-tab-background-color: #11092300 !important;     /*"tab_selected":"#363540"*/
+  --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
+  --toolbar-bgcolor: #1e20358c !important;                       /*"toolbar":"#131118", "Color de la toolbar"*/
+  --toolbar-color: #8e8085 !important;                           /*"ColorLabelMarcadores":"#1a1b25"*/
+  --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
+  --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
+  --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
+  --toolbarbutton-icon-fill: #d8d8d9 !important;                 /*"icons": "#00dbfd"*/
+  --lwt-toolbarbutton-icon-fill-attention: #4d7afe !important;   /*"icons_attention": "#00dbfd"*/
+  --toolbarbutton-hover-background: #4d4dfe50 !important;          /*"button_background_hover": "#26242e"*/
+  --toolbarbutton-active-background: #432ad6 !important;         /*"button_background_active": "#131217"*/
+  --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
+  --lwt-sidebar-background-color: #181735 !important;
+  --sidebar-background-color: #181735 !important;
+
+  --panel-separator-zap-gradient: linear-gradient(to left, #fa00ffc0,#551dfc,#2525ff, #1293bdcc) !important;
+  --toolbarbutton-inner-padding: 5px !important;
+  --tab-block-margin: 2px 4px !important;
+  --tab-min-height:  32px !important;
+  --tabs-shadow-size: 0px !important;
+  --tab-border-radius: 4px !important;
+  --arrowpanel-menuitem-padding: 6px !important;
+  --arrowpanel-padding: 0.8em !important;
+  
+  --button-bgcolor: #393762 !important; 
+  --button-hover-bgcolor: color-mix(in srgb, #4048bf 80%, transparent) !important;
+  --button-active-bgcolor: color-mix(in srgb, #3940ac 77%, transparent) !important;
+  
+  --urlbar-icon-padding: 4px !important;
+  --panel-separator-color: #3d3772 !important;
+  --toolbarbutton-outer-padding: 3px !important;
+  --urlbar-popup-url-color: #3399ff !important;
+  --autocomplete-popup-hover-background: #3e4cff95 !important;
+  --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
+  
+  --lwt-additional-images: url("../images/derecha.svg"), url("../images/middle.png") !important;
+  --lwt-background-alignment: right top,right top !important;
+  --lwt-background-tiling: no-repeat,repeat-x !important;
+  
+  --gradient: linear-gradient(160deg, #7f00bf 0%,#551dfc,#2525ff, #105fff,#2525ff, #551dfc, #7f00bf 100%) !important;
+  
+  /*ColorBotónGuardar*/
+    --button-primary-bgcolor: #304af1 !important;
+
+    /*ColorLetrasBotónGuardar*/
+    --button-primary-color: #eaeaea !important;
+
+    /*ColorBotónGuardar:Hover*/
+    --button-primary-hover-bgcolor: #2c3da0 !important;
+
+    /*ColorBotónGuardar:clic*/
+    --button-primary-active-bgcolor: #0073b1 !important;
+
+    /*Color borde en InputText Focus*/
+    --focus-outline-color: #407aef !important;
+
+    /*Color borde en InputText*/
+    --input-border-color: var(--focus-outline-color) !important;
+
+    /*Colores checkbox —v*/
+    --checkbox-unchecked-bgcolor: var(--button-bgcolor) !important;
+    --checkbox-unchecked-hover-bgcolor: var(--button-primary-bgcolor) !important;      
+    --checkbox-unchecked-active-bgcolor: var(--button-primary-bgcolor) !important;
+    --checkbox-checked-border-color: transparent !important;
+    --checkbox-checked-bgcolor: var(--button-primary-bgcolor) !important;
+    --checkbox-checked-color: #eaeaea !important;
+    --checkbox-checked-hover-bgcolor: #cc3535 !important;
+    --checkbox-checked-active-bgcolor: var(--button-primary-bgcolor) !important;  
+}

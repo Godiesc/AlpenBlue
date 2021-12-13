@@ -1,0 +1,22 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+/*rework en la Linea de Contenedores*/
+tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 32px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important; border-radius: 4px !important;
+  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
+tab:not([pinned],[selected]) .tab-context-line {max-width: 12px !important; height: 3px !important; margin-left: 12px !important; margin-bottom: 0px !important;
+  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
+tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 32px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important;border-radius: 4px !important;
+  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
+tab:is([pinned]):not([selected]) .tab-context-line {max-width: 12px !important; height: 3px !important; margin-left: 14px !important; !important; margin-bottom: 0px !important;
+  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
+
+/*Personalización de colores y presentación de pestañas en contenedores*//*Personalización de colores y presentación de pestañas en contenedores*/
+.identity-color-blue {--identity-tab-color: #2574A7 !important; --identity-icon-color: #2574A7 !important;}
+.identity-color-green {--identity-tab-color: #1E934F !important; --identity-icon-color: #1E934F !important;}
+.identity-color-orange {--identity-tab-color: #e67e22 !important; --identity-icon-color: #e67e22 !important;}
+.identity-color-red {--identity-tab-color: #ff392b !important; --identity-icon-color: #ff392b !important; }
+.identity-color-pink {--identity-tab-color: #ff33bb !important; --identity-icon-color: #ff33bb !important;}
+.identity-color-purple {--identity-tab-color: #813E9D !important; --identity-icon-color: #813E9D !important;}
+.identity-color-yellow {--identity-tab-color: #e6b803 !important; --identity-icon-color: #e6b803 !important;}
+.identity-color-turquoise {--identity-tab-color: #03b48d !important; --identity-icon-color: #03b48d !important;}

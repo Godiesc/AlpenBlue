@@ -1,0 +1,33 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+/*---------------------------Página -> "Personalizar Toolbar---------------------------*/
+
+/*"Color de fondo e íconos en "Perzonalizar barra de herramientas"*/
+#customization-container {color: #eaeaea !important; background-color: #232343 !important;} 
+
+.customizationmode-button {
+    background-color: var(--button-bgcolor) !important;
+    border-color: color-mix(in srgb, var(--arrowpanel-background) 80%, var(--lwt-tab-text, FieldText)) !important;
+    color: var(--lwt-tab-text) !important;
+    border-radius: 4px !important;
+}
+.customizationmode-button:is(:active, :hover):not([disabled]), .customizationmode-button[open], .customizationmode-button[checked] {
+    background-color: var(--button-primary-bgcolor) !important;
+    border-color: #2b7aff !important;
+    color: var(--lwt-tab-text) !important;
+}
+#customization-done-button {
+    color: #fff !important;
+    border-color: #3a84ff !important;
+    background-color: var(--button-primary-bgcolor) !important;
+}
+#customization-done-button:is(:active, :hover):not([disabled]) {
+    background-color: var(--button-primary-hover-bgcolor) !important;
+    border-color: #2b5abf !important;
+}
+/*Borde Redondeado - menú de debordamiento*/
+
+.panel-arrowcontent {
+    border-radius: 8px !important;
+}

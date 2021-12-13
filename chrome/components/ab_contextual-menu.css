@@ -1,0 +1,17 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+/*colores del Menú contextual*/
+/*"Menú con menos espacios"*/
+menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;} 
+/* Menu items border and padding */
+  menu, menuitem {border-radius: 4px !important; margin-left: 4px !important; margin-right: 4px !important;
+  padding-inline-start: 0.5em !important}
+/*borde izquierda y derecha del menú contextual*/
+  menugroup > menuitem:first-child {padding-left: 4px !important;} 
+  menugroup > menuitem:last-child { padding-right: 4px !important;}
+
+menuseparator {border-top: 1px solid #3d3762 !important; padding: 0 !important; margin: 2px 5px !important;}
+.menupopup-arrowscrollbox {background-color:#1f1f38 !important; border: 1px solid !important;  border-color: #4d4dbe50 !important;}
+menu[_moz-menuactive="true"]:not([disabled="true"]), menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+ background-color: #3949aa !important; color: #eaeaea !important; --menuitem-hover-background-color: #3949aa !important;}
