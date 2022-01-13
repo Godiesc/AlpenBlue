@@ -2,7 +2,7 @@
    https://github.com/Godiesc/AlpenBlue */
 
 /*"toolbar_top_separator": "#17161c"*/
-#navigator-toolbox{--tabs-border-color: #4d4dfe70 !important; }                 
+#navigator-toolbox{--lwt-tabs-border-color: #4d4dfe70 !important; }                 
 
 /*"bookmark_text": "#b3d9ff"*/
 .browser-toolbar:not(.titlebar-color) {color: #d3d3d3 !important;}              
