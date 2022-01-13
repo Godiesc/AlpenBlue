@@ -19,7 +19,8 @@
     background-repeat: no-repeat !important;
 }
 /*"tab_line": "#126e82"*/
-#tabbrowser-tabs {--tab-line-color: var(--gradient, transparent) !important}
+#tabbrowser-tabs {--tab-line-color: transparent !important}
+#tabbrowser-tabs { --lwt-tab-line-color: var(--gradient, transparent) !important; }
 
 /*"Medidas menores para scroll de pestañas"*/
 #tabbrowser-tabs{ --uc-tabs-scrollbutton-border: 0px !important; }
