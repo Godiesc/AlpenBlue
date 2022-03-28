@@ -5,7 +5,7 @@
 
 ![imagen](https://user-images.githubusercontent.com/22057609/145844543-168ad399-0c94-4912-8fff-9fe63376120f.png)
 
-The theme is <a href="https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/">Alpen Blue 💙</a>
+<ul><li>The theme is <a href="https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/">Alpen Blue 💙</a></li></ul>
 
 # ¿Cómo instalar? - How to install?
 
