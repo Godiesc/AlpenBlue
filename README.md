@@ -1,11 +1,10 @@
 # Alpen Blue to Firefox CSS
-
+<ul><li>Theme to Blue Lovers. v89+ versions of the browser.</li></ul>
 ![imagen](https://user-images.githubusercontent.com/22057609/145844106-ab68952b-d948-4531-b5cc-ca2945013b97.png)
 
 ![imagen](https://user-images.githubusercontent.com/22057609/145844543-168ad399-0c94-4912-8fff-9fe63376120f.png)
 
-
-Theme to Blue Lovers. v89+ versions of the browser.
+The themes is <a href="https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/">Alpen Blue</a>.
 
 # ¿Cómo instalar? - How to install?
 
@@ -22,8 +21,6 @@ Theme to Blue Lovers. v89+ versions of the browser.
    <ul>
 <li>(ES) Para encontrar el directorio de tu perfil ve a <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles. </li>
 <li>(EN) To find out your profile directory go to <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles.</li></ul>
-
-The themes is <a href="https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/">Alpen Blue</a>.
 
 # Example of about:support
 
