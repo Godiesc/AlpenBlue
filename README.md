@@ -20,8 +20,8 @@ Theme to Blue Lovers. v89+ versions of the browser.
    <li>Copy the chrome folder and the user.js file into your Firefox profile directory. </li>
    <li>Restart the browser. </li></ol>
    <ul>
-<li>(ES) Para encontrar el directorio de tu perfil ve a <a href="https://github.com/Godiesc/AlpenBlue#--example-of-aboutsupport"> about:support</a> or about:profiles. </li>
-<li>(EN) To find out your profile directory go to <a href="https://github.com/Godiesc/AlpenBlue#--example-of-aboutsupport"> about:support</a> or about:profiles.</li></ul>
+<li>(ES) Para encontrar el directorio de tu perfil ve a <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles. </li>
+<li>(EN) To find out your profile directory go to <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles.</li></ul>
 
 # Example of about:support
 
