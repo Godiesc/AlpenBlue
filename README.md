@@ -23,6 +23,8 @@ Theme to Blue Lovers. v89+ versions of the browser.
 <li>(ES) Para encontrar el directorio de tu perfil ve a <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles. </li>
 <li>(EN) To find out your profile directory go to <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles.</li></ul>
 
+The themes is <a href="https://addons.mozilla.org/es/firefox/addon/beautiful-alpen-blue/">Alpen Blue</a>.
+
 # Example of about:support
 
 ![156908375-824f8679-56a5-4d09-a86f-353a7f61135e](https://user-images.githubusercontent.com/22057609/160463037-5d8ca94d-3254-47ed-92be-c9ea800d6a44.png)
