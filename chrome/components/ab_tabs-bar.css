@@ -14,7 +14,8 @@
   box-shadow: none !important;
   background-clip: padding-box;
   background-image:  url("../images/tabbackground.png") !important;
-  background-size:cover !important;   
+  background-size:cover !important;
+  border-radius: 5px !important;
 }
 .tab-background[selected] > .tab-context-line{ margin: -5px 0 0 !important; }
 .tabbrowser-tab[selected] > .tab-stack::before{
