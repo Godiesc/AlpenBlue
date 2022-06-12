@@ -52,6 +52,7 @@ panel menulist:hover, panel menulist[open] {
 
 treechildren::-moz-tree-row(selected) {
     background-color: var(--button-primary-bgcolor) !important;
+    outline: none !important;
 }
 treechildren::-moz-tree-image(selected), treechildren::-moz-tree-twisty(selected), treechildren::-moz-tree-cell-text(selected) {
     color: white !important;
