@@ -2,17 +2,34 @@
    https://github.com/Godiesc/AlpenBlue */
 
 /*Linea de arcoiris en los menús principales*/
-.PanelUI-subView > toolbarseparator {border-image: var(--panel-separator-zap-gradient) 1 !important;}
-
+.PanelUI-subView > toolbarseparator {border-image: var(--panel-separator-zap-gradient) 1 !important;
+}
+/* Tamaño menu Open */
+#appMenu-popup panelview{ width: 24em !important; 
+}
+/*Color fondo gradiente :hover por los diferentes items de menús principales*/
+.protections-popup-category:hover, .protections-popup-footer-button:hover, #protections-popup-show-report-stack:hover > .protections-popup-footer-button,
+ panelview .toolbarbutton-1:not([disabled], [open]):is(:hover), toolbarbutton.subviewbutton:not([disabled], [open],.subviewbutton-back):is(:hover), 
+.navigable.subviewbutton:not([disabled], [open]):is(:hover), menu.subviewbutton:not([disabled])[_moz-menuhover],
+ menuitem.subviewbutton:not([disabled])[_moz-menuhover], .widget-overflow-list .toolbarbutton-1:not([disabled], [open]):is(:hover),
+.toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton:not([disabled], [open]):is(:hover) {
+ background: var(--panel-separator-zap-gradient) ;
+}
 /*Color label deshabilitado "protección contra rastreo"*/
 .protections-popup-category.notFound {color: #777777 !important;}
 .panel-info-button:not([disabled]):is([checked],:hover, :active) {background-color: #4e6bfd65 !important;}
-.panel-info-button:not([disabled]):is(:hover) {background-color: #4e6bfdbb !important;}
-
+.panel-info-button:not([disabled]):is(:hover) {background-color: #4e6bfdbb !important;
+}
 /*Color Sidebar*/
 #sidebar-box{
   background-color: #181735 !important;
 }
+/* Alinear lista de pestañas sincronizadas */
+.PanelUI-remotetabs-clientcontainer label {
+    padding-inline-start: 0px !important;
+}
+/* Fondo :hover botones de zoom */
+#appMenu-zoom-controls2 > .subviewbutton:not([disabled]):is(:hover, :hover:active) { background: transparent !important }
 
 /*-----------------íconos en el menú de hamburguesa----------------------*/
 

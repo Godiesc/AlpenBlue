@@ -2,15 +2,32 @@
    https://github.com/Godiesc/AlpenBlue */
 
 /*rework en la Linea de Contenedores*/
-tab:not([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 32px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important; border-radius: 4px !important;
-  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:not([pinned],[selected]) .tab-context-line {max-width: 12px !important; height: 3px !important; margin-left: 12px !important; margin-bottom: 0px !important;
-  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned])[selected] .tab-context-line {max-width: -moz-available !important; height: 32px !important; margin-left: 0px !important;margin-right:  0px !important; margin-bottom: 0px !important;border-radius: 4px !important;
-  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-tab:is([pinned]):not([selected]) .tab-context-line {max-width: 12px !important; height: 3px !important; margin-left: 14px !important; !important; margin-bottom: 0px !important;
-  -moz-box-ordinal-group: 2 !important; opacity: 1 !important; }
-
+tab:not([pinned])[selected] .tab-context-line {
+  max-width: 16px !important; 
+  height: 2px !important; 
+  margin-left: 8px !important; 
+  margin-bottom: 0px !important;
+  -moz-box-ordinal-group: 2 !important;  }
+tab:not([pinned],[selected]) .tab-context-line {
+  max-width: 12px !important; 
+  height: 3px !important; 
+  margin-left: 11px !important; 
+  margin-bottom: 1px !important;
+  -moz-box-ordinal-group: 2 !important; 
+}
+tab:is([pinned])[selected] .tab-context-line {
+  max-width: 16px !important; 
+  height: 2px !important; 
+  margin-left: 9px !important; 
+  margin-bottom: 0px !important;
+  -moz-box-ordinal-group: 2 !important; }
+tab:is([pinned]):not([selected]) .tab-context-line {
+  max-width: 12px !important; 
+  height: 3px !important; 
+  margin-left: 12px !important; 
+  margin-bottom: 1px !important;
+  -moz-box-ordinal-group: 2 !important; 
+}
 /*Personalización de colores y presentación de pestañas en contenedores*//*Personalización de colores y presentación de pestañas en contenedores*/
 .identity-color-blue {--identity-tab-color: #2574A7 !important; --identity-icon-color: #2574A7 !important;}
 .identity-color-green {--identity-tab-color: #1E934F !important; --identity-icon-color: #1E934F !important;}

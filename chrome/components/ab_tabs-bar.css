@@ -2,13 +2,41 @@
    https://github.com/Godiesc/AlpenBlue */
 
 /*Imagenes superiores*/
-#navigator-toolbox { background-image:  var(--lwt-additional-images) !important; background-repeat: var(--lwt-background-tiling) !important;
- background-position: var(--lwt-background-alignment) !important;}
-
+#navigator-toolbox { 
+    background-image:  var(--lwt-additional-images) !important; 
+    background-repeat: var(--lwt-background-tiling) !important;
+    background-position: var(--lwt-background-alignment) !important;
+}
+/* Linea Gradiente Pestaña Activa */
+.tab-background[selected]{
+  outline: none !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  background-clip: padding-box;
+  background-image:  url("../images/tabbackground.png") !important;
+  background-size:cover !important;   
+}
+.tab-background[selected] > .tab-context-line{ margin: -5px 0 0 !important; }
+.tabbrowser-tab[selected] > .tab-stack::before{
+  content: "";
+  display: -moz-box;
+  min-height: inherit;
+  border-radius: var(--tab-border-radius);
+  grid-area: 1/1;
+  margin-block: var(--tab-block-margin);
+  background: var( --identity-tab-color, var(--gradient)) !important;
+}
+/* Alinear pestañas */
+.tabbrowser-tab { padding-left: 2px !important; padding-right: 0px !important; margin-right: 0px !important; }
+.tab-content { padding-bottom: 2px !important;
+}
+/* Sombra-shadow > label de pestañas */
+.tab-label{ text-shadow: none !important; 
+}
 /*Centrar botón "Open Newtab"*/
 #TabsToolbar .toolbarbutton-1 {
-    margin-top: -1px !important;
     margin-left: -1px !important;
+    height: var(--tab-height-personal) !important;
 }
 /*favicon de pagina newtab*/
 .tab-icon-image[src="chrome://branding/content/icon32.png"] {
@@ -37,39 +65,4 @@
 /* Reduce spacing between pinned and regular tabs */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0px !important;
-}
-/*Linea gradiente en pestaña activa*/
-.tabbrowser-tab .tab-stack {padding-left: 1px !important;}
-.tabbrowser-tab .tab-background{height: 32px !important; margin-left: -1px !important; margin-right: -1px !important}
-.tabbrowser-tab:not([pinned])[selected="true"] .tab-background {
-    background-image: var(--gradient) !important;
-    border-radius: 4px !important;
-    height: 32px !important;
-    margin-left: -1px !important;
-    margin-right: -1px !important
-}
-.tabbrowser-tab .tab-content {margin-top: 3px !important; height: 30px !important;}
-.tabbrowser-tab:not([pinned], [multiselected])[selected="true"] .tab-content:not([multiselected]) {
-    background-image:  url("../images/tabbackground.png");
-    border-radius: 4px !important;
-    margin-top: 3px !important;
-    height: 30px !important;
-    transition-duration: 0ms !important;
-    backdrop-filter: saturate(35%) brightness(10%) !important;
-}
-.tabbrowser-tab:is([pinned]):not([selected="true"]) .tab-background {height: 32px !important; margin-left: -1px !important; margin-right: -1px !important;}
-.tabbrowser-tab:is([pinned])[selected="true"] .tab-background {
-    background-image: var(--gradient) !important;
-    border-radius: 4px !important;
-    height: 32px !important;
-    margin-left: -1px !important;
-    margin-right: -1px !important;
-}
-.tabbrowser-tab:is([pinned]):not([selected="true"]) .tab-content { margin-top: 3px !important; height: 30px !important;}
-.tabbrowser-tab:is([pinned])[selected="true"]:not([multiselected]) .tab-content {
-    background-image:  url("../images/tabbackground.png");
-    border-radius: 4px !important;
-    margin-top: 3px !important;
-    height: 30px !important;
-    backdrop-filter: saturate(35%) brightness(10%) !important;
 }

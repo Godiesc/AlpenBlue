@@ -1,6 +1,7 @@
 /* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
    https://github.com/Godiesc/AlpenBlue */
    
+@import url('components/ab_root-personal.css');
 @import url('components/ab_root.css');
 @import url('components/ab_tabs-bar.css');
 @import url('components/ab_urlbar-searchbar.css');

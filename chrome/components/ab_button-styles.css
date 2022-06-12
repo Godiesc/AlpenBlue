@@ -14,10 +14,11 @@
 /*color Rojo de boton "borrar marcador"*/
 
 #editBookmarkPanelBottomButtons>#editBookmarkPanelRemoveButton {
-    box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--arrowpanel-background) 80%, var(--lwt-tab-text, Field)) !important;
+    background-color: #da3633cb !important;
+    color: #f0f6fc !important;
 }
 #editBookmarkPanelBottomButtons>#editBookmarkPanelRemoveButton:hover {
-    background-color: #da3633 !important;
+    background-color: #ea3633 !important;
     color: #f0f6fc !important;
     box-shadow: none !important;
 }
@@ -29,7 +30,7 @@
 /*Color del botón menú deplegable*/
 
 panel menulist, panel menulist:not([open]) {
-    box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--arrowpanel-background) 80%, var(--lwt-tab-text, Field)) !important;
+    box-shadow: none !important;
 }
 panel menulist:hover, panel menulist[open] {
     background-color: var(--button-primary-bgcolor) !important;
@@ -39,7 +40,7 @@ panel menulist:hover, panel menulist[open] {
 /*Color -fondo y borde- menu desplegable (flecha hacia abajo)*/
 
 #editBookmarkPanel .expander-up, #editBookmarkPanel .expander-down {
-    border-color: color-mix(in srgb, var(--arrowpanel-background) 80%, var(--lwt-tab-text, Field)) !important;
+    border-color: transparent !important;
     border-radius: 4px !important
 }
 #editBookmarkPanel .expander-up:hover, #editBookmarkPanel .expander-down:hover {
@@ -55,7 +56,14 @@ treechildren::-moz-tree-row(selected) {
 treechildren::-moz-tree-image(selected), treechildren::-moz-tree-twisty(selected), treechildren::-moz-tree-cell-text(selected) {
     color: white !important;
 }
-
+#editBMPanel_folderTree treechildren{
+    background-color: var(--arrowpanel-background) !important;
+    color: white !important;
+}
+#editBMPanel_tagsSelector{
+    background-color: #2e273f !important;
+    border: 1px solid var(--input-border-color) !important;
+}
 /*--------------------------Marcadores----------------------------------*/
 
 /*Color de "highlight" inputtext*/
@@ -76,4 +84,25 @@ richlistitem[selected="true"], #editBMPanel_namePicker::selection , #editBMPanel
   border-radius: 4px !important;
   margin-top: 4px !important;
   margin-inline-start: 4px !important;
+}
+/*"personalizar barra de busqueda"*/
+findbar:-moz-lwtheme {
+    background-color: var(--toolbar-bgcolor) !important;
+    color: #d3d3d3 !important;  
+    border-color: var(--input-border-color) !important; }     
+.findbar-find-status[status="notfound"] { 
+    color: var(--lwt-toolbarbutton-icon-fill-attention) !important; 
+    font-weight: 600 !important; 
+}
+/*Aspecto tooltip: mouse hover on elements*/
+tooltip {
+	appearance: none !important;
+    background: color-mix(in srgb, var(--arrowpanel-background) 96%, white) !important;
+	color: var(--lwt-tab-text) !important;
+	border-color: color-mix(in srgb, var(--arrowpanel-background)80%, white) !important;
+	padding-inline: 4px 4px !important;
+	font-family: Fira Sans !important;
+	font-size: 14px !important;
+	opacity: 1 !important;
+    border-radius: 0px !important;
 }

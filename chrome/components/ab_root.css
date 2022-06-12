@@ -33,19 +33,14 @@
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
   --lwt-sidebar-background-color: #181735 !important;
   --sidebar-background-color: #181735 !important;
-
-  --panel-separator-zap-gradient: linear-gradient(to left, #fa00ffc0,#551dfc,#2525ff, #1293bdcc) !important;
+  
   --toolbarbutton-inner-padding: 5px !important;
-  --tab-block-margin: 2px 4px !important;
-  --tab-min-height:  32px !important;
+  --tab-block-margin: 2px 3px !important;
+  --tab-min-height: var(--tab-height-personal) !important; /*tamaño pestañas*/
   --tabs-shadow-size: 0px !important;
   --tab-border-radius: 4px !important;
   --arrowpanel-menuitem-padding: 6px !important;
   --arrowpanel-padding: 0.8em !important;
-  
-  --button-bgcolor: #393762 !important; 
-  --button-hover-bgcolor: color-mix(in srgb, #4048bf 80%, transparent) !important;
-  --button-active-bgcolor: color-mix(in srgb, #3940ac 77%, transparent) !important;
   
   --urlbar-icon-padding: 4px !important;
   --panel-separator-color: #3d3772 !important;
@@ -53,15 +48,15 @@
   --urlbar-popup-url-color: #3399ff !important;
   --autocomplete-popup-hover-background: #3e4cff95 !important;
   --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
+    
+  scrollbar-color: #38375580 #18173530 !important;                                                                      /* Colores - Barra de deplazamiento */
   
   --lwt-additional-images: url("../images/derecha.svg"), url("../images/middle.png") !important;
   --lwt-background-alignment: right top,right top !important;
   --lwt-background-tiling: no-repeat,repeat-x !important;
   
-  --gradient: linear-gradient(160deg, #7f00bf 0%,#551dfc,#2525ff, #105fff,#2525ff, #551dfc, #7f00bf 100%) !important;
-  
   /*ColorBotónGuardar*/
-    --button-primary-bgcolor: #304af1 !important;
+    --button-primary-bgcolor: #3b55fc !important;
 
     /*ColorLetrasBotónGuardar*/
     --button-primary-color: #eaeaea !important;
@@ -71,12 +66,15 @@
 
     /*ColorBotónGuardar:clic*/
     --button-primary-active-bgcolor: #0073b1 !important;
-
+    
+    /*Color input background en Marcadores*/
+    --input-bgcolor: color-mix(in srgb, var(--arrowpanel-background)80%, black) !important;
+    
     /*Color borde en InputText Focus*/
-    --focus-outline-color: #407aef !important;
+    --focus-outline-color: #4d4dfe !important;
 
     /*Color borde en InputText*/
-    --input-border-color: var(--focus-outline-color) !important;
+    --input-border-color: #2d2d5e !important;
 
     /*Colores checkbox —v*/
     --checkbox-unchecked-bgcolor: var(--button-bgcolor) !important;

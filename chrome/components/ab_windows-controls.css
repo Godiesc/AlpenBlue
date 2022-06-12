@@ -1,16 +1,22 @@
 /* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
-   https://github.com/Godiesc/AlpenBlue */
+   https://github.com/Godiesc/Chameleons-Beauty */
 
 /*WindowsControls borde redondeado*/
 
-.titlebar-button:not(.titlebar-close) {
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-button:not(.titlebar-close) {
     padding-left: 14px !important;
     padding-right: 14px !important;
-}
-.titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
-    border-radius: 0 0 4px 4px !important;
-    margin-bottom: 2px !important
-}
-.titlebar-close:hover {
-    border-radius: 0px 0 4px 4px !important;
-}
+   }}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-button:not(.titlebar-close):hover {
+    background-color: var(--toolbarbutton-hover-background) !important
+   }}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+    border-radius: 4px !important;
+    border: 2px solid #00000000 !important;
+    margin-bottom: -1px !important
+   }}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-min:hover, .titlebar-max:hover, .titlebar-restore:hover, .titlebar-close:hover {
+    border-radius: 4px !important;
+    border: 2px solid transparent !important;
+    background-clip: padding-box !important;
+   }}

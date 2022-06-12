@@ -1,0 +1,34 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/opera-gx */
+
+  /*--------------------------<-Personalizaciones Varias->----------------------------*/
+  :root{
+    
+  --lwt-main-image:  url("../images/newtab/wallpaper.png");                                  /* new-tab page image */
+  --wallpaper-size: auto auto;                                                               /* cover-> default ; auto auto -> to see all the image */
+  
+  --tab-height-personal: 32px ;                                                              /* Tamaño altura de pestañas*/
+  --toolbar-height-personal: 34px ;                                                          /* Toolbar height */
+  
+  --left-color: #fa00ff ;                                                                    /* Color left wordmark */
+  --right-color: #00bbff ;                                                                   /* Color right wordmark */
+  
+  --logo-wordmark-visibility: 1 ;                                                            /* :1 visible, :0 invisible ; Logo-wordmark*/
+  --searchbar-on-off: flex ;                                                                 /* :none ->eliminar Searchbar , :flex ->Mostrar searchbar*/
+  
+  --newtab-pinnedsites-background: color-mix(in srgb, #393762 50%, transparent) ;            /* color - fondo de sitios fijados y barra de búsqueda*/
+  
+  --selected-text-background: var(--button-active-bgcolor);                                  /* Selected text background */
+}
+
+:root{
+  /*--------------------------Gradiente Pestaña seleccionada - Gradiente general y :hover items------------------------------------*/
+  --gradient: linear-gradient(160deg, #7f00bf 0%,#551dfc,#2525ff, #105fff,#2525ff, #551dfc, #7f00bf 100%) !important;
+  
+  --panel-separator-zap-gradient: linear-gradient( to left, #902c8ad0 -20%, #902cfc90 30%, #2e4a9f 100%) !important;
+  
+  /*------------------------------Botones hover, clic--------------------------------*/
+  --button-bgcolor: #393762 !important; 
+  --button-hover-bgcolor: color-mix(in srgb, #4048bf 80%, transparent) !important;
+  --button-active-bgcolor: color-mix(in srgb, #2558bf 97%, transparent) !important;
+}
