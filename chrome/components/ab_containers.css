@@ -9,20 +9,20 @@ tab:not([pinned])[selected] .tab-context-line {
   margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important;  }
 tab:not([pinned],[selected]) .tab-context-line {
-  max-width: 12px !important; 
+  max-width: 13px !important; 
   height: 3px !important; 
-  margin-left: 11px !important; 
+  margin-left: 10px !important; 
   margin-bottom: 1px !important;
   -moz-box-ordinal-group: 2 !important; 
 }
 tab:is([pinned])[selected] .tab-context-line {
   max-width: 16px !important; 
   height: 2px !important; 
-  margin-left: 9px !important; 
+  margin-left: 10px !important; 
   margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important; }
 tab:is([pinned]):not([selected]) .tab-context-line {
-  max-width: 12px !important; 
+  max-width: 13px !important; 
   height: 3px !important; 
   margin-left: 12px !important; 
   margin-bottom: 1px !important;
