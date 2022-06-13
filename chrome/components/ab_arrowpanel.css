@@ -35,7 +35,7 @@
 
 /*Posicion y margen de los íconos*/
 
-#PanelUI-fxa-menu-connect-device-button, #PanelUI-fxa-menu-sendtab-button, #PanelUI-fxa-menu-account-signout-button, [oncommand="switchToTabHavingURI('about:performance', true)"] {
+#PanelUI-fxa-menu-connect-device-button, #PanelUI-fxa-menu-account-signout-button, [oncommand="switchToTabHavingURI('about:performance', true)"] {
     background-position: left 8px center;
     background-repeat: no-repeat;
     background-size: 16px;
