@@ -11,7 +11,7 @@
   --toolbar-height-personal: 34px ;                                                          /* Toolbar height */
   
   --left-color: #fa00ff ;                                                                    /* Color left wordmark */
-  --right-color: #00bbff ;                                                                   /* Color right wordmark */
+  --right-color: #0096cc ;                                                                   /* Color right wordmark */
   
   --logo-wordmark-visibility: 1 ;                                                            /* :1 visible, :0 invisible ; Logo-wordmark*/
   --searchbar-on-off: flex ;                                                                 /* :none ->eliminar Searchbar , :flex ->Mostrar searchbar*/
