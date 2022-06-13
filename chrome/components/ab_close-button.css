@@ -11,7 +11,7 @@
     border-radius: 8px !important;
 }
 .tab-close-button:hover {
-    background-color: var(--toolbarbutton-active-background) !important;
+    background-color: var(--identity-tab-color, var(--toolbarbutton-active-background)) !important;
 }
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
     display: -moz-box !important
