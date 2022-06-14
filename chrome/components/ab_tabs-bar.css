@@ -14,7 +14,7 @@
   box-shadow: none !important;
   background-clip: padding-box;
   background-image:  url("../images/tabbackground.png") !important;
-  background-size:cover !important;
+  background-size:cover !important;   
   border-radius: 5px !important;
 }
 .tab-background[selected] > .tab-context-line{ margin: -5px 0 0 !important; }
@@ -32,7 +32,12 @@
 .tab-content { padding-bottom: 2px !important;
 }
 /* Sombra-shadow > label de pestañas */
-.tab-label{ text-shadow: none !important; 
+.tab-label{ text-shadow: none !important; font-weight: 600 !important;}
+.tab-label[selected]{
+    color: #ccddcc !important;
+  /*background: linear-gradient(to right, #22bbff 0%, #a08bff 25%, #ff6Ac2 60%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;*/
 }
 /*Centrar botón "Open Newtab"*/
 #TabsToolbar .toolbarbutton-1 {

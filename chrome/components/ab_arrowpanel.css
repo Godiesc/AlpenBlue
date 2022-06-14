@@ -13,7 +13,7 @@
 .navigable.subviewbutton:not([disabled], [open]):is(:hover), menu.subviewbutton:not([disabled])[_moz-menuhover],
  menuitem.subviewbutton:not([disabled])[_moz-menuhover], .widget-overflow-list .toolbarbutton-1:not([disabled], [open]):is(:hover),
 .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton:not([disabled], [open]):is(:hover) {
- background: var(--panel-separator-zap-gradient) ;
+    background-image: var(--panel-separator-zap-gradient) ;
 }
 /*Color label deshabilitado "protección contra rastreo"*/
 .protections-popup-category.notFound {color: #777777 !important;}
@@ -32,9 +32,17 @@
 #appMenu-zoom-controls2 > .subviewbutton:not([disabled]):is(:hover, :hover:active) { background: transparent !important }
 
 /*-----------------íconos en el menú de hamburguesa----------------------*/
-
+/* Logo Hamburguer menu */
+#PanelUI-menu-button > stack{
+    list-style-image: url("../images/foxlogo.svg") !important;
+    height: inherit !important;
+    width: inherit !important; 
+}
+#PanelUI-menu-button[open="true"] > stack{
+    list-style-image: url("../images/foxfill.svg") !important;
+    fill: #cacaca !important;
+}
 /*Posicion y margen de los íconos*/
-
 #PanelUI-fxa-menu-connect-device-button, #PanelUI-fxa-menu-account-signout-button, [oncommand="switchToTabHavingURI('about:performance', true)"] {
     background-position: left 8px center;
     background-repeat: no-repeat;
@@ -147,10 +155,11 @@
     list-style-image: url("chrome://global/skin/icons/help.svg");
 }
 /*Ícono salir*/
-
 #appMenu-quit-button2 {
-    list-style-image: url("../images/quit.png");    
-    color: #fff !important;
+    list-style-image: url("../images/quit1.svg");
+}
+#appMenu-quit-button2:hover {
+    list-style-image: url("../images/quit2.svg");
 }
 /*Íconos de marcadores*/
 

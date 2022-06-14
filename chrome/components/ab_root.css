@@ -3,6 +3,7 @@
 
 :root{
   --lwt-accent-color: #0c0b0f !important;                        /*"frame": "#17161c" */
+  --lwt-frame: var(--lwt-accent-color) !important;
   --lwt-text-color: #b3b3b3 !important;                          /*"tab_background_text": "#c3c3c3"*/
   --arrowpanel-background: #1d1d38fa !important;                 /*"popup": "#1c1b22Fa"*/
   --arrowpanel-color: #ffffff !important;                        /*"popup_text": "#dfdfdf"*/
@@ -12,7 +13,7 @@
   --panel-description-color: #3399ff !important;                 /*"Color de letras de: correo de la cuenta, y dispositivos conectados"*/
   --toolbar-field-background-color: #2f2a3c00 !important;        /*"toolbar_field":"#1a1b25"*/
   --toolbar-field-color: #e5e5e6 !important;                     /*"toolbar_field_text":"#e2e9e9"*/
-  --toolbar-field-border-color: #4d4dfe40 !important;            /*"toolbar_field_border": "#363540"*/
+  --toolbar-field-border-color: #4d4dbe34 !important;            /*"toolbar_field_border": "#363540"*/
   --lwt-toolbar-field-focus: #242343fc !important;               /*"toolbar_field_focus": "#1a1b25FB"*/
   --toolbar-field-focus-color: #ffffff !important;               /*"toolbar_field_text_focus": "#e5e5e6"*/
   --toolbar-field-focus-border-color: transparent !important;    /*"toolbar_field_border_focus": "#005F66"*/
@@ -26,10 +27,10 @@
   --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
   --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
   --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
-  --toolbarbutton-icon-fill: #d8d8d9 !important;                 /*"icons": "#00dbfd"*/
+  --toolbarbutton-icon-fill: #eaeaea !important;                 /*"icons": "#00dbfd"*/
   --lwt-toolbarbutton-icon-fill-attention: #4d7afe !important;   /*"icons_attention": "#00dbfd"*/
-  --toolbarbutton-hover-background: #4d4dfe50 !important;          /*"button_background_hover": "#26242e"*/
-  --toolbarbutton-active-background: #432ad6 !important;         /*"button_background_active": "#131217"*/
+  --toolbarbutton-hover-background: #4d4dfe50 !important;        /*"button_background_hover": "#26242e"*/
+  --toolbarbutton-active-background: #4d4dfe78 !important;       /*"button_background_active": "#131217"*/
   --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
   --lwt-sidebar-background-color: #181735 !important;
   --sidebar-background-color: #181735 !important;
@@ -49,7 +50,7 @@
   --autocomplete-popup-hover-background: #3e4cff95 !important;
   --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
     
-  scrollbar-color: #38375580 #18173530 !important;                                                                      /* Colores - Barra de deplazamiento */
+  scrollbar-color: #38375580 #18173530 !important;                                                          /* Colores - Barra de deplazamiento */
   
   --lwt-additional-images: url("../images/derecha.svg"), url("../images/middle.png") !important;
   --lwt-background-alignment: right top,right top !important;
@@ -68,7 +69,7 @@
     --button-primary-active-bgcolor: #0073b1 !important;
     
     /*Color input background en Marcadores*/
-    --input-bgcolor: color-mix(in srgb, var(--arrowpanel-background)80%, black) !important;
+    --input-bgcolor: var(--arrowpanel-background) !important;
     
     /*Color borde en InputText Focus*/
     --focus-outline-color: #4d4dfe !important;

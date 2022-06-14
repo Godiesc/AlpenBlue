@@ -5,9 +5,9 @@
   :root{
     
   --lwt-main-image:  url("../images/newtab/wallpaper.png");                                  /* new-tab page image */
-  --wallpaper-size: auto auto;                                                               /* auto auto-> default ; cover -> to see all the image */
+  --wallpaper-size: auto auto;                                                               /* cover-> default ; auto auto -> to see all the image */
   
-  --tab-height-personal: 32px ;                                                              /* Tamaño altura de pestañas*/
+  --tab-height-personal: 34px ;                                                              /* Tamaño altura de pestañas*/
   --toolbar-height-personal: 34px ;                                                          /* Toolbar height */
   
   --left-color: #fa00ff ;                                                                    /* Color left wordmark */

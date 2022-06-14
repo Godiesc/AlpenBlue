@@ -1,96 +1,138 @@
 /* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
    https://github.com/Godiesc/AlpenBlue */
 
-/*Label de medios "Reproduciendo" modifiado*/
+/*----------------> Label de medios "Reproduciendo" modifiado <------------------------------*/
 tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpicture]) {
-  display: -moz-box !important;
-  margin-top: -4px !important; 
-  margin-bottom: 2px !important; 
   opacity: 1 !important; 
   text-shadow: none !important;  
-  font-weight: bold !important; 
-  background: linear-gradient(to right, #00aaff 0%, #906bff 40%, #cd4AA2 100%);
-  -webkit-background-clip: text;  
-  -webkit-text-fill-color: transparent
+  font-weight: 601 !important;
+  background: linear-gradient(to right, #00aaff 15%, #906bff 30%, #cd4AA2 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -2px !important;
+  margin-left: 14px !important;
 }
 tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinpicture]) {
-  display: -moz-box !important;
-  margin-top: -4px !important; 
-  margin-bottom: 2px !important; 
-  text-shadow: none !important;  
-  font-weight: bold !important;
-  transition-duration:  0ms !important
+  text-shadow: none !important;
+  color: #cacaca !important;
+  opacity: 0.8 !important;
+  font-weight: 601 !important;
+  transition-duration:  0ms !important;
+  margin-top: -2px !important;
+  margin-left: 14px !important;
 }
 .tab-secondary-label:is([muted], [activemedia-blocked]) {
   display: none !important; 
   transition-duration: 0ms !important;
 }
-/*ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon*/
-.tab-icon-image{ 
-  opacity: 1 !important; 
+/*------------------> ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon <---------------*/
+.tab-icon-image{ opacity: 1 !important; 
 }
-.tab-icon-overlay{
+.tab-icon-overlay:not([crashed]){
   height: 14px !important; 
   width: 14px !important;
-}
-.tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  transition-duration: 300ms !important;
-  opacity: 1 !important; 
-  border-radius: 9px !important; 
-  top: 1px; inset-inline-end: -15px; 
-  z-index: 1;margin-right: 16px !important; 
-  color: #ffffff !important;
-  background-color: #1d1d3800 !important; 
-  fill-opacity: 1 !important; 
-  padding: 0px !important; 
-}
-.tab-icon-overlay:not([crashed],[pinned])[muted], .tab-icon-overlay:not([crashed])[activemedia-blocked] {
-  list-style-image: url("../images/muted.svg") !important;
-  opacity: 1 !important; 
-  border-radius: 9px !important; 
-  top: -6px; 
-  inset-inline-end: -6px;
-  z-index: 1;margin-right: 7px !important;  
-  color: #ffffff !important;
-  background-color: color-mix(in srgb, var(--button-bgcolor) 65%, black) !important; 
-  fill-opacity: 1 !important; 
   padding: 0px !important;
-}
-.tab-icon-overlay:not([crashed])[soundplaying]:hover, .tab-icon-overlay:not([crashed])[muted]:hover, 
-.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { 
-  stroke: var(--lwt-toolbarbutton-icon-fill-attention) !important; 
-  background-color: var(--lwt-toolbarbutton-icon-fill-attention) !important; 
-  color: black !important; fill-opacity: 1 !important; padding: 0px !important;
-  border-radius: 4px !important;
-  transition-duration: 200ms !important;
-}
-.tab-icon-overlay:is([pinned],[muted]):not([soundplaying]){
-list-style-image: url("../images/muted.svg") !important;
-}
-.tab-icon-overlay:is([pinned]){
-  padding: 0px !important; 
-  stroke: #140d2dc0 !important; 
-  color: white !important;
-  transition-duration: 200ms !important;
-}
-.tab-icon-overlay:is([pinned]):hover{
-  stroke: transparent !important; 
-  background:  white !important;
-  color: white !important;
-  transition-duration: 200ms !important;
+  fill-opacity: 1 !important;
 }
 .tabbrowser-tab:not(:hover) .tab-icon-overlay:is([muted]){
   opacity: 0 !important; 
 }
-.tab-icon-overlay:is([pinned],[muted]):not([soundplaying]){
+/* Reproducción bloqueada */
+.tab-icon-overlay:not([crashed])[activemedia-blocked],
+.tab-icon-overlay:not([crashed])[activemedia-blocked][pinned]{
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
+  color: #ff5050 !important;
+  opacity: 1 !important;
+  stroke: transparent !important;
+  background-color: black !important; 
+  top: -7px; 
+  inset-inline-start: 7px;
+  height: 14px !important;
+  width: 14px !important;
+  border-radius: 50% !important;
+}
+.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover,
+.tab-icon-overlay:not([crashed])[activemedia-blocked][pinned]:hover{
+  color: white !important;
+}
+/* Pestaña reproduciendo sonido */
+.tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
+  list-style-image: none !important;
+  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1 !important;
+  top: 9px; 
+  inset-inline-start: 20px; 
+  color: #00aaff !important;
+  stroke: transparent !important;
+  background-color: transparent !important; 
+  fill-opacity: 1 !important; 
+  padding: 0px !important;
+  width: 423% !important;
+  z-index: 100 !important;
+}
+tab:not([pinned],[selected]).tabbrowser-tab:is([soundplaying]) .tab-icon-overlay {
+  color: #cacaca !important;
+  opacity: 0.8 !important;
+}
+.tab-icon-overlay:not([crashed],[pinned])[soundplaying]:hover {
+  background-image: url("../images/muted.svg") !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  list-style-image: none !important;
+  stroke: transparent !important; 
+  background-color: transparent !important; 
+  color: #559dfc !important; 
+  fill-opacity: 1 !important; 
+  border-radius: 3px !important;
+  transition-duration: 200ms !important;
+  top: 9px; inset-inline-start: 20px; 
+}
+/* Pestaña Muteada */
+.tab-icon-overlay:not([crashed],[pinned])[muted] {
+  list-style-image: url("../images/muted.svg") !important;
+  opacity: 1 !important; 
+  border-radius: 3px !important; 
+  top: -7px; 
+  inset-inline-start: 7px;
+  stroke: transparent !important; 
+  background-color: #34343490 !important; 
+  color: white !important;
+  fill-opacity: 1 !important;
+}
+.tab-icon-overlay:not([crashed])[muted]:hover{
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
+  stroke: transparent !important; 
+  background-color: color-mix(in srgb, var(--button-active-bgcolor) 90%, white) !important; 
+  color: white !important;
+  border-radius: 3px !important;
+}
+/* -------------> Configuración para pestañas fijadas <--------------*/
+.tab-icon-overlay:not([crashed])[pinned][soundplaying]{
+  border-radius: 3px !important;
+}
+.tab-icon-overlay:is([pinned]){
+  stroke: #140d2dc0 !important; 
+  color: white !important;
+  transition-duration: 200ms !important;
+  border-radius: 3px !important;
+}
+.tab-icon-overlay:is([pinned][muted]){
+  list-style-image: url("../images/muted.svg") !important;
+}
+.tab-icon-overlay:is([pinned]):hover{
+  stroke: transparent !important; 
+  background-color: color-mix(in srgb, var(--button-active-bgcolor) 90%, white) !important; 
+  color: white !important;
+  border-radius: 3px !important;
+  transition-duration: 200ms !important;
+}
+.tab-icon-overlay:is([pinned][muted]){
 list-style-image: url("../images/muted.svg") !important;
   color: #fff !important;
-  stroke: color-mix(in srgb, var(--button-bgcolor) 65%, black) !important; 
-}
-.tab-icon-overlay:is([pinned][activemedia-blocked]), .tab-icon-overlay:not([pinned])[activemedia-blocked]{
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
-  margin-right: inherit !important;
+  stroke: color-mix(in srgb, var(--button-bgcolor) 65%, transparent) !important; 
 }
 /* Eliminar ícono de sonido cuando la página está cargandose */
-.tabbrowser-tab:is([muted],[soundplaying],[pictureinpicture])[busy] .tab-throbber{ visibility: visible !important; opacity: 1 !important;}
-.tabbrowser-tab:is([muted],[soundplaying],[pictureinpicture])[busy] .tab-icon-overlay{ opacity: 0 !important; }
+.tabbrowser-tab:is([muted],[soundplaying],[pictureinpicture],[activemedia-blocked])[busy] .tab-throbber{ visibility: visible !important; opacity: 1 !important;}
+.tabbrowser-tab:is([muted],[soundplaying],[pictureinpicture],[activemedia-blocked])[busy] .tab-icon-overlay{ opacity: 0 !important; }

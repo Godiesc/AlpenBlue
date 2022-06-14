@@ -3,15 +3,15 @@
 
 /*rework en la Linea de Contenedores*/
 tab:not([pinned])[selected] .tab-context-line {
-  max-width: 16px !important; 
+  max-width: 20px !important; 
   height: 2px !important; 
-  margin-left: 8px !important; 
+  margin-left: 5px !important; 
   margin-bottom: 0px !important;
   -moz-box-ordinal-group: 2 !important;  }
 tab:not([pinned],[selected]) .tab-context-line {
-  max-width: 13px !important; 
+  max-width: 14px !important; 
   height: 3px !important; 
-  margin-left: 10px !important; 
+  margin-left: 9px !important; 
   margin-bottom: 1px !important;
   -moz-box-ordinal-group: 2 !important; 
 }
