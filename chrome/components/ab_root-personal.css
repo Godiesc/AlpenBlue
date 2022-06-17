@@ -8,7 +8,7 @@
   --wallpaper-size: auto auto;                                                               /* cover-> default ; auto auto -> to see all the image */
   
   --tab-height-personal: 34px ;                                                              /* Tamaño altura de pestañas*/
-  --toolbar-height-personal: 34px ;                                                          /* Toolbar height */
+  --toolbar-height-personal:var(--tab-height-personal) ;                                     /* Toolbar height */
   
   --left-color: #fa00ff ;                                                                    /* Color left wordmark */
   --right-color: #0096cc ;                                                                   /* Color right wordmark */

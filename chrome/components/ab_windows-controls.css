@@ -20,3 +20,19 @@
     border: 2px solid transparent !important;
     background-clip: padding-box !important;
    }}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+:root:is([lwtheme-image],[style*="--lwt-additional-images"]) .titlebar-button:hover:not(.titlebar-close){
+    background-color: var(--toolbar-bgcolor) !important; color: var(--button-active-bgcolor) !important;
+    }}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+:root[lwtheme-image] .titlebar-min:hover { list-style-image: url('../images/minimize.svg') !important;
+    -moz-context-properties: fill !important; fill: var(--button-active-bgcolor) !important; }
+}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+:root[lwtheme-image] .titlebar-restore:hover { list-style-image: url('../images/restore.svg') !important;
+    -moz-context-properties: fill !important; fill: var(--button-active-bgcolor) !important; }
+}
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+:root[lwtheme-image] .titlebar-max:hover { list-style-image: url('../images/maximize.svg') !important;
+    -moz-context-properties: fill !important; fill: var(--button-active-bgcolor) !important; }
+}
