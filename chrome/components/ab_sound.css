@@ -6,7 +6,7 @@ tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpi
   opacity: 1 !important; 
   text-shadow: none !important;  
   font-weight: 601 !important;
-  background: linear-gradient(to right, #00aaff 15%, #906bff 30%, #cd4AA2 100%);
+  background: linear-gradient(to right, #00aaff 0%, #906bff 30%, #cd4AA2 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: -2px !important;
