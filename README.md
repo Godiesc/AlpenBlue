@@ -23,6 +23,10 @@
 <li>(ES) Para encontrar el directorio de tu perfil ve a <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles. </li>
 <li>(EN) To find out your profile directory go to <a href="https://github.com/Godiesc/AlpenBlue#example-of-aboutsupport"> about:support</a> or about:profiles.</li></ul>
 
+# <a href= "https://github.com/Godiesc/AlpenBlue/tree/main/Extras">Extras</a>
+<ul><li> OneLine - <a href ="https://user-images.githubusercontent.com/22057609/174413592-f769e697-148c-4d6e-81d2-77908dccca6d.png">Preview</a></li>
+<li>Play/Pause icon button extension. </li></ul>
+
 # Personalizar - Customize
 <ul><b><i>Personalizaciones Varias - Various customizations</i></b>
 <li><p>The file --> <code>chrome</code> --> <code>components</code> --> <code>ab_root-personal.css</code> contain a very useful config rules to a better an easy custom of the wallpaper, height tabs, etc. There are descriptions on the right of each rule to you know what you can custom.</p></li></ul>
