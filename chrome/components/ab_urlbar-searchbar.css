@@ -84,7 +84,7 @@
     --uc-slot-radius: 0 0 4px 4px;
     margin-top: -3px !important;    
     border-radius: 0 0 4px 4px !important;
-    --arrowpanel-border-color: #4d4dfe40 !important;
+    --panel-border-color: #4d4dfe40 !important;
 }
 slot[part="content"] {
     border-radius: var(--uc-slot-radius, var(--panel-border-radius)) !important;

@@ -58,7 +58,7 @@ treechildren::-moz-tree-image(selected), treechildren::-moz-tree-twisty(selected
     color: white !important;
 }
 #editBMPanel_folderTree treechildren{
-    background-color: var(--arrowpanel-background) !important;
+    background-color: var(--panel-background-color) !important;
     color: white !important;
 }
 #editBMPanel_tagsSelector{
@@ -75,11 +75,11 @@ richlistitem[selected="true"], #editBMPanel_namePicker::selection , #editBMPanel
 }
 /*Imagen grande y Favicon*/
 #editBookmarkPanelImage{
-    box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--arrowpanel-background) 84%, var(--lwt-tab-text, Field)) !important;
+    box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--panel-background-color) 84%, var(--lwt-tab-text, Field)) !important;
 }
 #editBookmarkPanelFavicon[src] {
-  background-color: color-mix(in srgb, var(--arrowpanel-background) 94%, var(--lwt-tab-text)) !important;
-  box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--arrowpanel-background) 84%, var(--lwt-tab-text, Field)) !important;
+  background-color: color-mix(in srgb, var(--panel-background-color) 94%, var(--lwt-tab-text)) !important;
+  box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--panel-background-color) 84%, var(--lwt-tab-text, Field)) !important;
   width: 16px !important;
   height: 16px !important;
   border-radius: 4px !important;
@@ -98,9 +98,9 @@ findbar:-moz-lwtheme {
 /*Aspecto tooltip: mouse hover on elements*/
 tooltip {
 	appearance: none !important;
-    background: color-mix(in srgb, var(--arrowpanel-background) 96%, white) !important;
+    background: color-mix(in srgb, var(--panel-background-color) 96%, white) !important;
 	color: var(--lwt-tab-text) !important;
-	border-color: color-mix(in srgb, var(--arrowpanel-background)80%, white) !important;
+	border-color: color-mix(in srgb, var(--panel-background-color)80%, white) !important;
 	padding-inline: 4px 4px !important;
 	font-family: Fira Sans !important;
 	font-size: 14px !important;

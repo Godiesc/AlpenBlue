@@ -8,7 +8,7 @@
 
 .customizationmode-button {
     background-color: var(--button-bgcolor) !important;
-    border-color: color-mix(in srgb, var(--arrowpanel-background) 80%, var(--lwt-tab-text, FieldText)) !important;
+    border-color: color-mix(in srgb, var(--panel-background-color) 80%, var(--lwt-tab-text, FieldText)) !important;
     color: var(--lwt-tab-text) !important;
     border-radius: 4px !important;
 }

@@ -24,7 +24,7 @@
   min-height: inherit;
   border-radius: var(--tab-border-radius);
   grid-area: 1/1;
-  margin-block: var(--tab-block-margin);
+  margin-block: var(--tab-margin-block);
   background: var( --identity-tab-color, var(--gradient)) !important;
 }
 /* Alinear pestañas */
@@ -44,10 +44,7 @@
     margin-left: -1px !important;
     height: var(--tab-height-personal) !important;
 }
-/*favicon de pagina newtab*/
-.tab-icon-image[src="chrome://branding/content/icon32.png"] {
-    content: url("../images/foxlogo.svg")!important;
-}
+
 /*"tab_line": "#126e82"*/
 #tabbrowser-tabs {--tab-line-color: transparent !important}
 #tabbrowser-tabs { --lwt-tab-line-color: var(--gradient, transparent) !important; }

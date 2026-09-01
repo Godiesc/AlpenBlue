@@ -1,16 +1,43 @@
 /* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
    https://github.com/Godiesc/AlpenBlue */
 
-:root{
-  --lwt-accent-color: #0c0b0f !important;                        /*"frame": "#17161c" */
-  --lwt-frame: var(--lwt-accent-color) !important;
-  --lwt-text-color: #b3b3b3 !important;                          /*"tab_background_text": "#c3c3c3"*/
+:root {
+
+  /* Toolbox Background & text color \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  --lwt-accent-color: #0c0b0f !important;                                                           /* frame */
+  --lwt-accent-color-inactive: var(--lwt-accent-color, Field) !important;                             /* frame_inactive */
+  --lwt-text-color: #b3b3b3 !important;                                                             /*"tab_background_text": "#c3c3c3"*/
+  /*--toolbox-text-color: blue !important;                                                            /* tab_background_text - focused window */
+  /*--toolbox-text-color-inactive: red !important;                                                    /* tab_background_text - unfocused window */
+  /*--lwt-text-color: inherit !important;                                                             /* tab_background_text - general focus & unfocused window */
+  --inactive-titlebar-opacity: 1 !important;                                                          /* Opacity unfocused window */
+
+  /* Panels - Arrowpanels \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
   --arrowpanel-background: #1d1d38fa !important;                 /*"popup": "#1c1b22Fa"*/
-  --arrowpanel-color: #ffffff !important;                        /*"popup_text": "#dfdfdf"*/
-  --arrowpanel-border-color: #4d4dbe50 !important;               /*"popup_border": "#304f60"*/
+  --panel-background-color: #1d1d38fa !important;                 /*"popup": "#1c1b22Fa"*/
+  --panel-text-color: #ffffff !important;                        /*"popup_text": "#dfdfdf"*/
+  --panel-border-color: #4d4dbe50 !important;               /*"popup_border": "#304f60"*/
+  --panel-subview-body-padding: 8px !important;                                                   /* Popup main padding */
+  /*--menu-panel-width-wide: 29em !important;                                                         /* Popup width */
+  /*--panel-text-color: red !important;                                                               /* popup_text */
+  /*--button-text-color-ghost: red !important;                                                        /* popup_text - other */
+  /*--panel-border-color: red !important;                                                             /* popup_border */
+  /*--autocomplete-popup-highlight-background: var(--color-accent-primary-hover);                     /* popup_highlight */
+  /*--panel-padding: 16px !important;                                                                 /* Padding in 'notification' popup */
+
+  --panel-menuitem-margin: 0px !important;                                                            /* Marging for each item */
+  --panel-menuitem-padding-block: 6px !important;                                                     /* Padding block for each item */
+  --panel-menuitem-padding-inline: 0.5em !important;                                                    /* Padding inline for each item */
+  --panel-menuitem-border-radius: 4px !important;                                                     /* Menuitems 'hover' roundness */
+
+  --panel-separator-padding-vertical: 4px !important;                                                 /* Padding block of separator */
+  --panel-separator-padding-horizontal: 6px !important;                                               /* Padding inline of separators */
+  --panel-separator-color: #3d3772 !important;                                         /* Separator color */
+
+
   --lwt-popup-brighttext-url-color: #4da6ff !important;          /*"color de label: El sitio no funciona?"*/
-  --panel-disabled-color: #99999990 !important;                  /*"label de popup label-deshabilitado"*/
-  --panel-description-color: #3399ff !important;                 /*"Color de letras de: correo de la cuenta, y dispositivos conectados"*/
   --toolbar-field-background-color: #2f2a3c00 !important;        /*"toolbar_field":"#1a1b25"*/
   --toolbar-field-color: #e5e5e6 !important;                     /*"toolbar_field_text":"#e2e9e9"*/
   --toolbar-field-border-color: #4d4dbe34 !important;            /*"toolbar_field_border": "#363540"*/
@@ -36,15 +63,16 @@
   --sidebar-background-color: #181735 !important;
   
   --toolbarbutton-inner-padding: 5px !important;
-  --tab-block-margin: 2px 3px !important;
+
+  /* Tabs \
+  ¯¯¯¯¯¯¯¯ */
+  --tab-margin-block: 2px 3px !important;
   --tab-min-height: var(--tab-height-personal) !important; /*tamaño pestañas*/
   --tabs-shadow-size: 0px !important;
   --tab-border-radius: 4px !important;
-  --arrowpanel-menuitem-padding: 6px !important;
-  --arrowpanel-padding: 0.8em !important;
   
   --urlbar-icon-padding: 4px !important;
-  --panel-separator-color: #3d3772 !important;
+  
   --toolbarbutton-outer-padding: 3px !important;
   --urlbar-popup-url-color: #3399ff !important;
   --autocomplete-popup-hover-background: #3e4cff95 !important;
@@ -69,7 +97,7 @@
     --button-primary-active-bgcolor: #0073b1 !important;
     
     /*Color input background en Marcadores*/
-    --input-bgcolor: var(--arrowpanel-background) !important;
+    --input-bgcolor: var(--panel-background-color) !important;
     
     /*Color borde en InputText Focus*/
     --focus-outline-color: #4d4dfe !important;
