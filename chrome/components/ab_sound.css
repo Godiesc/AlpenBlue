@@ -1,138 +1,469 @@
 /* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
    https://github.com/Godiesc/AlpenBlue */
 
-/*----------------> Label de medios "Reproduciendo" modifiado <------------------------------*/
-tab:not([pinned])[selected] .tab-secondary-label:is([soundplaying], [pictureinpicture]) {
-  opacity: 1 !important; 
-  text-shadow: none !important;  
-  font-weight: 601 !important;
-  background: linear-gradient(to right, #00aaff 0%, #906bff 30%, #cd4AA2 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: -2px !important;
-  margin-left: 14px !important;
+/* 'muted' & 'activemedia-blocked' icons hidden */
+
+.tabbrowser-tab:not(:hover) {
+    .tab-icon-overlay:not([soundplaying]),      /* For pinned tabs */
+    .tab-audio-button:not([soundplaying]) {     /* For Unpinned tabs */
+        opacity: 0;
+    }
 }
-tab:not([pinned],[selected]) .tab-secondary-label:is([soundplaying], [pictureinpicture]) {
-  text-shadow: none !important;
-  color: #cacaca !important;
-  opacity: 0.8 !important;
-  font-weight: 601 !important;
-  transition-duration:  0ms !important;
-  margin-top: -2px !important;
-  margin-left: 14px !important;
+
+/* Fixed glich when clic mute button */
+
+.tabbrowser-tab {
+    --tab-icon-end-margin: 5.5px !important;
+
+    &:is([muted], [soundplaying], [activemedia-blocked]) {
+        --tab-icon-end-margin: 2.75px !important;
+    }
 }
-.tab-secondary-label:is([muted], [activemedia-blocked]) {
-  display: none !important; 
-  transition-duration: 0ms !important;
+
+/* Hide sound button when tab is pending or loading */
+
+.tabbrowser-tab:is([pending],[busy]):hover :is(.tab-audio-button, .tab-icon-overlay) {
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
-/*------------------> ícono de sonido simpre visible en pestañas con sonido, sin dejar de mostrar el favicon <---------------*/
-.tab-icon-image{ opacity: 1 !important; 
+
+/* General style for sound button */
+
+.button-background {
+    position: var(--my-position) !important;
+    top: var(--my-top) !important;
+    inset-inline-start: var(--my-inset-inline-start) !important;
+    background-image: var(--my-background-sound-image, var(--message-bar-icon-close-url)) !important;   /* Keep 'close icon' in infobar */
+    background-size: var(--my-background-size) !important;
+    /*box-shadow: var(--my-box-shadow) !important;/**/
+    opacity: var(--my-opacity) !important;
+    fill: var(--my-fill, currentColor) !important;
+    stroke: var(--my-stroke, inherit) !important;/**/
+    outline: var(--my-outline) !important;
+    outline-offset: var(--my-outline-offset) !important;
+    align-items: var(--my-align-items, center) !important;
 }
-.tab-icon-overlay:not([crashed]){
-  height: 14px !important; 
-  width: 14px !important;
-  padding: 0px !important;
-  fill-opacity: 1 !important;
+
+@media not -moz-pref("firefoxgx.classic-sound-icon") {
+
+    /*  Favicon trimmed when sound playing */
+    .tab-icon-stack:not([crashed]):is([soundplaying]) {
+        & :is(.tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay) {
+            mask-image: url("../icons/tab_icon_masks.svg#SoundMask") !important;
+        }
+    }
+    
+    /* Favicon trimmed on tab 'hover' when it is 'muted' or 'media blocked' */
+    .tabbrowser-tab:not([pending]):hover {
+        & .tab-icon-stack:not([crashed]):is([soundplaying],[muted],[activemedia-blocked]) {
+            & :is(.tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay) {
+                mask-image: url("../icons/tab_icon_masks.svg#SoundMask") !important;
+            }
+        }
+    }
+    
+    .tab-audio-button {
+        --icon-size-default: 14px !important;
+    }
+
+    .tab-audio-button:is([soundplaying],[muted],[activemedia-blocked]) {
+        --my-position: absolute !important;
+        --button-size-icon-small: 14px !important;
+        --button-min-height-small: var(--button-size-icon-small) !important;
+        --my-top: calc(var(--tab-height-personal)/2 - 13px) !important;
+        --my-inset-inline-start: 14px !important;
+        --button-border-radius: 50% !important;
+        --my-outline-offset: -2px !important;
+        --my-background-size: var(--button-size-icon-small) !important;
+        --my-stroke: transparent !important;
+        --my-align-items: end !important;
+        height: var(--button-min-height-small) !important;
+    }
+    
+    /* Normal tabs - Playing icon */
+    
+    .tab-audio-button[soundplaying] {
+        --my-background-sound-image: url("../icons/sound-playing.svg") !important;
+        --button-background-color-ghost: color-mix(in srgb, var(--my-scheme-color), transparent) !important;
+        --button-background-color-ghost-hover: color-mix(in srgb, var(--my-scheme-color), transparent) !important;
+        --button-background-color-ghost-active: color-mix(in srgb, var(--my-scheme-color), transparent) !important;
+        --my-fill: var(--general-color)  !important;
+        
+        &:hover {
+            --my-fill: var(--my-font-color) !important;
+        }
+    }
+    
+    /* Normal tabs - Muted icon */
+    
+    .tab-audio-button:is([muted],[activemedia-blocked]) {
+        --my-background-sound-image: url("../icons/sound-muted.svg") !important;
+        --button-background-color-ghost: transparent !important;
+        --button-background-color-ghost-hover: transparent !important;
+        --button-background-color-ghost-active: transparent !important;
+        --my-fill: var(--my-font-color)  !important;
+        --my-opacity: 0.8 !important;
+        
+        &:hover {
+            --my-background-sound-image: url("../icons/sound-muted-hover.svg") !important;
+            --my-fill: var(--my-font-color) !important;
+            --my-opacity: 1 !important;
+        }
+    }
+    
+    .tab-audio-button:is([activemedia-blocked]) {
+        --my-background-sound-image: url("../icons/sound-blocked.svg") !important;
+        --my-fill: var(--my-font-color)  !important;
+    }
+    
+    /* ¯¯¯¯¯¯¯¯ New margins when tab width get smaller ¯¯¯¯¯¯¯¯ */
+    
+    @container smaller-tab (width < 52px) {
+        .tab-audio-button:is([soundplaying],[muted],[activemedia-blocked]) {
+            --my-inset-inline-start: calc(50% - 2px) !important;
+        }
+    }
+    
+    /* Pinned tabs */
+    
+    .tab-icon-overlay {
+        #tabbrowser-tabs[orient="vertical"]:not([expanded]) &:not([crashed]), &[pinned]:not([crashed]) {
+            
+            &:is([soundplaying], [muted], [activemedia-blocked]) {
+                width: 14px !important;
+                height: 14px !important;
+                background-color: color-mix(in srgb, var(--my-scheme-color), transparent) !important;
+                background-image: none !important;
+                inset-inline-end: -7px !important;
+                top: -5px !important;
+                padding: 0px !important;
+            }
+            
+            &[soundplaying] {
+                list-style-image: url("../icons/sound-playing.svg") !important;
+                fill: var(--general-color)  !important;
+                
+                &:hover {
+                    fill: var(--my-font-color) !important;
+                }
+            }
+            
+            &:is([muted],[activemedia-blocked]) {
+                list-style-image: url("../icons/sound-muted.svg") !important;
+                background-color: color-mix(in srgb, var(--my-scheme-color), transparent) !important;
+                
+                &:hover {
+                    fill: var(--my-font-color) !important;
+                    list-style-image: url("../icons/sound-muted-hover.svg") !important;
+                }
+            }
+            
+            &:is([activemedia-blocked]) {
+                list-style-image: url("../icons/sound-blocked.svg") !important;
+            }
+        }
+    }
+    
+    /* Sound icon for Vertical tabs - sidebar 'expanded' */
+
+    @media -moz-pref("sidebar.verticalTabs") {
+
+        .tab-audio-button:is([soundplaying],[muted],[activemedia-blocked]) {
+            --my-inset-inline-start: calc(var(--my-vertical-elements-width)/2 - 1px) !important;
+        }
+    }
+    
+    /* Sound icon when using default 'Vertical-tabs' with 'expand-on-hover' */
+    
+    .tab-icon-overlay {
+        @media -moz-pref("sidebar.visibility", "expand-on-hover") {
+            #tabbrowser-tabs[orient="vertical"][expanded] &:not([crashed]) {
+                &:is([soundplaying],[muted],[activemedia-blocked]) {
+                    height: 14px !important;
+                    width: 14px !important;
+                    background-color: color-mix(in srgb, var(--my-scheme-color), transparent) !important;
+                    background-image: none !important;
+                    padding: 0px !important;
+                    top: -5px !important;
+                    
+                    &:hover {
+                        fill: var(--my-font-color) !important;
+                    }
+                }
+
+                &[soundplaying] {
+                    list-style-image: url("../icons/sound-playing.svg") !important;
+                    fill: var(--general-color)  !important;
+                }
+
+                &:is([muted],[activemedia-blocked]) {
+                    list-style-image: url("../icons/sound-muted.svg") !important;
+                    background-color: transparent !important;
+                    
+                    &:hover {
+                        list-style-image: url("../icons/sound-muted-hover.svg") !important;
+                    }
+                }
+
+                &:is([activemedia-blocked]) {
+                    list-style-image: url("../icons/sound-blocked.svg") !important;
+                }
+            }
+        }
+    }
 }
-.tabbrowser-tab:not(:hover) .tab-icon-overlay:is([muted]){
-  opacity: 0 !important; 
+
+/* _____________________________________________________ Classic Sound icon _____________________________________________________
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+@media -moz-pref("firefoxab.classic-sound-icon") {
+    
+    /* Hide favicon when mute button appears */
+    
+    :root:has(.tab-audio-button[soundplaying]:hover),
+    :root:has(.tabbrowser-tab:hover .tab-audio-button:is([muted],[soundplaying][muted],[activemedia-blocked])) { 
+        .tabbrowser-tab:not([pending],[busy]):hover {
+            .tab-icon-image {
+                opacity: 0 !important;
+            }
+        }
+    }
+
+    /* General style for sound button */
+    
+    .button-background {
+        background-position: var(--my-background-position) !important;
+    }
+    
+    /* Shared styles for mute and play button */
+    
+    .tab-audio-button:is([soundplaying],[muted],[soundplaying][muted],[activemedia-blocked]) {
+        --my-position: absolute !important;
+    }
+
+    /* Normal tabs - Playing icon */
+    
+    .tab-audio-button[soundplaying] {
+        --button-min-height-small: calc(var(--tab-height-personal) - 4px) !important;
+        --my-background-sound-image: var(--my-beats-image) !important;
+        --my-background-size: 22px 16px !important;
+        --my-background-position: 0 bottom !important;
+        --my-inset-inline-start: 4px !important;
+        --my-top: calc(var(--tab-height-personal)/2 - 11px) !important;
+
+        &:hover {
+            --button-size-icon-small: 18px !important;
+            --button-min-height-small: 18px !important;
+            --my-background-sound-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
+            --button-background-color-ghost-hover: var(--general-color) !important;
+            --button-background-color-ghost-active: var(--general-color) !important;
+            --my-background-size: inherit !important;
+            --my-background-position: center !important;
+            --my-fill: var(--my-scheme-color) !important;
+            --my-top: calc(var(--tab-height-personal)/2 - 9px) !important;
+            --my-inset-inline-start: 7px !important;
+        }
+    }
+    
+    /* Normal tabs - Muted icon */
+    
+    .tab-audio-button:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+        --button-size-icon-small: 18px !important;
+        --button-min-height-small: 18px !important;
+        --my-background-sound-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg") !important;
+        --my-background-color: var(--button-background-color-hover) !important;
+        --my-background-position: center !important;
+        --my-fill: var(--my-font-color) !important;
+        --my-top: calc(var(--tab-height-personal)/2 - 9px) !important;
+        --my-inset-inline-start: 7px !important;
+        --my-opacity: 0.8 !important;
+
+        &:hover {         
+            --my-background-color: var(--color-accent-primary-hover) !important;
+            --my-fill: var(--my-font-color) !important;
+            --my-opacity: 1 !important;
+        }
+    }
+    
+    /* ¯¯¯¯¯¯¯¯ New margins when tab width get smaller ¯¯¯¯¯¯¯¯ */
+    
+    @container smaller-tab (width < 52px) {
+        .tab-audio-button:is([soundplaying],[muted],[activemedia-blocked]) {
+            --my-inset-inline-start: calc(50% - 12px) !important;
+            
+            &:hover {
+                --my-inset-inline-start: calc(50% - 9px) !important;
+            }
+        }
+        
+        .tab-audio-button:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+            --my-inset-inline-start: calc(50% - 9px) !important;
+        }
+    }
+    
+    #tabbrowser-arrowscrollbox[orient="vertical"] {
+
+        /* Normal tabs - Playing icon */
+        
+        .tab-audio-button[soundplaying] {
+            --my-inset-inline-start: 8px !important;
+
+            &:hover {
+                --my-inset-inline-start: 11px !important;
+            }
+        }
+
+        /* Normal tabs - Muted icon */
+
+        .tab-audio-button:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+            --my-inset-inline-start: 11px !important;
+
+            &:hover {         
+                --my-background-color: var(--color-accent-primary-hover) !important;
+                --my-fill: var(--my-font-color) !important;
+                --my-opacity: 1 !important;
+            }
+        }
+    }
+    
+    /* Pinned tabs */
+    
+    /* Hide favicon when sound icon appears */
+    
+    :root:has(.tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]):hover) .tabbrowser-tab[pinned]:hover .tab-icon-image {
+        opacity: 0 !important;
+    }
+    
+    .tab-icon-overlay {
+        #tabbrowser-tabs[orient="vertical"]:not([expanded]) &:not([crashed]), &[pinned]:not([crashed]) {
+            &:is([soundplaying], [muted], [activemedia-blocked]) {
+                position: absolute !important;
+                background-color: transparent !important;
+                background-image: none !important;
+                border-radius: 3px !important;
+            }
+            
+            &[soundplaying]:not(:hover) {
+                list-style-image: var(--my-beats-image) !important;
+                width: 26px !important;
+                height: 20px !important;
+                background-size: 22px 20px !important;
+                inset-block-start: calc(var(--tab-height-personal)/2 - 10px) !important;
+                inset-inline-end: -5px !important;
+            }
+
+            &[soundplaying]:is(:hover),
+            &:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+                height: 18px !important;
+                width: 18px !important;
+                padding: 3px !important;
+                top: -1px !important;
+                inset-inline-end: -1px !important;
+            }
+            
+            &[soundplaying]:is(:hover) {
+                background-color: var(--general-color) !important;
+                fill: var(--my-scheme-color) !important;
+            }
+            
+            &:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+                background-color: transparent !important;
+
+                &:hover {
+                    background-color: var(--button-background-color-hover) !important;
+                    fill: var(--my-font-color) !important;
+                }
+            }
+        }
+    }
+    
+    
+    .tab-icon-overlay {
+        @media -moz-pref("sidebar.visibility", "expand-on-hover") {
+            #tabbrowser-tabs[orient="vertical"][expanded] &:not([crashed]) {
+                &:is([soundplaying], [muted], [activemedia-blocked]) {
+                    position: absolute !important;
+                    background-color: transparent !important;
+                    background-image: none !important;
+                    border-radius: 3px !important;
+                }
+
+                &[soundplaying]:not(:hover) {
+                    list-style-image: var(--my-beats-image) !important;
+                    width: 26px !important;
+                    height: 20px !important;
+                    background-size: 22px 20px !important;
+                    inset-block-start: calc(var(--tab-height-personal)/2 - 10px) !important;
+                    inset-inline-end: -5px !important;
+                }
+
+                &[soundplaying]:is(:hover),
+                &:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+                    height: 18px !important;
+                    width: 18px !important;
+                    padding: 3px !important;
+                    top: -1px !important;
+                    inset-inline-end: -1px !important;
+                }
+
+                &[soundplaying]:is(:hover) {
+                    background-color: var(--general-color) !important;
+                    fill: var(--my-scheme-color) !important;
+                }
+
+                &:is([muted],[soundplaying][muted],[activemedia-blocked]) {
+                    background-color: transparent !important;
+
+                    &:hover {
+                        background-color: var(--button-background-color-hover) !important;
+                        fill: var(--my-font-color) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Playing 'beats' image style for light themes - needs to be in this place */
+
+    @media (prefers-color-scheme: light) {
+
+        .tab-audio-button[soundplaying] {
+            --my-background-size: 16px 10px !important;
+            --my-top: calc(var(--tab-height-personal)/2 - 13px) !important;
+            --my-inset-inline-start: 7px !important;
+        }
+
+        #tabbrowser-arrowscrollbox[orient="vertical"] {
+            
+            .tab-audio-button[soundplaying] {
+                --my-background-size: 16px 10px !important;
+                --my-top: calc(var(--tab-height-personal)/2 - 13px) !important;
+                --my-inset-inline-start: 11px !important;
+            }    
+        }
+
+        /* Pinned */
+        .tab-icon-overlay {
+            #tabbrowser-tabs[orient="vertical"]:not([expanded]) &:not([crashed]), &[pinned]:not([crashed]) {            
+                &[soundplaying]:not(:hover) {
+                    width: 20px !important;
+                    height: 14px !important;
+                    background-size: 20px 14px !important;
+                    inset-block-start: 10px !important; 
+                    inset-inline-end: -2px !important;
+                }
+            }
+        }
+    }
 }
-/* Reproducción bloqueada */
-.tab-icon-overlay:not([crashed])[activemedia-blocked],
-.tab-icon-overlay:not([crashed])[activemedia-blocked][pinned]{
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
-  color: #ff5050 !important;
-  opacity: 1 !important;
-  stroke: transparent !important;
-  background-color: black !important; 
-  top: -7px; 
-  inset-inline-start: 7px;
-  height: 14px !important;
-  width: 14px !important;
-  border-radius: 50% !important;
+
+/* ______________________________________ Sound icon when using default 'expand-on-hover' _______________________________________
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+.tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay {
+    @media -moz-pref("sidebar.visibility", "expand-on-hover") {
+        #tabbrowser-tabs[orient="vertical"][expanded] /*.tabbrowser-tab:not([pinned])/**/ & {
+            margin-inline-end: 5.5px !important;
+        }
+    }
 }
-.tab-icon-overlay:not([crashed])[activemedia-blocked]:hover,
-.tab-icon-overlay:not([crashed])[activemedia-blocked][pinned]:hover{
-  color: white !important;
-}
-/* Pestaña reproduciendo sonido */
-.tab-icon-overlay:not([pinned],[crashed])[soundplaying]{
-  list-style-image: none !important;
-  background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 1 !important;
-  top: 9px; 
-  inset-inline-start: 20px; 
-  color: #00aaff !important;
-  stroke: transparent !important;
-  background-color: transparent !important; 
-  fill-opacity: 1 !important; 
-  padding: 0px !important;
-  width: 423% !important;
-  z-index: 100 !important;
-}
-tab:not([pinned],[selected]).tabbrowser-tab:is([soundplaying]) .tab-icon-overlay {
-  color: #cacaca !important;
-  opacity: 0.8 !important;
-}
-.tab-icon-overlay:not([crashed],[pinned])[soundplaying]:hover {
-  background-image: url("../images/muted.svg") !important;
-  background-repeat: no-repeat;
-  background-size: contain;
-  list-style-image: none !important;
-  stroke: transparent !important; 
-  background-color: transparent !important; 
-  color: #559dfc !important; 
-  fill-opacity: 1 !important; 
-  border-radius: 3px !important;
-  transition-duration: 200ms !important;
-  top: 9px; inset-inline-start: 20px; 
-}
-/* Pestaña Muteada */
-.tab-icon-overlay:not([crashed],[pinned])[muted] {
-  list-style-image: url("../images/muted.svg") !important;
-  opacity: 1 !important; 
-  border-radius: 3px !important; 
-  top: -7px; 
-  inset-inline-start: 7px;
-  stroke: transparent !important; 
-  background-color: #34343490 !important; 
-  color: white !important;
-  fill-opacity: 1 !important;
-}
-.tab-icon-overlay:not([crashed])[muted]:hover{
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
-  stroke: transparent !important; 
-  background-color: color-mix(in srgb, var(--button-active-bgcolor) 90%, white) !important; 
-  color: white !important;
-  border-radius: 3px !important;
-}
-/* -------------> Configuración para pestañas fijadas <--------------*/
-.tab-icon-overlay:not([crashed])[pinned][soundplaying]{
-  border-radius: 3px !important;
-}
-.tab-icon-overlay:is([pinned]){
-  stroke: #140d2dc0 !important; 
-  color: white !important;
-  transition-duration: 200ms !important;
-  border-radius: 3px !important;
-}
-.tab-icon-overlay:is([pinned][muted]){
-  list-style-image: url("../images/muted.svg") !important;
-}
-.tab-icon-overlay:is([pinned]):hover{
-  stroke: transparent !important; 
-  background-color: color-mix(in srgb, var(--button-active-bgcolor) 90%, white) !important; 
-  color: white !important;
-  border-radius: 3px !important;
-  transition-duration: 200ms !important;
-}
-.tab-icon-overlay:is([pinned][muted]){
-list-style-image: url("../images/muted.svg") !important;
-  color: #fff !important;
-  stroke: color-mix(in srgb, var(--button-bgcolor) 65%, transparent) !important; 
-}
-/* Eliminar ícono de sonido cuando la página está cargandose */
-.tabbrowser-tab:is([muted],[soundplaying],[pictureinpicture],[activemedia-blocked])[busy] .tab-throbber{ visibility: visible !important; opacity: 1 !important;}
-.tabbrowser-tab:is([muted],[soundplaying],[pictureinpicture],[activemedia-blocked])[busy] .tab-icon-overlay{ opacity: 0 !important; }

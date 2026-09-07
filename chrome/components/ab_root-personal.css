@@ -1,34 +1,39 @@
 /* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
    https://github.com/Godiesc/opera-gx */
 
-  /*--------------------------<-Personalizaciones Varias->----------------------------*/
-  :root{
-    
+/*--------------------------<-Personalizaciones Varias->----------------------------*/
+:root {  
+  --blue: #4c4cff;
+  --general-color: var(--blue);
+  
+  --tab-height-personal: 30px ;                                                              /* Tamaño altura de pestañas*/
+  --tab-min-width-personal: 22px ;                                                           /* Tab min width | default -> :76px */
+  --toolbar-height-personal: 36px ;                                                          /* Toolbar height */
+  
+  --my-group-line-thickness: 1px ;
+
   --lwt-main-image:  url("../images/newtab/wallpaper.png");                                  /* new-tab page image */
   --wallpaper-size: cover;                                                                   /* cover-> default ; auto auto -> to see all the image */
-  
-  --tab-height-personal: 34px ;                                                              /* Tamaño altura de pestañas*/
-  --toolbar-height-personal:var(--tab-height-personal) ;                                     /* Toolbar height */
-  
+
   --left-color: #fa00ff ;                                                                    /* Color left wordmark */
   --right-color: #0096cc ;                                                                   /* Color right wordmark */
-  
-  --logo-wordmark-visibility: 1 ;                                                            /* :1 visible, :0 invisible ; Logo-wordmark*/
-  --searchbar-on-off: flex ;                                                                 /* :none ->eliminar Searchbar , :flex ->Mostrar searchbar*/
-  
-  --newtab-pinnedsites-background: color-mix(in srgb, #393762 50%, transparent) ;            /* color - fondo de sitios fijados y barra de búsqueda*/
-  
-  --selected-text-background: var(--button-active-bgcolor);                                  /* Selected text background */
+
+  --my-newtab-elements-background: color-mix(in srgb, 
+    white 3%, #292a43 50%, transparent) ;                                                    /* Background color of newtab elements */
+  --my-border-radius: 12px ;                                                                 /* Roundness of many elements in 'about:' pages */
+  --my-blur: blur(14px) ;                                                                    /* Utilizado para personalizar newtab page */
 }
 
 :root{
   /*--------------------------Gradiente Pestaña seleccionada - Gradiente general y :hover items------------------------------------*/
   --gradient: linear-gradient(160deg, #7f00bf 0%,#551dfc,#2525ff, #105fff,#2525ff, #551dfc, #7f00bf 100%) !important;
-  
+
   --panel-separator-zap-gradient: linear-gradient( to left, #902c8ad0 -20%, #902cfc90 30%, #2e4a9f 100%) !important;
-  
-  /*------------------------------Botones hover, clic--------------------------------*/
-  --button-bgcolor: #393762 !important; 
-  --button-hover-bgcolor: color-mix(in srgb, #4048bf 80%, transparent) !important;
-  --button-active-bgcolor: color-mix(in srgb, #2558bf 97%, transparent) !important;
+
+  /* ------------------------------ Botones hover, clic -------------------------------- */
+  --color-accent-primary-xsmall: color-mix(in srgb, transparent 75%, var(--color-accent-primary));                        /* Button background color smaller */
+  --color-accent-primary-small: color-mix(in srgb, transparent 60%, var(--color-accent-primary));                         /* Button background color small */
+  --color-accent-primary-medium: color-mix(in srgb, transparent 45%, var(--color-accent-primary));                        /* Button background color medium */
+  --color-accent-primary-hover: color-mix(in srgb, var(--my-scheme-color) 24%, var(--color-accent-primary)) !important;   /* Button background color when 'hover' */
+  --color-accent-primary-active: color-mix(in srgb, var(--my-scheme-color) 40%, var(--color-accent-primary)) !important;  /* Button background color when 'active' */
 }

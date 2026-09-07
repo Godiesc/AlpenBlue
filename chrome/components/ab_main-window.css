@@ -1,0 +1,260 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+/* Remove theme image when it is in navigator-toolbox \
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+#navigator-toolbox {
+    background-image: none !important;      /* ¡important, Don't use the image variable - 'bug' in image in tab selected */
+    border-bottom-color: var(--toolbar-background-color) !important; /* Keep border but transparent */
+}
+
+/* Apply the image properties in body element, in both image cases ¬
+-  into 'main-window' to not affect sidebarbox                       \
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+#main-window > body {
+    background-image: var(--toolbox-background-image) !important;
+    background-repeat: var(--toolbox-background-repeat) !important;
+    background-position: var(--toolbox-background-position) !important;
+    background-position-y: var(--my-background-position-y, top) !important;
+    background-size: var(--toolbox-background-size) !important;
+}
+
+/* Gradient effect to the bottom \
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+#main-window {
+    &>body:before {
+        content: "";
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - var(--tab-height-personal) - 5px);
+        background: var(--my-main-gradient-background);
+        z-index: -1;
+        pointer-events: none;
+    }
+    /* Put here this color only in themes with images because a bug with solid themes 'lwt-accent-color'
+    -  important, Added too for 'Private' window */
+    &:is([lwtheme-image],[style*="--lwt-additional-images"],[privatebrowsingmode="temporary"])>body:before {
+        background-color: var(--toolbar-background-color);
+    }
+}
+
+/* Remove unnecessary background to show the theme image \
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+.browserContainer, #sidebar {
+    background-color: transparent !important;
+}
+
+/* _____________________________ Some styles when using Vertical tabs ______________________________ 
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+@media -moz-pref("sidebar.verticalTabs") {
+    
+    :root {
+        --tab-margin-block: 0px !important;             /* Tab margins */
+        --sidebar-divider-color: #4d4dbe !important;    /* Various separators */
+        
+        /* These Variables needed to be in root, not only into some class */
+        --tab-height-with-margin-padding: calc(var(--tab-min-height) + 2px) !important;     /* Remove unwanted tab extra height for pinned tabs */
+        --my-vertical-elements-width: var(--tab-collapsed-width) !important;
+    }
+    
+    /* ¡Necessary when the urlbar is 'open' to show the dark filter */
+    .browser-titlebar {
+        :root & {
+            will-change: unset !important;
+            transition: none !important;
+        }
+    }
+
+    /* Background for toolbars when using 'vertical tabs' \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .browser-toolbar, #browser {
+        background-color: var(--toolbar-background-color) !important;
+    }
+    
+    /* Sidebar background when 'expand-on-hover' \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    :root[sidebar-expand-on-hover] {
+        & #sidebar-container {
+                background-image: linear-gradient(var(--toolbar-background-color), var(--toolbar-background-color)),
+                    url("../images/middle.png") !important;
+
+            &[sidebar-launcher-expanded], &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) {
+                background-image: linear-gradient(var(--toolbar-background-color), var(--toolbar-background-color)),
+                    url("../images/middle.png") !important;
+            }
+        }
+    }
+    
+    /* Remove unwanted space between tabs \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    #tabbrowser-tabs[orient="vertical"] {
+        --tab-inline-padding: calc((var(--tab-collapsed-width) - var(--icon-size)) / 2);
+
+        /* Pinned tabs */
+        #pinned-tabs-container .tabbrowser-tab {
+            /*padding-block: 0px !important;/**/
+            
+            /* Remove unwanted pinned tabs background */
+            &:not(:hover, [multiselected]) .tab-background {
+                background-color: transparent !important;
+            }
+        }
+
+        /* Normal tabs - include collapsed & expanded sidebar */
+        .tabbrowser-tab {
+            padding-block: 1px !important;
+        }
+    }
+
+    #pinned-tabs-container[orient="vertical"] {
+        :root:not([sidebar-expand-on-hover]) & {
+            --tab-inline-padding: calc((var(--tab-collapsed-width) - var(--icon-size)) / 2) !important;
+        }
+    }
+    
+    /* Keep the same pinned tab width when sidebar expand-collapse \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    @media not -moz-pref("sidebar.visibility", "expand-on-hover") { 
+        #tabbrowser-tabs[orient="vertical"][expanded] {
+            & .tabbrowser-tab[pinned] {
+                width: var(--my-vertical-elements-width) !important;
+            }
+        }
+    }
+    
+    /* For some reason with this 'pinned-tabs-content' stay into the sidebar width */
+    slot[part="items-wrapper"] {
+        padding-inline: 0px !important;
+        grid-template-columns: repeat( auto-fit, minmax(var(--my-vertical-elements-width), auto)) !important;
+    }
+
+    /* Autohide 'tools-and-extensions' when Vertical tabs are enable \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* Rules to show all the tools without 'overflow button' */
+    .buttons-wrapper {
+        height: auto !important;
+        min-height: unset !important;
+        overflow: unset !important;
+        padding-block: 0px !important;
+    }
+
+    /* Remove unwanted margin when 'expand-on-hover' */
+
+    .tools-and-extensions[orientation="horizontal"] {
+        /*--space-xxsmall: 0px !important;/**/
+    }
+
+    /* Code to hide 'overflow' button */
+
+    .tools-and-extensions.actions-list {
+        height: auto !important;
+    }
+
+    .tools-and-.acextensionstions-list.overflow-button {
+        display: none !important;
+    }
+
+    /* Remove unwanted padding when 'expanded' */
+
+    .actions-list[orientation="horizontal"] {
+        /*--space-xxsmall: 0px !important; /* Remove unwante extra margin when sidebar is 'expanded' - causes high cpu consumption */
+        margin-block-start: 0px !important;
+        /*padding-inline: 0px !important;
+        padding-block-end: 0px !important;/**/
+
+    }
+
+    /* Hide tools except for the last one 'configuration' */
+
+    .actions-list[orientation="vertical"]:not(:hover) moz-button[type="icon ghost"]:not(:last-child),
+    .actions-list[orientation="horizontal"]:not(:hover) moz-button[type="icon ghost"]:not(:first-child)/**/ {
+        opacity: 0 !important;
+        transform: translateY(10px) !important;
+        visibility: collapse !important;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease, transform 0.4s ease;
+    }
+
+    /* Hide tools except for the last one 'configuration' */
+
+    .actions-list[orientation="vertical"]:is(:hover) moz-button[type="icon ghost"]:not(:last-child),
+    .actions-list[orientation="horizontal"]:is(:hover) moz-button[type="icon ghost"]:not(:first-child)/**/ {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+        visibility: visible !important;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease, transform 0.4s ease;
+    }
+
+    .tools-and-extensions[orientation="horizontal"] {
+        &[overflowing="true"] {
+            flex-wrap: wrap !important;
+            height: auto !important;
+        }
+    }
+
+    /* 'Customize sidebar' button in the latest position */
+
+    .wrapper:has(.actions-list[orientation="vertical"] moz-button[type="icon"]) .actions-list moz-button[type="icon ghost"]:is(:last-child) {
+        order: 2 !important;
+    }
+
+    /* Active tool always in the penultimate position when 'collapsed' */
+
+    .actions-list moz-button[type="icon"] {
+        order: 1 !important;
+    }
+
+    /* Active tool always in the same position when 'expanded' */
+
+    .actions-list[orientation="horizontal"] moz-button[type="icon"] {
+        order: -1 !important;
+    }
+
+    /* When using default 'expand-on-hover' */
+
+    @media -moz-pref("sidebar.visibility", 'expand-on-hover') {
+
+        .more-tools-button {
+            display: none !important;
+        }
+
+        /* Keep alight newtab overflow separator when 'collapse' & 'expand' */
+        .tools-and-extensions[orientation="horizontal"] {
+            margin-block-start: -1px !important;
+        }
+
+        /* Transition delayed to hide tools when expanding */
+        .actions-list[orientation="vertical"]:is(:hover) moz-button[type="icon ghost"]:not(:last-child) {
+            transition-delay: 0.3s, 0.4s, 0.3s !important;
+        }
+
+        /* Transition duration removed to hide tools instantly on collapse */
+        .actions-list[orientation="vertical"]:not(:hover) moz-button[type="icon ghost"]:not(:last-child) {
+            transition-duration: 0ms !important;
+        }
+    }
+    
+    /* _____________________ Various separators _____________________
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */    
+    /* Remove top separator of tools-and-extensions */    
+    #sidebar-tools-and-extensions-splitter {
+        display: flex !important;
+        background-color: transparent !important;
+        pointer-events: none !important;
+    }
+    
+    #vertical-pinned-tabs-splitter {
+        #tabbrowser-tabs[expanded] > & {
+            --sidebar-divider-size: null !important;
+            --sidebar-divider-position: calc(50% - 7px) center, calc(50% + 7px) center, center !important;
+            background-image: var(--sidebar-divider-image) !important;
+        }
+    }
+    
+    #tabbrowser-tabs[orient="vertical"][expanded] {
+        &::after {
+            border-bottom-color: var(--sidebar-divider-color) !important;
+        }
+    }
+}

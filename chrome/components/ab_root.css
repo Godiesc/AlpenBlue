@@ -2,24 +2,98 @@
    https://github.com/Godiesc/AlpenBlue */
 
 :root {
+  
+  --my-main-gradient-background: linear-gradient(to top, 
+    var(--lwt-accent-color) calc(100% - 200px), transparent  );                                        /* Gradiente background used in themes with images */
+  --noise-urlbar-personal: url("../icons/urlbar-noise-light.png") !important;                         /* Urlbar [open] - noise background */
+  --my-beats-image: url("../icons/Beats.webp") !important;                                            /* Used in 'Extra' feature 'classic sound icon' */
+  --my-scheme-color: #000000;
 
   /* Toolbox Background & text color \
   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
-  --lwt-accent-color: #0c0b0f !important;                                                           /* frame */
+  --lwt-accent-color: #0c0b0f !important;                                                             /* frame */
   --lwt-accent-color-inactive: var(--lwt-accent-color, Field) !important;                             /* frame_inactive */
-  --lwt-text-color: #b3b3b3 !important;                                                             /*"tab_background_text": "#c3c3c3"*/
+  --lwt-text-color: #b3b3b3 !important;                                                               /*"tab_background_text": "#c3c3c3"*/
   /*--toolbox-text-color: blue !important;                                                            /* tab_background_text - focused window */
   /*--toolbox-text-color-inactive: red !important;                                                    /* tab_background_text - unfocused window */
   /*--lwt-text-color: inherit !important;                                                             /* tab_background_text - general focus & unfocused window */
   --inactive-titlebar-opacity: 1 !important;                                                          /* Opacity unfocused window */
+  
+  /* Tabs \
+  ¯¯¯¯¯¯¯¯ */
+  --tab-margin-block: 2px 3px !important;                                                             /* Tab margins */
+  --tab-min-height: var(--tab-height-personal) !important;                                            /* Tab size */
+  --tabstrip-min-height: var(--tab-height-personal) !important;                                       /* Tab min size */
+  --tabs-shadow-size: 0px !important;                                                                 /* Tab shadow */
+  --tab-border-radius: 5px !important;                                                                /* Tab roundness */
+  --tab-attention-dot-color: var(--general-color) !important;                                         /* Dot below favicon */
+  --tab-overflow-clip-margin: 1px !important;                                                         /* Remove unwanted space between tabs */
+  
+  /* Selected tab \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  --tab-selected-outline-color: transparent !important;                                               /* Selected tab border color */
+  --tab-loading-fill: var(--general-color) !important;                                                /* Dot color when page loads */
+  --tab-background-color-hover: var(--color-accent-primary-xsmall) !important;                        /* Tab background when 'hover' */
+  --tab-background-color-selected: var(--toolbar-background-color) !important;                        /* tab-selected background color - Fix 'flash' bug when add tab 'hover' transition
+                                                                                                      -- test in theme with images - theme with colored tab selected */
+  /*--tab-selected-textcolor: var(--my-font-color) !important;                                        /* tab_selected text color */
+  
+  /* Navbar \
+  ¯¯¯¯¯¯¯¯¯¯ */
+  --toolbar-background-color: #1e20357c !important;                                                   /* toolbar background */
+  --toolbar-text-color: var(--toolbarbutton-icon-fill) !important;                                    /* toolbar label color */
+  --tabs-navbar-separator-color: #262576 !important;                                                  /* Separator color between tabs and navbar */
+  --chrome-content-separator-color: #4d4dbe34 !important;                                             /* toolbar_bottom_separator - test with 'sidebar revamp' */
+
+  /* Navbar field \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  --toolbar-field-background-color: transparent !important;                                           /* toolbar_field */
+  --toolbar-field-text-color: var(--toolbar-text-color) !important;                                   /* toolbar_field_text */
+  --toolbar-field-border-color: #4d4dbe34  !important;                                                /* toolbar_field_border */
+
+  /* Navbar field - focus \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  --toolbar-field-background-color-focus: #242343fc !important;                                       /* toolbar_field_focus */
+  --toolbar-field-text-color-focus: var(--panel-text-color) !important;                               /* toolbar_field_text_focus */
+  --toolbar-field-border-color-focus: transparent !important;                                         /* toolbar_field_border_focus */
+  --lwt-toolbar-field-highlight: var(--general-color) !important;                                     /* toolbar_field_highlight */
+  --lwt-toolbar-field-highlight-text: var(--my-scheme-color) !important;                              /* toolbar_field_highlight_text */
+
+  --autocomplete-popup-hover-background: var(--color-accent-primary-small) !important;                /* background 'Search suggestions' 'hover' ^|v */
+  --urlbarview-separator-color: transparent !important;                                               /* Urlbar 'open' - Separator color  */
+  --border-radius-urlbar-personal: 4px;                                                               /* Personal variable - urlbar buttons roundness with 'tab-shapes' config */
+  
+  /* Navbar field items \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  --urlbar-box-background-color-hover: var(--color-accent-primary-small) !important;                  /* Background urlbar icons when 'hover' */
+  --urlbar-box-background-color-active: var(--color-accent-primary-medium) !important;                /* Background urlbar icons when 'active' */
+  /*--urlbar-box-text-color-hover: contrast-color(var(--color-accent-primary-xsmall)) !important;     /* Icon fill when 'hover' & 'open' */
+  --urlbar-inner-border-radius: 3px !important;                                                       /* Roundness of url bar icons */
+  --urlbar-icon-padding: calc((var(--urlbar-height) - 5px - 5px - 16px ) / 2) !important;             /* Urlbar icon padding */
+  --urlbar-input-gap: 10px !important;                                                                 /* Margin between 'trust' icon and url */
+  --urlbar-basic-component-size: calc(var(--urlbar-height) - 5*                                       /* Url icon size - height & width */
+    (var(--urlbar-input-container-border-width) + var(--urlbar-input-container-padding))) !important;
+  
+  /* Toolbar buttons \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  /*--toolbarbutton-icon-fill: blue !important;                                                       /* icons */
+  --toolbarbutton-icon-fill-attention: var(--general-color) !important;                               /* icons_attention */
+  --toolbarbutton-padding-inner: 5px !important;                                                      /* Smaller toolbar buttons */
+  --toolbarbutton-padding-outer: 3px !important;                                                      /* Space between buttons */
+  --toolbarbutton-border-radius: 5px !important;                                                      /* Buttons roundness */
+  --toolbarseparator-color: var(--toolbarbutton-hover-personal, #493b55) !important;                  /* Bookmarks-bar separator */
+  --toolbar-padding-inline: 9px !important;                                                           /* Padding left-right in first/last toolbar button */
+  
+  --toolbarbutton-background-color-hover: #4d4dfe50 !important;                                       /*"button_background_hover": "#26242e"*/
+  --toolbarbutton-background-color-active: #4d4dfe78 !important;                                      /*"button_background_active": "#131217"*/
 
   /* Panels - Arrowpanels \
   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
-  --arrowpanel-background: #1d1d38fa !important;                 /*"popup": "#1c1b22Fa"*/
-  --panel-background-color: #1d1d38fa !important;                 /*"popup": "#1c1b22Fa"*/
-  --panel-text-color: #ffffff !important;                        /*"popup_text": "#dfdfdf"*/
-  --panel-border-color: #4d4dbe50 !important;               /*"popup_border": "#304f60"*/
-  --panel-subview-body-padding: 8px !important;                                                   /* Popup main padding */
+  --arrowpanel-background: #1d1d38fa !important;                                                      /*"popup": "#1c1b22Fa"*/
+  --panel-background-color: #1d1d38fa !important;                                                     /*"popup": "#1c1b22Fa"*/
+  --panel-text-color: #ffffff !important;                                                             /*"popup_text": "#dfdfdf"*/
+  --panel-border-color: #4d4dbe50 !important;                                                         /*"popup_border": "#304f60"*/
+  --panel-subview-body-padding: 4px !important;                                                       /* Popup main padding */
   /*--menu-panel-width-wide: 29em !important;                                                         /* Popup width */
   /*--panel-text-color: red !important;                                                               /* popup_text */
   /*--button-text-color-ghost: red !important;                                                        /* popup_text - other */
@@ -29,89 +103,64 @@
 
   --panel-menuitem-margin: 0px !important;                                                            /* Marging for each item */
   --panel-menuitem-padding-block: 6px !important;                                                     /* Padding block for each item */
-  --panel-menuitem-padding-inline: 0.5em !important;                                                    /* Padding inline for each item */
+  --panel-menuitem-padding-inline: 0.5em !important;                                                  /* Padding inline for each item */
   --panel-menuitem-border-radius: 4px !important;                                                     /* Menuitems 'hover' roundness */
 
   --panel-separator-padding-vertical: 4px !important;                                                 /* Padding block of separator */
   --panel-separator-padding-horizontal: 6px !important;                                               /* Padding inline of separators */
-  --panel-separator-color: #3d3772 !important;                                         /* Separator color */
-
-
-  --lwt-popup-brighttext-url-color: #4da6ff !important;          /*"color de label: El sitio no funciona?"*/
-  --toolbar-field-background-color: #2f2a3c00 !important;        /*"toolbar_field":"#1a1b25"*/
-  --toolbar-field-color: #e5e5e6 !important;                     /*"toolbar_field_text":"#e2e9e9"*/
-  --toolbar-field-border-color: #4d4dbe34 !important;            /*"toolbar_field_border": "#363540"*/
-  --lwt-toolbar-field-focus: #242343fc !important;               /*"toolbar_field_focus": "#1a1b25FB"*/
-  --toolbar-field-focus-color: #ffffff !important;               /*"toolbar_field_text_focus": "#e5e5e6"*/
-  --toolbar-field-focus-border-color: transparent !important;    /*"toolbar_field_border_focus": "#005F66"*/
-  --lwt-toolbar-field-highlight: #304af1 !important;             /*"toolbar_field_highlight": "#006f80"*/
-  --lwt-toolbar-field-highlight-text: #eaeaea !important;        /*"toolbar_field_highlight_text": "#eaeaea"*/
-  --lwt-tab-text: #ffffff !important;                            /*"tab_text": "#ffffff"*/
-  --lwt-selected-tab-background-color: #11092300 !important;     /*"tab_selected":"#363540"*/
-  --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
-  --toolbar-bgcolor: #1e20358c !important;                       /*"toolbar":"#131118", "Color de la toolbar"*/
-  --toolbar-color: #8e8085 !important;                           /*"ColorLabelMarcadores":"#1a1b25"*/
-  --toolbarseparator-color: #392b45 !important;                  /*"toolbar_vertical_separator": "#363540"*/
-  --chrome-content-separator-color: #18151e !important;          /*"toolbar_bottom_separator": "#181818"*/
-  --lwt-toolbarbutton-icon-fill: #d8d8d9 !important;             /*"icons" : "#00dbfd"*/
-  --toolbarbutton-icon-fill: #eaeaea !important;                 /*"icons": "#00dbfd"*/
-  --lwt-toolbarbutton-icon-fill-attention: #4d7afe !important;   /*"icons_attention": "#00dbfd"*/
-  --toolbarbutton-hover-background: #4d4dfe50 !important;        /*"button_background_hover": "#26242e"*/
-  --toolbarbutton-active-background: #4d4dfe78 !important;       /*"button_background_active": "#131217"*/
-  --autocomplete-popup-highlight-background: #3e3b9d !important; /*"popup_highlight": "#006f80"*/
-  --lwt-sidebar-background-color: #181735 !important;
-  --sidebar-background-color: #181735 !important;
+  --panel-separator-color: #3d3772 !important;                                                        /* Separator color */
   
-  --toolbarbutton-inner-padding: 5px !important;
-
-  /* Tabs \
-  ¯¯¯¯¯¯¯¯ */
-  --tab-margin-block: 2px 3px !important;
-  --tab-min-height: var(--tab-height-personal) !important; /*tamaño pestañas*/
-  --tabs-shadow-size: 0px !important;
-  --tab-border-radius: 4px !important;
+  /* Accent colors - Other variables placed in 'ogx_root-personal.css' \
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+  --color-accent-primary: var(--general-color) !important;                                            /* Accent color */
+  --color-accent-attention: var(--general-color) !important;                                          /* Accent color - don't know where it applies */
+  --focus-outline-color: var(--general-color) !important;
   
-  --urlbar-icon-padding: 4px !important;
+  /* Buttons \
+  ¯¯¯¯¯¯¯¯¯¯¯ */
+  --button-background-color: light-dark(
+    lch(from var(--arrowpanel-background, var(--background-color-canvas)) calc(l - 20) c h),
+    lch(from var(--arrowpanel-background, var(--background-color-canvas)) calc(l + 20) c h)) !important;  /* Normal buttons background */
+  --button-background-color-hover: var(--color-accent-primary-hover) !important;                          /* Normal buttons background 'hover' - test in Private - clear session button */
+  --border-radius-medium: 4px !important;                                                                 /* Roundness of various buttons */
   
-  --toolbarbutton-outer-padding: 3px !important;
-  --urlbar-popup-url-color: #3399ff !important;
+  --button-text-color-primary: contrast-color(var(--button-background-color-primary-hover)) !important;   /* Primary Button text color - Test it in Notification when closing the browser */  
+  --button-border-color-primary: var(--color-accent-primary-xsmall) !important;                           /* Primary Button border color */
+  --button-background-color-primary-disabled: var(--color-accent-primary-xsmall) !important;              /* Primary button when disabled */
+  --button-text-color-primary-disabled: GrayText !important;                                              /* Primary Button text color when disabled */  
+  --button-border-color-primary-disabled: transparent !important;                                         /* Primary Button border color when disabled */
+  
+  --sidebar-background-color: var(--toolbar-background-color) !important;/**/
+  
   --autocomplete-popup-hover-background: #3e4cff95 !important;
   --autocomplete-popup-separator-color: color-mix(in srgb, #4d4dfeff 30%, transparent) !important;
     
   scrollbar-color: #38375580 #18173530 !important;                                                          /* Colores - Barra de deplazamiento */
   
-  --lwt-additional-images: url("../images/derecha.svg"), url("../images/middle.png") !important;
-  --lwt-background-alignment: right top,right top !important;
-  --lwt-background-tiling: no-repeat,repeat-x !important;
-  
-  /*ColorBotónGuardar*/
-    --button-primary-bgcolor: #3b55fc !important;
+  --toolbox-background-image: url("../images/derecha.svg"), url("../images/middle.png") !important;
+  --toolbox-background-position: right top, right top !important;
+  --toolbox-background-repeat: no-repeat, repeat-x !important;
+}
 
-    /*ColorLetrasBotónGuardar*/
-    --button-primary-color: #eaeaea !important;
-
-    /*ColorBotónGuardar:Hover*/
-    --button-primary-hover-bgcolor: #2c3da0 !important;
-
-    /*ColorBotónGuardar:clic*/
-    --button-primary-active-bgcolor: #0073b1 !important;
+/* ___________ Tabs groups ___________
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+:root {
+  tab-group {
+    --general-color: var(--tab-group-color) !important;                                                 /* General color becomes the group accent color */
+    --color-accent-primary: var(--general-color) !important;                                            /* Accent color */
+    --tab-group-line-thickness: var(--my-group-line-thickness) !important;                              /* Tab-group line width */
+    --tab-group-background-color: lch(from 
+      var(--tab-group-color) l c h / 12%) !important;                                                   /* Group Background */
     
-    /*Color input background en Marcadores*/
-    --input-bgcolor: var(--panel-background-color) !important;
+    /* Need to duplicate some variable */
+    --tab-background-color-hover: var(--color-accent-primary-xsmall) !important;                        /* Tab background when 'hover' */
+    --tab-loading-fill: var(--tab-selected-outline-color) !important;                                   /* Dot color when page loads */
     
-    /*Color borde en InputText Focus*/
-    --focus-outline-color: #4d4dfe !important;
-
-    /*Color borde en InputText*/
-    --input-border-color: #2d2d5e !important;
-
-    /*Colores checkbox —v*/
-    --checkbox-unchecked-bgcolor: var(--button-bgcolor) !important;
-    --checkbox-unchecked-hover-bgcolor: var(--button-primary-bgcolor) !important;      
-    --checkbox-unchecked-active-bgcolor: var(--button-primary-bgcolor) !important;
-    --checkbox-checked-border-color: transparent !important;
-    --checkbox-checked-bgcolor: var(--button-primary-bgcolor) !important;
-    --checkbox-checked-color: #eaeaea !important;
-    --checkbox-checked-hover-bgcolor: #cc3535 !important;
-    --checkbox-checked-active-bgcolor: var(--button-primary-bgcolor) !important;  
+    /* These variables from 'ogx_root-personal.css' are also needed here */
+    --color-accent-primary-xsmall: color-mix(in srgb, transparent 75%, var(--color-accent-primary));                        /* Button background color smaller */
+    --color-accent-primary-small: color-mix(in srgb, transparent 60%, var(--color-accent-primary));                         /* Button background color small */
+    --color-accent-primary-medium: color-mix(in srgb, transparent 45%, var(--color-accent-primary));                        /* Button background color medium */
+    --color-accent-primary-hover: color-mix(in srgb, var(--my-scheme-color) 24%, var(--color-accent-primary)) !important;   /* Button background color when 'hover' */
+    --color-accent-primary-active: color-mix(in srgb, var(--my-scheme-color) 40%, var(--color-accent-primary)) !important;  /* Button background color when 'active' */
+  }
 }

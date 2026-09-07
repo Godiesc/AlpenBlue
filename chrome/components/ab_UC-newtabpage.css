@@ -1,0 +1,1053 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text.
+   https://github.com/Godiesc/firefox-one */
+
+.alt-stop { stop-color: var(--left-color) !important; }                                 /* left color logo-and-wordmark */
+.main-stop { stop-color: var(--right-color) !important; }                               /* right color logo-and wordmark*/
+
+/* Styles for all 'about' pages \
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+@-moz-document url-prefix(about:) {
+    :root {
+        --color-accent-primary: var(--general-color) !important;                                    /* Main Accent color */
+
+        --border-radius-large: var(--my-border-radius) !important;                                  /* Roundness of all elements */
+        --border-radius-medium: calc(var(--border-radius-large) - 2px) !important;                  /* Roundness of all elements */
+
+        --button-background-color-primary: var(--color-accent-primary) !important;                  /* Primary button background */
+        --button-background-color-primary-hover: var(--color-accent-primary-hover) !important;      /* Primary button background on 'hover' */
+        --button-background-color-primary-active: var(--color-accent-primary-active) !important;    /* Primary button background on 'hover' */
+        --button-text-color-primary: contrast-color(var(--color-accent-primary-hover)) !important;  /* Primary button text color */
+        --button-border-color-primary: var(--general-color) !important;                             /* Primary button border color */
+        --button-border-color-primary-hover: var(--color-accent-primary-hover) !important;          /* Primary button border color */
+        --button-border-color-primary-active: var(--color-accent-primary-active) !important;        /* Primary button border color */
+        --button-background-color-hover: color-mix(in srgb, 
+            var(--general-color), var(--button-background-color-menu)) !important;                  /* Normal button background on 'hover' */
+        --button-background-color-active: var(--color-accent-primary-medium) !important;            /* Normal button background on 'active' */
+        --button-border-color: var(--my-smooth-border-color) !important;                            /* Normal Button border color */
+        --button-border-color-ghost: transparent !important;                                        /* Ghost Button border color */
+        --button-border-color-hover: var(--color-accent-primary-xsmall) !important;                 /* Normal Button border color on 'hover' */
+        
+        --select-background-color: var(--button-background-color) !important;                       /* Background color e.g. select a coockie site */
+
+        --customize-menu-bg: var(--newtab-background-color-secondary) !important;                   /* Slider background - !important - same variable into the slider class */
+        --my-box-button-background-color: color-mix(in srgb,                                        /* Variable used to in other 'about:' pages to fill 'Manage' buttons */
+            var(--customize-menu-bg, #181d25) 94%, 
+            var(--my-scheme-color), var(--general-color)) !important;
+
+        /* ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+        --toolbarbutton-icon-fill-attention: unset !important;                                                  /* Remove unwanted accent color in 'about:preferences' */
+        --color-accent-primary-selected: var(--general-color) !important;                                       /* Accent color bg into combobox */
+        --text-color-accent-primary-selected: var(--color-white) !important;                                    /* Accent color text */
+
+        --background-color-box: light-dark(var(--color-white), #111115) !important;                             /* Card default solid bg - about:config bg */
+
+        --background-color-canvas: var(--background-color-box) !important;                                      /* Background 'about:config' page */
+        --table-row-background-color-alternate: color-mix(in srgb,                                              /* Table rows distinction */
+            var(--background-color-box) 95%, FieldText) !important;
+        --table-background-color: var(--button-background-color-menu) !important;                               /* Table background */
+        --table-border-color: color-mix(in srgb, currentColor 21%, transparent) !important;                     /* Table border color */
+        --table-header-background-color: var(--color-accent-primary-xsmall) !important;                         /* Table th accent color */
+        --table-header-text-color: FieldText !important;                                                        /* Table th color */
+
+        --button-background-color-menu: light-dark(#dee2ed, var(--my-box-button-background-color)) !important;  /* Other Ghost button background */
+
+        --border-color: light-dark(var(--color-gray-50), #70707070) !important;                                 /* Border color */
+
+        --link-color: var(--general-color) !important;                                                          /* Links color */
+        --link-color-hover: FieldText !important;                                                               /* Links color on 'hover' */
+        --link-color-active: var(--purple) !important;                                                          /* Links color on 'active' */
+        --link-color-visited: var(--general-color) !important;                                                  /* Links color on 'visited' */
+
+        --background-color-information: color-mix(in srgb, 
+            var(--my-scheme-color) 60%, var(--general-color)) !important;                                       /* Information message */
+        --icon-color-information: var(--general-color) !important;                                              /* Information message icon */
+        
+        --my-font-color: light-dark(#000000, #ffffff) !important;                                               /* Needed variables to mix colors */
+        --my-small-main-background: color-mix(in srgb,
+            var(--general-color) 6%, var(--my-newtab-elements-background));                                     /* Color used below ¯¯v */
+
+        --my-gradient-background: url("../icons/urlbar-noise-light.png"),
+            linear-gradient(to bottom,
+                var(--my-newtab-elements-background) 30%, var(--my-small-main-background));                     /* Smooth Gradient background used in main elements */
+
+        --my-gradient-background-hover: url("../icons/urlbar-noise-light.png"),
+            linear-gradient(247deg, #3bbed05a, rgba(255,0,0,0) 70.71%), 
+            linear-gradient(127deg, #6c65ec90, rgba(0,255,0,0) 70.71%),
+            linear-gradient(370deg, #cb2fe15a, rgba(0,0,255,0) 80.71%);                                         /* Background color when 'hover' in main elements */
+    }
+
+    /* Toggle button \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .toggle-button {
+        --toggle-background-color-hover: var(--color-accent-primary-xsmall) !important;
+        --toggle-background-color-pressed: var(--color-accent-primary-small) !important;
+        --toggle-background-color-pressed-hover: var(--color-accent-primary-hover) !important;
+        --toggle-background-color-pressed-active: var(--color-accent-primary-active) !important;
+        --toggle-border-radius: var(--border-radius-medium) !important;
+        --toggle-height: 21px !important;
+        --toggle-width: 36px !important;
+        --toggle-dot-height: calc(var(--toggle-height) - 4 * var(--toggle-dot-margin) - 2 * var(--toggle-border-width)) !important;
+        --toggle-dot-width: calc(var(--toggle-height) - 4 * var(--toggle-dot-margin) - 2 * var(--toggle-border-width)) !important;
+
+        /* Toggle hexagon */
+        &::before {
+            margin-inline: 2px !important;
+            border-radius: calc(var(--toggle-border-radius) - 2px) !important;
+        }
+    }
+
+    /* Toggle Opacity when not 'hover' */
+    .toggle-button:not(:hover) {
+        opacity: 0.8 !important;
+    }
+
+    /* Toggle on */
+    .toggle-button[aria-pressed="true"] {
+        border-color: var(--general-color) !important;
+
+        &::before {
+            margin-inline: 1px !important;
+            background-color: currentColor !important;
+        }
+    }
+    
+    /* The same style like moz buttons */
+    moz-box-group {
+        background-color: color-mix(in srgb, var(--button-background-color-menu) 30%, transparent) !important;
+    }
+
+    /* All buttons? - 'Manage' Buttons \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .button:not([disabled]) {
+        &:hover {
+            outline: 1px solid var(--color-accent-primary-small) !important;
+        }
+    }
+    
+    /* Combobox 'select' - test in newtab & about:preferences */
+    
+    .select-wrapper {
+        --select-background-color: var(--button-background-color-menu) !important;
+    }
+    
+    /* General Scheme color when using light/dark wallpaper \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* When using 'Dark' wallpaper */
+    .darkWallpaper  {
+        color-scheme: dark !important;
+    }
+
+    /* When using 'light' wallpaper */
+    .lightWallpaper {
+        color-scheme: light !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --my-scheme-color: black;                                        /* Background for dark theme */
+            --my-contrast-color: white;                                      /* Contrast color */
+            --my-border-color-scheme: #09080d;                               /* Border color for contrast */
+            --my-smooth-border-color: #50505030;                             /* Border with transparency */
+            --my-arrowpanel-border-color: #302b3a;                           /* border color for menus */
+        }
+
+        .lightWallpaper,
+        .nova-tokens:has(> body.activity-stream.lightWallpaper) {
+            --my-scheme-color: white !important;                             /* Test in dark theme + light wallpaper */
+            --my-contrast-color: black;                                      /* Contrast color */
+            --newtab-background-color: #eaeaea !important;                   /* Replace newtab background color - variable used in slider */
+            --my-border-color-scheme: #10101920;                             /* Border of 3 dot context menu */
+            --my-smooth-border-color: #10101920;                             /* Border with transparency */
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --my-scheme-color: white;                                        /* Background for dark theme */
+            --my-contrast-color: black;                                      /* Contrast color */
+            --my-border-color-scheme: #10101920;                             /* Border color for contrast */
+            --my-smooth-border-color: #10101920;                             /* Border with transparency */
+            --my-arrowpanel-border-color: #302b3a60;                         /* border color for menus */
+        }
+
+        .darkWallpaper,
+        .nova-tokens:has(> body.activity-stream.darkWallpaper) {
+            --my-scheme-color: black !important;                             /* Test in light theme + dark wallpaper */
+            --my-contrast-color: white;                                      /* Contrast color */
+            --newtab-background-color: #101019 !important;                   /* Replace newtab background color - variable used in slider */
+            --my-border-color-scheme: #09080d;                               /* Border of 3 dot context menu */
+            --my-smooth-border-color: #50505030;                             /* Border with transparency */
+        }
+    }
+}
+
+/* __________________________________________________________ Newtab styles __________________________________________________________
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home"), url-prefix("about:privatebrowsing") {
+    
+    body {
+        --newtab-text-primary-color: FieldText !important;                                            /* General font color */
+        --newtab-text-secondary-color: FieldText !important;                                          /* 'Recent Activity' first line */
+        --newtab-contextual-text-primary-color: FieldText !important;                                 /* Pinned font color*/
+        
+        --newtab-overlay-color: color-mix(in srgb,                                                    /* - Original variable but needs to be here for some reason */
+            var(--newtab-background-color) 45%, transparent);                                         /* test 'edit site' when using darkTheme + light wallpaper  */        
+        --newtab-background-card: var(--newtab-background-color) !important;                          /* When 'edit site' -> Site icon background */
+        
+        --newtab-button-hover-background: var(--color-accent-primary-hover) !important;               /* Newtab button 'hover' - 3 dot button */
+        --newtab-button-active-background: var(--color-accent-primary-active) !important;             /* Newtab button 'active' - 3 dot button */
+        
+        --newtab-background-color-secondary: var(--my-context-menu-background) !important;            /* 3 dot context menu background */
+        --background-color-box: var(--my-context-menu-background) !important;                         /* 'Weather' context menu background */
+        
+        --my-opaque-background: color-mix(in srgb, var(--my-scheme-color), transparent);              /* Background with transparency - follow newtab scheme*/
+        --my-small-opaque-background: color-mix(in srgb, var(--my-scheme-color) 20%, transparent);    /* Background with transparency - follow newtab scheme*/
+        --my-big-opaque-background: color-mix(in srgb, var(--my-scheme-color) 90%, transparent);      /* Background with transparency - follow newtab scheme*/
+        
+        --my-context-menu-background: color-mix(in srgb,                                              /* Background color for menus */
+            var(--newtab-background-color) 100%, FieldText);
+        
+        --my-box-shadow:                                                                              /* General 'box shadow' style */
+            0 0.25px 0.75px var(--box-shadow-color-lighter-layer-1),
+            0 2px 6px var(--box-shadow-color-lighter-layer-2);
+    }
+    
+    /* Wallpaper default brightness */
+
+    @media not -moz-pref("firefoxone.main-image") {
+        body::before {
+            position: fixed;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: color-mix(in srgb, var(--newtab-background-color), transparent var(--brightness-wallpaper));
+            pointer-events: none;
+        }
+    }
+    
+    /* _______________________________________________________ Logo & Wordmark _______________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .logo {
+        background: url("../images/foxlogo.png") no-repeat !important;
+        height: 110px !important;
+        width: 120px !important;
+        background-size: 100% 100% !important;
+        -moz-context-properties: fill !important;
+        fill: var(--general-color) !important;
+    }
+
+    .wordmark {
+        background-image: url("../icons/firefox-wordmark.svg") !important;
+    }
+    
+    /* ______________________________________________________ Various Changes ________________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* Some buttons style - Ex. 'News' section \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .button-background {
+        backdrop-filter: var(--my-blur);
+    }
+    
+    /* Colors when editing a pinned site or When deleting a pinned site \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* Big transparent background with blur effect */
+    .modalOverlayOuter::backdrop,
+    .confirmation-dialog::backdrop,
+    .modal-overlay {
+        backdrop-filter: var(--my-blur);
+    }
+    
+    /* Modal & confirmation styles */
+    .modalOverlayOuter,
+    .confirmation-dialog {
+        border-radius: 0px !important;
+        border: unset !important; /* Used in cofirmation dialog */
+        box-shadow: 0 0 0 1px var(--my-border-color-scheme), var(--my-box-shadow) !important;
+        border: 1px solid transparent !important;
+        background-color: var(--newtab-background-color) !important;/**/
+        border-image: var(--panel-separator-zap-gradient2) 1 !important;
+        backdrop-filter: var(--my-blur) !important;
+    }
+    
+    /* Edit form  */
+    .topsite-form {        
+        /* Gradient separator line */
+        .actions {
+            border-image: var(--panel-separator-zap-gradient2) 1 !important;
+        }
+        
+        /* Textbox */
+        input {
+            border-color: var(--border-color) !important;
+            
+            &:hover {
+                border-color: var(--general-color) !important;
+            }
+            
+            /* When input 'focus' */
+            &:focus-visible {
+                outline: 2px solid var(--general-color) !important;
+                border-color: var(--general-color) !important;
+            }
+        }
+        
+        /* 'X' button */
+        .icon.icon-clear-input {
+            &:hover {
+                fill: var(--general-color) !important;
+            }
+        }
+    }
+    
+    /* Styles for the 'Save' button */
+    #topsites-form-save-button {
+        --button-border-radius: var(--border-radius-large) !important;
+    }
+    
+    /* Styles for the 'Cancel' button */
+    #topsites-form-cancel-button,                                                                           /* 'Edit site' cancel button */
+    moz-button[data-l10n-id="newtab-topsites-cancel-button"] {                                              /* 'Confirmation Dialog' cancel button */
+        --button-background-color: light-dark(lch(from var(--newtab-background-color) calc(l - 20) c h),
+            lch(from var(--newtab-background-color) calc(l + 20) c h)) !important;
+        --button-background-color-hover: color-mix(in srgb, var(--red) 60%, transparent) !important;
+        --button-background-color-active: color-mix(in srgb, var(--red) 80%, transparent) !important;
+        --button-border-color-hover: color-mix(in srgb, var(--red) 60%, transparent) !important;
+        --button-border-radius: var(--border-radius-large) !important;
+        --my-smooth-border-color: color-mix(in srgb, var(--red) 50%, transparent) !important;
+    }
+    
+    /* Border in button for collapse/expand widgets */
+    .widgets-expand-button {
+        --newtab-primary-action-background: var(--my-smooth-border-color) !important;
+    }
+    
+    /* Keep 'customize' button collapse after close customize menu (slider) */
+    .open-customization-button.personalize-animate-enter.personalize-animate-enter-active,
+    .customize-menu.customize-animate-exit.customize-animate-exit-active {
+        display: none !important;
+    }
+    
+    /* 'Customize' button \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .button-background {
+        & img {
+            content: var(--my-button-icon-content, var(--button-icon-content)) !important;
+        }
+    }
+    
+    .open-customization-button {
+        --button-background-color-primary: transparent !important;
+        --button-border-color-primary: var(--my-smooth-border-color) !important;
+        --button-icon-content: url("../icons/more-options.svg") !important;
+        --button-icon-fill: var(--my-contrast-color) !important;
+        --button-icon-stroke: var(--my-contrast-color) !important;
+        
+        &:hover,
+        &:focus {
+            --button-background-color: var(--color-accent-primary-xsmall) !important;
+            --button-icon-fill: var(--button-text-color-primary) !important;
+            --button-icon-stroke: var(--button-text-color-primary) !important;
+        }
+    }
+    
+    /* ___________________________________________________ Customize menu Slider ____________________________________________________
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */    
+    /* Smooth gradient background */    
+    .customize-menu.nova-enabled,
+    .wallpaper-list.category,
+    .widgets-mgmt-panel,
+    .sections-mgmt-panel {
+        background-color: transparent !important;
+        /* Color used below */
+        --my-small-main-background: color-mix(in srgb, var(--general-color) 4%, var(--customize-menu-bg));
+        /* Smooth Gradient background */
+        background: url("../icons/urlbar-noise-light.png"), 
+            linear-gradient(to top, var(--my-small-main-background), var(--customize-menu-bg)) !important;
+    }
+    
+    /* Shape and border */
+    .customize-menu {
+        --customize-menu-bg: var(--newtab-background-color-secondary) !important;
+        --my-slider-border-color: color-mix(in srgb, var(--customize-menu-bg) 94%, var(--my-contrast-color));
+        min-height: 100% !important;
+        border-radius: 0px !important;
+        box-shadow: -1px 0 var(--my-slider-border-color), 0px 0px 20px rgb(1 1 1 / 16%), 0px 0px 10px rgb(0 0 0 / 93%) !important;
+        --space-xxsmall: 0px !important;
+    }
+    
+    .customize-menu-content .manage-settings-footer {
+        --my-slider-footer-background-color: color-mix(in srgb, var(--color-accent-primary-xsmall) 20%, var(--customize-menu-bg));
+        background: linear-gradient(var(--my-slider-footer-background-color), var(--my-slider-footer-background-color)),
+            linear-gradient(to bottom, transparent 10px, var(--customize-menu-bg) 20px) !important;
+        
+        &::before {
+            background: url("../icons/urlbar-noise-light.png"), 
+                linear-gradient(to top, var(--my-slider-footer-background-color), transparent) !important;
+            pointer-events: none !important;
+        }
+    }
+    
+    /* 'Close' button */    
+    .close-button-wrapper {
+        --newtab-background-color-secondary: transparent !important;
+        position: static !important; /* Make close button scroll up */
+        
+        /* Remove unwantes styles from 'buttons' styles */
+        #close-button {
+            --my-blur: none !important;
+            --my-box-shadow: none !important;
+        }
+    }
+    
+    /* Separator line */
+    
+    .home-section .divider {
+        border-image: var(--panel-separator-zap-gradient2) 1 !important;
+    }
+    
+    .nova-enabled.logo-in-content .content {
+        grid-row: 2/span 2 !important;
+    }
+    
+    /* __________________________________________________________ Search box _________________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* Width */
+    @container content-grid (inline-size >= calc(750px + 6.75rem)) {
+        .nova-enabled .search-inner-wrapper {
+            width: calc(6 * var(--col-width) + 12 * var(--space-medium)) !important;
+        }
+    }
+    
+    @container outer-grid (inline-size >= calc(1050px + 8.25rem)) {
+        .nova-enabled .search-inner-wrapper {
+            width: calc(6 * var(--col-width) + 12 * var(--space-medium)) !important;
+        }
+    }
+    
+    .search-wrapper content-search-handoff-ui {
+        --newtab-background-color-secondary: transparent !important;
+        --newtab-text-primary-color: Fieldtext !important;
+        --content-search-handoff-ui-border-width: 0px !important;
+    }
+    
+    /* Remove arrow */
+    .non-handoff-container .search-button {
+        display: none !important;
+        border-radius: 0 calc(var(--border-radius-medium) + 22px) calc(var(--border-radius-medium) + 22px) 0px !important;
+    }
+    
+    /* Background color */
+    content-search-handoff-ui {
+        background: var(--my-gradient-background) !important;
+    }
+    
+    /* Styles for both searchbox - classic & improved \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */    
+    #newtab-search-text,
+    .search-handoff-button {
+        backdrop-filter: var(--my-blur) !important;
+        box-shadow: inset 0 -1px var(--color-accent-primary-xsmall), inset 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow) !important;
+        transition: box-shadow 0.2s ease, background-color 0.2s ease !important;
+        outline: 2px solid transparent !important; /* Remove unwanted outline but keep it transparent for 'accessibility' */
+        
+        &:hover,
+        &:hover:not([keepfocus]) {
+            box-shadow: inset 0 0px 0 1px var(--my-box-shadow-color, var(--color-accent-primary-hover)), inset 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow), 0 0 2px 0px var(--my-scheme-color)  !important;/**/
+            transition-delay: 0.1s, 0s !important;
+        }
+        
+        &[keepfocus] {
+            box-shadow: inset 0 0 0 1px var(--general-color), inset 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow) !important;
+            transition-delay: 0s, 0s !important;
+        }
+    }
+    
+    /* Styles for the improved search box \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .non-handoff-container:focus-within,
+    content-search-handoff-ui[fakefocus] {
+        --my-box-shadow-color: var(--general-color) !important;
+        --my-smooth-border-color: var(--my-box-shadow-color) !important;
+    }
+    
+    /* Styles for the classic search box \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    #newtab-search-text {
+        padding-inline-start: 50px !important;
+    }
+    
+    /* Searchbox focus Animation line
+    - Styles for the classic search box
+    - Styles for the improved search box
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .non-handoff-container,
+    content-search-handoff-ui {
+        border-radius: calc(var(--border-radius-medium) + 22px) !important;
+        will-change: clip-path !important;
+        
+        &:before {
+            content: '' !important; display: flex !important; position: absolute !important;
+            width: -moz-available !important;
+            border-radius: calc(var(--border-radius-medium) + 22px) !important;
+            height: calc(100% - 0px) !important;
+            bottom: 0px !important;
+            box-shadow: inset 0 -1px var(--general-color), 0 1px 0 0 var(--general-color) !important;
+            clip-path: xywh(50% 0px 0% calc(100% + 0px)) !important;
+            transition: clip-path 0.8s ease, background 0.4s ease !important;
+            pointer-events: none !important;
+        }
+    }
+
+    .non-handoff-container:focus-within,
+    content-search-handoff-ui[fakefocus] {
+        &:before {
+            box-shadow: 0 0 0 1px var(--general-color), 0 0 4px var(--my-scheme-color) !important;
+            clip-path: xywh(-4px -4px calc(100% + 8px) calc(100% + 8px)) !important;
+            background: var(--my-gradient-background-hover) !important;
+            transition: clip-path 0.3s ease, background 0.4s ease !important;
+        }
+    }
+    
+    /* Search-box when it get sticky position \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */    
+    @media (height > 700px) {
+        .nova-outer-wrapper.stuck-search::before {
+            --my-solid-background-blur: color-mix(in srgb, var(--newtab-background-color), transparent) !important;
+            background-image: linear-gradient(
+                var(--my-solid-background-blur), var(--my-solid-background-blur)),
+                var(--newtab-wallpaper, none),
+                linear-gradient(var(--my-solid-background-blur, transparent), var(--my-solid-background-blur, transparent))!important;
+            background-size: cover;
+            background-position: var(--newtab-wallpaper-backgroundPosition);
+            background-attachment: fixed;
+            backdrop-filter: var(--my-blur) !important;
+            border-color: Field !important;
+            box-shadow: var(--my-box-shadow) !important;
+            
+            @media -moz-pref("firefoxone.main-image") {
+                background-image: none !important;
+                background-color: var(--my-big-opaque-background) !important;
+            }
+        }
+    }
+    
+    /* __________________________________________________________ Widgets ___________________________________________________________
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /*.widget-wrapper>/**/article {
+        background: var(--my-gradient-background) !important;
+        box-shadow: inset 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow) !important;
+        outline-color: transparent !important;
+        transition: box-shadow ease-in-out 0.1s !important;
+        backdrop-filter: var(--my-blur) !important;
+
+        &:hover {
+            background: var(--my-gradient-background-hover) !important;
+            /*box-shadow:  inset 0 0 0 1px var(--color-accent-primary-active), 0 0 0 1px var(--color-accent-primary-active), var(--my-box-shadow) !important;/**/
+        }
+    }
+    
+    /* 'Checklist widget' - button background \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */    
+    .lists {
+        --lists-button-background: var(--color-accent-primary) !important;
+    }
+    
+    /* _____________________________________________________ Weather _____________________________________________________ \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .weather-widget.col-4.small-widget {
+        height: 90px !important;
+    }
+    
+    .weather-widget {
+        --weather-sunny-background-color: light-dark(var(--color-yellow-0), var(--color-yellow-50)) !important;
+        
+        .forecast-footer {
+            display: none !important;
+        }
+    }
+    
+    /* _____________________________________________________ Pinned sites ________________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+    .top-sites-list {
+        --col-width: calc(var(--mrec-width) / 3.2) !important;
+
+        /* Pinned Site Colors (Small Background) */
+        .top-site-outer .tile {
+            width: var(--col-width) !important;
+            height: var(--col-width) !important;
+            border-width: 0px !important;
+            align-items: start !important;
+            padding-block-start: 10px !important;
+            box-shadow: inset 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow) !important;
+            background-color: transparent !important;
+            background: var(--my-gradient-background) !important;
+            backdrop-filter: var(--my-blur) !important;
+            transition: box-shadow ease-in-out 0.1s !important;
+            
+            .icon-wrapper {
+                --size-item-large: 48px !important;
+                width: var(--size-item-large) !important;
+                height: var(--size-item-large) !important;
+            }
+        }
+        
+        /* Favicon size when their size is smaller */
+        & .default-icon {
+            background-size: var(--size-item-large) !important;
+            width: var(--size-item-large) !important;
+            height: var(--size-item-large) !important;
+        }
+
+        /* Pin icon removed 
+        .top-site-outer .icon.icon-pin-small { 
+            display: none !important;
+        }*/
+        
+        /* Label - pinned site */
+        .title {
+            padding-block: 0px !important;
+            
+        }
+        
+        .title-label  {
+            font-size: 14px !important;
+            min-height: 1lh !important;
+            margin-block-start: -28px !important;
+            padding-inline: 8px !important;
+            align-content: center !important;
+            text-shadow: 0px 0px 4px var(--my-scheme-color) !important;
+        }
+
+        /* Title label just in one line */
+        
+        .top-site-outer .title:not(.sponsored) .title-label {
+            -webkit-line-clamp: unset !important;
+        }
+        
+        .top-site-outer span[dir="auto"] {
+            text-wrap-mode: nowrap !important;
+        }
+        
+        /* Remove style when on 'hover' over pinned sites (larger background) */
+
+        /* remove unwanted padding of elements */
+        .top-site-outer .top-site-inner > a {
+            padding: 0 !important;
+        }
+
+        /* size and background color */
+        .top-site-outer {
+            border-radius: 0px !important;
+            background-color: transparent !important;
+            /*margin-block-end: 22px !important;/**/
+            
+            .top-site-icon {
+                background-color: transparent !important;
+            }
+        }
+
+        /* Styes when on 'hover' over 'Pinned sites' and 'Recent Activity' */
+        .top-site-outer:is(:hover, :focus-within, .active) {
+            .tile {
+                background: var(--my-gradient-background-hover) !important;
+                /*box-shadow:  inset 0 0 0 1px var(--color-accent-primary-active), 0 0 0 1px var(--color-accent-primary-active), var(--my-box-shadow) !important;/**/
+                outline-color: transparent !important;
+            }
+        }
+    }
+
+    /* ____________________________________________________ Recent Activity ______________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .card-outer {
+        background-color: transparent !important;
+        box-shadow: 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow) !important;
+        transition: background ease 0.1s, box-shadow ease-in-out 0.1s !important;
+        
+        &:hover,
+        &.active {
+            background: var(--my-gradient-background-hover) !important;
+            /*box-shadow: 0 0 0 2px var(--color-accent-primary-active), var(--my-box-shadow) !important;/**/
+        }
+        
+        .card {
+            background: var(--my-gradient-background) !important;
+            backdrop-filter: var(--my-blur) !important;
+            
+            & .card-title {
+                transition: text-decoration ease 0.19s !important;
+                text-underline-offset: 2px !important;
+            }
+            
+            /* Icon */
+            .card-context {
+                backdrop-filter: var(--my-blur);
+                background-color: var(--my-opaque-background) !important;
+                border-radius: 50% !important;
+
+                &> .card-context-icon {
+                    fill: currentColor !important;
+                }
+            }
+        }
+        
+        /* Underline on 'hover' */
+        &:is(:hover, :focus, :active, :focus-within, .active):not(.placeholder) .card-title {
+            --newtab-primary-action-background: var(--newtab-text-primary-color) !important;
+            text-decoration: underline !important;
+        }
+        
+        /* Text shadow */
+        .card-host-name,
+        .card-title {
+            text-shadow: 0px 0px 4px var(--my-scheme-color) !important;
+        }
+    }
+    
+    /* ______________________________________________________ News Section _______________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .section-context-wrapper {
+        margin-inline-end: 14px !important;
+    }
+
+    .ds-card {
+        --color-accent-primary: FieldText !important;                                   /* Accent color in 'News' when 'hover' */
+        --newtab-text-secondary-color: var(--general-color) !important;                 /* Source of information in 'News' */
+        background-color: transparent !important;
+        background: var(--my-gradient-background) !important;
+        box-shadow: transparent !important;
+        box-shadow:  inset 0 0 0 1px transparent, 0 0 0 2px transparent, var(--my-box-shadow) !important;
+        backdrop-filter: var(--my-blur) !important;
+        transition: box-shadow ease-in-out 0.1s !important;
+
+        &:hover {
+            /*box-shadow:  inset 0 0 0 1px var(--color-accent-primary-active), 0 0 0 2px var(--color-accent-primary-active), var(--my-box-shadow) !important;/**/
+            background: var(--my-gradient-background-hover) !important;
+        }
+
+        .ds-card-link {
+            background-color: transparent !important;
+            border-radius: var(--border-radius-large) !important;
+            box-shadow: inset 0 0 0 1px var(--my-smooth-border-color), var(--my-box-shadow) !important;
+            transition: box-shadow ease-in-out 0.1s !important;
+
+            &:hover {
+                /*box-shadow:  inset 0 0 0 1px transparent, 0 0 0 1px var(--color-accent-primary-active) !important;/**/
+            }
+        }
+
+        .info-wrap {
+            text-shadow: 0px 0px 4px var(--my-scheme-color) !important;
+        }
+    }
+
+    /* Underline when 'hover' */
+    .ds-card-grid .ds-card:hover h3,
+    .ds-card-grid .ds-card.active h3 {
+        text-decoration: underline 1px !important;
+    }
+    
+    /* _________________________________________________ 3 dot contextual menu ___________________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+    /* 3 dot icon pinned sites */
+
+    .top-site-outer .context-menu-button {
+        --size-item-medium: 18px !important;
+        background-image: url("../icons/more.svg") !important;        
+        border-radius: var(--border-radius-medium) !important;
+        border-start-start-radius: 0px !important;
+        border-start-end-radius: calc(var(--my-border-radius) - 3px) !important;
+        border-end-end-radius: 0px !important;
+        inset-block-start: 1px !important;
+        inset-inline-end: 1px !important;
+        transition: opacity 100ms;
+        
+        & ~ .context-menu {
+            margin-inline-start: -6px !important;
+            top: 16px !important;
+        }
+    }
+
+    /* 3 dot icon recent activity */
+
+    .card-outer .context-menu-button {
+        background-color: var(--my-opaque-background) !important;
+        top: 2px !important;
+        inset-inline-end: 2px !important;
+        border-radius: var(--border-radius-large) !important;
+        fill: currentColor !important;
+        transition-duration: 150ms !important;
+        transition-delay: 0ms !important;
+
+        &:hover,
+        &[aria-expanded="true"] {
+            background-color: var(--general-color) !important;
+        }
+    }
+
+    /* 3 dot contextual menu */
+
+    .context-menu,
+    #weather-context-menu {
+        --newtab-element-secondary-hover-color: var(--panel-separator-zap-gradient3) !important;    /* 'Hover' menuitem gradient */
+        --newtab-element-secondary-active-color: var(--panel-separator-zap-gradient4) !important;    /* 'clic' menuitem gradient */
+        
+        border-radius: 0px !important;
+        box-shadow: 0px 0px 0 1px var(--my-border-color-scheme) !important;
+        border: 1px solid var(--my-arrowpanel-border-color) !important;
+        border-image: var(--panel-separator-zap-gradient2) 1 !important;
+        backdrop-filter: var(--my-blur) !important;
+
+        /* Separator */
+        & .separator {
+            margin-inline: 6px !important;
+            width: -moz-available !important;
+            border-image: var(--panel-separator-zap-gradient2) 1 !important;
+        }
+    }
+    
+    /* Menuitem hover text color */
+    .context-menu > ul > li > a:hover, 
+    .context-menu > ul > li > button:hover {
+        color: contrast-color(var(--color-accent-primary-hover)) !important;
+    }
+    
+    #weather-context-menu {
+        --button-background-color-hover: var(--color-accent-primary-hover) !important;
+    }
+    
+    /* _____________ Styles when using Firefox feature 'transparent browser' _____________
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+    @media -moz-pref("browser.tabs.allow_transparent_browser") {
+        
+        /* Remove unwanted solid background */
+        body {
+            background-color: transparent !important;
+        }
+    }
+    
+    /* ______________________________________________ For Main-image configuration _______________________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    
+    @media -moz-pref("firefoxone.main-image") {
+        
+        body {
+            background: transparent !important;
+
+            /*Remove unwanted brightness */
+            &::before {
+                display: none !important;
+            }
+        }
+        
+        /* Previews - Firefox ONE wallpapers deleted and show only accent color */        
+        moz-button[data-l10n-id="newtab-wallpaper-category-title-photographs"] ~ div :is(.theme-dark, .theme-light) {
+            background-size: 0px !important;
+            background-color: black !important;            
+            align-content: center !important;
+            text-align: center !important;
+            
+            &[aria-checked]::after {
+                width: 16px !important;
+                height: 16px !important;
+                margin-inline-start: -8px !important;
+                margin-block-start: -8px !important;
+            }
+        }
+        
+        .wallpaper-list>moz-button[data-l10n-id="newtab-wallpaper-category-title-photographs"] ~ div .theme-light {
+            background-color: white !important;
+        }
+    }
+}
+
+/* _____________________________________________________ Private Newtab page _____________________________________________________ 
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+@-moz-document url-prefix(about:privatebrowsing) {
+    :root {
+        --newtab-background-color: light-dark(#fefefe, #101019) !important;
+    }
+    
+    /* Background & Font color - test changing to a light theme */
+    @media not (prefers-contrast) {
+        html.private {
+            background: none !important;
+            color-scheme: inherit !important;
+        }
+    }
+    
+    /* Firefox logo replaced by 'Private' logo */
+    .logo {
+        background: url("../icons/logo_private.svg") no-repeat !important;
+        background-size: cover !important;
+    }
+    
+    /* Informative boxes */
+    .promo.below-search, 
+    .info {
+        --my-informative-background-color: light-dark(#ffffff, #0c0c0d) !important;
+        background: var(--my-gradient-background) !important;
+        backdrop-filter: var(--my-blur) !important;
+        outline: 1px solid #50505050 !important;
+
+        &:hover {
+            --my-gradient-background-hover: color-mix(in srgb,                                            /* Background color when 'hover' in main elements */
+            var(--general-color) 6%, var(--my-informative-background-color)) !important;
+            background: var(--my-gradient-background-hover) !important;
+        }
+    }
+
+    .info-border {
+        background: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Primary buttons */
+    .promo-cta .primary {
+        background-color: var(--color-accent-primary-small) !important;
+        border-color: var(--color-accent-primary-xsmall) !important;
+        color: Fieldtext !important;
+        
+        &:hover {
+            background-color: var(--color-accent-primary-hover) !important;
+        }
+    }
+    
+    /* __________________________________ Searchbox __________________________________ 
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    .search-handoff-button {
+        --content-search-handoff-ui-fill: FieldText !important;     /* Icon fill color */
+        background-color: transparent !important;
+        border-width: 0px !important;
+        border-color: transparent !important;
+        box-shadow: inset 0 -1px var(--color-accent-primary-small) !important;
+        opacity: 0.8 !important;
+    }
+    
+    /* 'Search with...' text color */
+    .fake-textbox, 
+    .fake-editable {
+        color: FieldText !important;
+    }
+
+    /* Caret- insertion point */
+    .fake-caret { 
+        background-color: FieldText !important;
+    }
+    
+    /* I don't know why this keep the animation in searchbox */
+    .search-inner-wrapper {
+        --mrec-width: 300px;
+        --col-width: calc(var(--mrec-width) / 4);
+        width: calc(6 * var(--col-width) + 12 * var(--space-medium)) !important;
+        min-width: calc(6 * var(--col-width) + 12 * var(--space-medium)) !important;
+        backdrop-filter: var(--my-blur) !important;
+        margin-inline: auto !important;
+    }
+}
+
+/* ________________________________________________________ Firefox View _________________________________________________________ 
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+@-moz-document regexp("^about:firefoxview.*") {
+    
+    :root {
+        --newtab-text-primary-color: unset !important;                                  /* Remove general font color */
+        --fxview-primary-action-background: var(--general-color) !important;            /* Accent color 'View all' & ... */
+        --fxview-element-background-hover: var(--color-accent-primary-hover) !important;      /* Context menu: color on 'hover' over items */
+        --fxview-element-background-active: var(--color-accent-primary-active) !important;    /* Context menu: color on 'clic' over items */
+        --fxview-background-color: transparent !important;                              /* Sticky background */
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        :host, :root {
+            --newtab-background-color-secondary: rgba(32, 35, 49, 0.9) !important;          /* Category content background color */
+        }
+    }
+    
+    @media (prefers-color-scheme: light){
+        :root{
+            --newtab-background-color-secondary: rgba(292, 295, 299, 0.9) !important;       /* Category content background color */
+        }
+    }
+    
+    /* Remove unwanted big vertical scrollbar */
+    body {
+        overflow-y: hidden !important;
+    }
+    
+    /* All right side */
+    .main-container {
+        width: 100% !important;
+    }
+    
+    /* Sticky */
+    .sticky-container {
+        margin-inline: 0px !important;
+        padding-inline: 42px 52px !important;
+        box-shadow: 6px 0px 10px black !important;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));
+    }
+    
+    /* Search-box */
+    #input {
+        &[type="search"] {
+            background-color: color-mix(in srgb, var(--newtab-background-color) 80%, transparent) !important;
+            border-color: color-mix(in srgb, var(--newtab-background-color) 80%, FieldText) !important; 
+            border-radius: var(--border-radius-medium) !important;
+
+            &:hover {
+                background-color: color-mix(in srgb, var(--color-accent-primary-xsmall) 30%, var(--newtab-background-color)) !important;
+                border-color: var(--color-accent-primary-small) !important;
+            }
+            
+            &:focus-visible {
+                background-color: var(--newtab-background-color) !important;
+                border-color: var(--general-color) !important;
+                outline: 1px solid var(--general-color) !important;
+            }
+        }
+    }
+    
+    /* Category Content */
+    .cards-container {
+        height: 66vh !important;
+        overflow: auto;
+        scrollbar-gutter: stable !important;
+        padding-inline: 42px 52px !important;
+        padding-block-start: 10px !important;
+    }
+}
+
+/* Fix pages background color when they didn't set a background in its body element \
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+@-moz-document regexp("^https?://.*") {                                     /* Twitch with extensions */
+    html:not([class*="dark"],[data-theme*="dark"]) > body:not([class*="dark"],[tabindex="-1"]) {
+        background-color: Field;
+    }
+
+    html > body[class*="redhat"] {
+        background-color: Field !important;
+    }
+}
+
+/* Some websites set the background color into 'html', need to remove the background color from body element setted above */
+@-moz-document 
+    regexp(".*startpage.*"),
+    regexp(".*https://ogs.google.*"),   /* Test in google.com - account button */
+    regexp(".*play.hbomax.*"),
+    regexp(".*https://fastcomments.*"),
+    regexp(".*https://accounts.*"),
+    regexp(".*0day.*"),
+    regexp(".*https://playersquared.com.*") {
+    html:not([class*="dark"],[data-theme*="dark"]) > body:not([class*="dark"],[tabindex="-1"])  {
+        background-color: initial;
+    }
+}

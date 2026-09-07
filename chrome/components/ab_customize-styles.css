@@ -13,14 +13,14 @@
     border-radius: 4px !important;
 }
 .customizationmode-button:is(:active, :hover):not([disabled]), .customizationmode-button[open], .customizationmode-button[checked] {
-    background-color: var(--button-primary-bgcolor) !important;
+    background-color: var(--button-background-color-primary) !important;
     border-color: #2b7aff !important;
     color: var(--lwt-tab-text) !important;
 }
 #customization-done-button {
     color: #fff !important;
     border-color: #3a84ff !important;
-    background-color: var(--button-primary-bgcolor) !important;
+    background-color: var(--button-background-color-primary) !important;
 }
 #customization-done-button:is(:active, :hover):not([disabled]) {
     background-color: var(--button-primary-hover-bgcolor) !important;

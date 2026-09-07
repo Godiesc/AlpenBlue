@@ -4,7 +4,7 @@
 /* Menu padding \
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
 menupopup:not(.in-menulist) {
-    --panel-padding: 8px 8px !important;
+    --panel-padding: 4px !important;
     
     /* without '>' to affect too the context navigation buttons */
     & :is(menuitem, menu) {
@@ -40,7 +40,7 @@ menupopup:not(.in-menulist)  menuseparator {
 menupopup menupopup {
     appearance: none !important;
     margin-block-start: -6px !important;
-    margin-inline-start: -8px !important;
+    margin-inline-start: -4px !important;
 }
 
 /* General Styles \

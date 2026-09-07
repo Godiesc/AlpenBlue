@@ -1,0 +1,320 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+@-moz-document url-prefix(about:preferences), url-prefix(about:settings), url-prefix(about:addons), 
+    url-prefix(about:support), url-prefix(about:profiles) , url-prefix(about:debugging), url-prefix(about:welcome) {
+        
+        /* Replace style for cards background setted in main 'root' variables in 'ab_UC-newtabpage.css' */
+        
+        :root {
+            --my-gradient-background: radial-gradient( 100% 91.38% at 50% 99.62%,                               /* Background gradient - personal */
+                color-mix(in srgb, var(--color-accent-primary-small) 5%, transparent) 0%,
+                transparent);
+            --my-gradient-background-hover: radial-gradient( 100% 91.38% at 50% 99.62%,                         /* Background gradient when 'hover' - personal */
+                color-mix(in srgb, var(--color-accent-primary-small) 20%, transparent) 0%,
+                transparent);
+        }
+        
+        html,   /* For addons-preferences... */
+        body {  /* For other 'about:' pages */
+            background: transparent !important;                 /* Main background color */
+        }
+        
+        .sticky-container {
+            --background-color-canvas: transparent !important;  /* Sticky background color */
+        }
+        
+        /* Categories - left side */
+
+        moz-page-nav-button {
+            --page-nav-button-background-color-selected: color-mix(in srgb, var(--general-color) 8%, transparent) !important;
+        }
+        
+        button {
+            &[selected] {
+                --page-nav-button-text-color-selected: light-dark(lch(from var(--general-color) calc(l - 5) c h), lch(from var(--general-color) calc(l + 5) c h)) !important;
+                
+                &:hover {
+                    --page-nav-button-text-color-selected: currentColor !important;
+                    --page-nav-button-background-color-selected: var(--color-accent-primary-medium) !important;
+                }
+            }
+        }
+        
+        /* Remove unwanted border in footer items */
+        .sidebar-footer-list {
+            --button-border-color: transparent !important;
+            --button-border: var(--border-width) solid var(--button-border-color);
+        }
+        
+        /* Search box \
+        ¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+        #input {        
+            &[type="search"] {
+                --input-text-background-color: color-mix(in srgb, var(--button-background-color) 70%, transparent) !important; /* background color */
+                border-color: var(--border-color) !important;  /* border color for searchbox */
+                border-radius: var(--my-border-radius) !important;
+
+                &:hover {
+                    --input-text-background-color: color-mix(in srgb, var(--color-accent-primary-xsmall) 70%, transparent) !important; /* background color */
+                    border-color: var(--color-accent-primary-small) !important;
+                    outline: 0px solid var(--general-color) !important;
+                }
+
+                &:focus-visible {
+                    --input-text-background-color: color-mix(in srgb, var(--my-scheme-color), transparent) !important; /* background color */
+                    border-color: var(--general-color) !important;
+                    outline: 1px solid var(--general-color) !important;
+                }
+            }
+        }
+        
+        /* ____________________________ Cards ____________________________
+        ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+        /* Little gradient background in cards */
+        .card:not([active="false"]) {
+            
+            background: var(--my-gradient-background) !important;
+            background-color: var(--button-background-color-menu) !important;
+            transition: background 0.2s ease-in-out, border-color 0.1s ease-in-out !important;
+            
+            &:hover {
+                background: var(--my-gradient-background-hover) !important;
+                background-color: var(--button-background-color-menu) !important;
+            }
+        }
+        
+        /* underline style when 'hover' */
+        addon-card:not([expanded]) > .addon.card {
+            
+            & .addon-name-link {
+                text-decoration: underline transparent !important;
+                text-underline-offset: 2px !important;
+                transition: text-decoration 0.1s ease-in-out !important;
+            }
+            &:hover .addon-name-link {
+                color: inherit !important;
+                text-decoration: underline currentColor !important;
+            }
+        }
+
+        .card[active="true"] {
+            box-shadow: 0 0 0 1px transparent !important;
+            &:hover {
+                border-color: var(--general-color) !important;
+                box-shadow: 0 0 0 1px var(--general-color) !important;
+                transition: border-color 0.1s ease, box-shadow 0.1s ease !important;
+            }
+        }
+        
+        /* 'Separator line' gradient in 'settings' */
+        .subcategory:not([hidden]) ~ .subcategory {
+            border-width: 2px !important;
+            border-image: var(--panel-separator-zap-gradient3) 1 !important; 
+        }
+}
+
+/* ________________________________________ only 'about:addons' page _________________________________________
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+
+@-moz-document url-prefix(about:addons) {
+    
+    :root {
+        --newtab-background-color: var(--background-color-box) !important;
+    }
+    
+    /* 'About:addons' page \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    #content {
+        max-height: 100vh;
+        display: grid !important;
+        grid-template-rows: auto auto 1fr;
+        --in-content-page-background: transparent;
+    }
+
+    #main {
+        overflow: auto;
+        max-width: 100% !important;
+        scrollbar-gutter: stable !important;
+        margin-inline-start: 0px !important;
+        padding-inline-start: var(--main-margin-start);
+
+        & addon-card[expanded="true"],
+        & addon-list,
+        &>recommended-themes-section>recommended-addon-list,
+        & recommended-extensions-section {
+            --page-main-content-width: calc(100% + 28px + 4px) !important;
+            display: block !important;
+            max-width: calc(100% - var(--sidebar-width) - var(--main-margin-start, 0px)) !important;
+            padding-inline-start: 4px !important;
+        }
+
+        & discovery-pane {
+            --page-main-content-width: calc(100% + var(--main-margin-start) + 4px) !important;
+            display: block !important;
+            max-width: calc(100% - var(--sidebar-width) - var(--main-margin-start)) !important;
+            padding-inline-start: 4px !important;
+        }
+    }
+
+    /* Sticky elements in one line \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* Header */
+    .sticky-container {
+        display: grid !important;
+        grid-template-rows: 1 !important;
+        grid-template-columns: auto  auto !important;
+
+        /* Left side */
+        & .main-heading {
+            grid-column: 1;
+            grid-row: 1;
+            align-items: center !important;
+            padding-block-end: unset !important;
+
+            & .spacer {
+                max-width: 20px !important;
+            }
+        }
+
+        /* Right side */
+        & .main-search {
+            justify-content: center !important;
+            display: grid !important;
+            grid-column: 2;
+            grid-row: 1;
+            align-items: center !important;
+            padding-block: 30px !important;
+
+            & .search-label {
+                display: none !important;
+            }
+        }
+    }
+
+    /* Stycky head Style in small width resolution */
+
+    @media (max-width: 830px) {
+
+        /* Remove header label */
+        .main-heading>.header-name {
+            display: none !important;
+        }
+    }
+}
+
+/* ________________________________________________________________________________________________________________________________________________________
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ Only 'about:preferences' page ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+/* Variables used in popup dialogbox - Needs to be outside */
+@media not ((forced-colors) or (-moz-native-theme)) {
+    :root[dialogroot] {
+        --my-scheme-color: light-dark(#ffffff, #000000) !important;                                         /* Scheme color - needed to set here again */
+        --my-font-color: light-dark(#000000, #ffffff) !important;                                           /* Needed variables to mix colors */
+        --toolbarbutton-icon-fill-attention: unset !important;                                              /* Remove unwanted default accent color */
+        --color-accent-primary-selected: var(--color-accent-primary-hover) !important;                      /* Accent color in some items selected */
+        --text-color-accent-primary-selected: contrast-color(var(--color-accent-primary-hover)) !important; /* Accent text color in some items selected */
+        --background-color-box: light-dark(var(--color-white), #111115) !important;                         /* inset container background - needed to set here again */
+        
+        --color-accent-primary: var(--general-color) !important;                                            /* Main Accent color */
+        --button-background-color-primary: var(--color-accent-primary) !important;                          /* Primary button background */
+        --button-background-color-primary-hover: var(--color-accent-primary-hover) !important;              /* Primary button background when 'hover' */
+        --button-background-color-primary-active: var(--color-accent-primary-active) !important;            /* Primary button background when 'active' */
+        --button-text-color-primary: contrast-color(var(--color-accent-primary-hover)) !important;          /* Primary button text color */
+        
+        --button-background-color: color-mix(in srgb, var(--background-color-box) 75%, 
+            var(--my-font-color), var(--color-accent-primary-small)) !important;                            /* General button background */
+        --button-background-color-hover: color-mix(in srgb, var(--background-color-box) 80%, 
+            var(--my-font-color), var(--color-accent-primary-small)) !important;                            /* General button background when 'hover' */
+    }
+}
+
+@-moz-document url-prefix(about:preferences) {
+    
+    /* General Buttons background */
+    setting-control {
+        --button-background-color: light-dark(lch(from var(--button-background-color-menu) calc(l - 5) c h), 
+            lch(from var(--button-background-color-menu) calc(l + 5) c h)) !important;
+    }
+    
+    /* Remove unwanted margin from right section */
+    .main-content {
+        padding-inline: 0px !important;
+    }
+    
+    .pane-container {
+        width: max(calc(100% - 1px), var(--page-main-content-width)) !important;
+        display: grid !important;
+        overflow-x: hidden !important;
+
+        & #mainPrefPane {
+            padding-top: 20px !important; 
+            padding-inline-start: 60px !important;
+            padding-inline-end: calc(100% - var(--page-main-content-width)) !important;
+            overflow-x: hidden !important;
+        }
+    }
+    
+    /* Background color for modal window */
+    window, 
+    dialog, 
+    .dialogBox {
+        --background-color-canvas: light-dark(#f9f9f9, #1a1a24) !important;
+        border-color: var(--border-color) !important;
+    }
+    
+    :root {
+        --border-color-interactive: light-dark(var(--color-gray-50), var(--border-color)) !important;  /* border color for Picker items */
+    }
+    
+    /* Search input */
+    
+    #search-container {
+        --background-color-canvas: transparent !important;
+    }
+
+    #input {
+        &[type="search"] {
+            width: 30% !important;
+            margin-inline-start: 230px !important;
+        }
+    }
+
+    /* Combobox item roundness */
+    menupopup {
+        --menuitem-border-radius: 1px !important;
+    }
+
+    /* Tested in 'Privacy & Security' \
+    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
+    /* Selected option */
+    @media not (forced-colors) {
+        .info-box-container.selected {
+            background: radial-gradient( 70% 71.38% at 50% 99.62%,
+                color-mix(in srgb, var(--color-accent-primary-xsmall), transparent),
+                transparent) !important;
+            background-color: var(--background-color-box) !important;
+        }
+    }
+
+    /* Box inside selected option */
+    .highlighting-group {
+        --section-highlight-background-color: var(--color-accent-primary-xsmall) !important;
+    }
+    .privacy-detailedoption.selected .content-blocking-warning {
+        border-color: var(--general-color) !important;
+    }
+
+    /* Not selected options */
+    @media not (forced-colors) {
+        .privacy-detailedoption {
+            background-color: var(--button-background-color-menu) !important;
+        }
+
+        /* Not selected options when 'hover' */
+        .info-box-container:not(.selected):hover {
+            background: var(--my-gradient-background-hover) !important;
+            background-color: var(--button-background-color-menu) !important;
+        }
+    }
+}

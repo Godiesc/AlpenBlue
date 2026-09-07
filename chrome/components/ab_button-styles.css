@@ -33,7 +33,7 @@ panel menulist, panel menulist:not([open]) {
     box-shadow: none !important;
 }
 panel menulist:hover, panel menulist[open] {
-    background-color: var(--button-primary-bgcolor) !important;
+    background-color: var(--button-background-color-primary) !important;
     color: #eaeaea !important;
     box-shadow: none !important;
 }
@@ -44,14 +44,14 @@ panel menulist:hover, panel menulist[open] {
     border-radius: 4px !important
 }
 #editBookmarkPanel .expander-up:hover, #editBookmarkPanel .expander-down:hover {
-    border-color: var(--button-primary-bgcolor) !important;
-    background-color: var(--button-primary-bgcolor) !important;
+    border-color: var(--button-background-color-primary) !important;
+    background-color: var(--button-background-color-primary) !important;
     color: #eaeaea !important;
 }
 /*Color -fondo y letras - botón menu desplegable*/
 
 treechildren::-moz-tree-row(selected) {
-    background-color: var(--button-primary-bgcolor) !important;
+    background-color: var(--button-background-color-primary) !important;
     outline: none !important;
 }
 treechildren::-moz-tree-image(selected), treechildren::-moz-tree-twisty(selected), treechildren::-moz-tree-cell-text(selected) {
@@ -70,40 +70,6 @@ treechildren::-moz-tree-image(selected), treechildren::-moz-tree-twisty(selected
 /*Color de "highlight" inputtext*/
 
 richlistitem[selected="true"], #editBMPanel_namePicker::selection , #editBMPanel_tagsField::selection{
-    background-color: var(--button-primary-bgcolor) !important;
+    background-color: var(--button-background-color-primary) !important;
     color: white !important;
-}
-/*Imagen grande y Favicon*/
-#editBookmarkPanelImage{
-    box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--panel-background-color) 84%, var(--lwt-tab-text, Field)) !important;
-}
-#editBookmarkPanelFavicon[src] {
-  background-color: color-mix(in srgb, var(--panel-background-color) 94%, var(--lwt-tab-text)) !important;
-  box-shadow: inset 0px 0px 0 1px color-mix(in srgb, var(--panel-background-color) 84%, var(--lwt-tab-text, Field)) !important;
-  width: 16px !important;
-  height: 16px !important;
-  border-radius: 4px !important;
-  margin-top: 4px !important;
-  margin-inline-start: 4px !important;
-}
-/*"personalizar barra de busqueda"*/
-findbar:-moz-lwtheme {
-    background-color: var(--toolbar-bgcolor) !important;
-    color: #d3d3d3 !important;  
-    border-color: var(--input-border-color) !important; }     
-.findbar-find-status[status="notfound"] { 
-    color: var(--lwt-toolbarbutton-icon-fill-attention) !important; 
-    font-weight: 600 !important; 
-}
-/*Aspecto tooltip: mouse hover on elements*/
-tooltip {
-	appearance: none !important;
-    background: color-mix(in srgb, var(--panel-background-color) 96%, white) !important;
-	color: var(--lwt-tab-text) !important;
-	border-color: color-mix(in srgb, var(--panel-background-color)80%, white) !important;
-	padding-inline: 4px 4px !important;
-	font-family: Fira Sans !important;
-	font-size: 14px !important;
-	opacity: 1 !important;
-    border-radius: 4px !important;
 }

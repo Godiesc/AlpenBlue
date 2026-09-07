@@ -1,0 +1,85 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/AlpenBlue */
+
+@-moz-document url-prefix("https://addons.mozilla.org") {
+
+  :host,
+  :root {
+    --my-scheme-color: light-dark(#dedede, #14141d) !important;                                           /* Personal variable to mix colors */
+    --color-accent-primary: var(--general-color) !important;                                              /* Accent color */
+    --link-color: lch(from var(--color-accent-primary) calc(l + 3) c calc(h + 0)) !important;             /* Links color */
+    --background-grey: var(--newtab-background-color, var(--my-scheme-color)) !important;                 /* Background color */
+    --base-color: lch(from var(--background-grey) calc(l + 10) c h) !important;                           /* Cards background color */
+    --light-active-color: lch(from var(--base-color) calc(l - 8) c h) !important;                        /* Elements background when 'hover' */
+    --neutral-button-bg-hover: var(--color-accent-primary-hover) !important;                              /* Button hover - e.g. 'Delete' extension */
+    --header-base-color: transparent !important;                                                          /* Header unwanted background color */
+    --my-header-footer-background: color-mix(in srgb, var(--color-accent-primary) 40%, black) !important; /* New 'Header' background color */
+  }
+
+  /* Links in dropdown menus- ' extensions - themes - más..v '*/
+  .DropdownMenuItem-link a:active, 
+  .DropdownMenuItem-link a:focus, 
+  .DropdownMenuItem-link a:hover, 
+  .DropdownMenuItem-link button:active, 
+  .DropdownMenuItem-link button:focus, 
+  .DropdownMenuItem-link button:hover {
+    color: var(--link-color) !important;
+  }
+
+  /* Links in addon reviews */
+  .AddonReviewCard-allControls 
+  .AddonReviewCard-control:not(.AddonReviewCard-deleting),
+  .AddonReviewCard-allControls .AddonReviewCard-control:not(.AddonReviewCard-deleting):link, 
+  .AddonReviewCard-allControls .AddonReviewCard-control:not(.AddonReviewCard-deleting):visited {
+    color: var(--link-color) !important;
+
+    &:hover { color: currentColor !important; }      
+    &:active { color: var(--color-accent-primary) !important; }
+  }
+
+  /* Accent color in various main backgrounds */
+  .Header,
+  .Footer {
+    background-color: var(--background-grey) !important;
+    background-image: linear-gradient(var(--my-header-footer-background), var(--my-header-footer-background)) !important;/**/
+  }
+
+  /* Searchbox */
+  .AutoSearchInput-query {
+    &:hover {
+      border-color: var(--color-accent-primary-hover) !important;
+    }
+
+    &:focus {
+      border-color: var(--general-color) !important;
+      box-shadow: inset 0 0 0 1px var(--color-accent-primary),0 0 0 1px var(--color-accent-primary-hover) ,0 0 0 4px var(--color-accent-primary-active) !important;
+      outline: none;
+    }
+  }
+
+  /* Buttons - e.g. 'install theme' */
+  .Button--action {
+    background: var(--color-accent-primary) !important;
+    color: contrast-color(var(--color-accent-primary-hover)) !important;
+
+    &:hover { background: var(--color-accent-primary-hover) !important; }
+    &:active { background: var(--color-accent-primary-active) !important; }
+  }
+
+  /* Buttons - e.g. 'Delete' extension */
+  .Button--neutral.Button--micro:not(.Button--disabled):hover, 
+  .Button--neutral:not(.Button--disabled):hover {
+    color: contrast-color(var(--color-accent-primary-hover)) !important;
+  }
+
+  /* Gradient background in main addons page */
+  .HeroRecommendation--loading,
+  .HeroRecommendation-color-ink-80-color-blue-70,
+  .HeroRecommendation-color-ink-80-color-pink-70,
+  .HeroRecommendation-color-ink-80-color-purple-70,
+  .HeroRecommendation-color-ink-80-color-green-70,
+  .HeroRecommendation-color-ink-80-color-violet-70 {
+    --my-gradient: lch(from var(--my-header-footer-background) calc(l + 10) c calc(h + 30)) !important;
+    background-image: linear-gradient(var(--my-header-footer-background) 20%, var(--my-gradient)) !important;/**/
+  }
+}
