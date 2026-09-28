@@ -32,6 +32,10 @@
         background: var(--my-main-gradient-background);
         z-index: -1;
         pointer-events: none;
+        
+        @media -moz-pref("sidebar.verticalTabs") {
+            height: 100vh !important;
+        }
     }
     /* Put here this color only in themes with images because a bug with solid themes 'lwt-accent-color'
     -  important, Added too for 'Private' window */
@@ -69,8 +73,8 @@
 
     /* Background for toolbars when using 'vertical tabs' \
     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
-    .browser-toolbar, #browser {
-        background-color: var(--toolbar-background-color) !important;
+    .browser-toolbar {
+        background-color: transparent !important;
     }
     
     /* Sidebar background when 'expand-on-hover' \

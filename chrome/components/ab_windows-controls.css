@@ -3,36 +3,37 @@
 
 /*WindowsControls borde redondeado*/
 
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-button:not(.titlebar-close) {
+@media (-moz-platform: windows),(-moz-platform: windows){ .titlebar-button:not(.titlebar-close) {
     padding-left: 14px !important;
     padding-right: 14px !important;
    }}
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-button:not(.titlebar-close):hover {
-    background-color: var(--toolbarbutton-hover-background) !important
+@media (-moz-platform: windows),(-moz-platform: windows){ .titlebar-button:not(.titlebar-close):hover {
+    background-color: var(--toolbarbutton-background-color-hover) !important
    }}
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
-    border-radius: 4px !important;
-    border: 2px solid #00000000 !important;
-    margin-bottom: -1px !important
-   }}
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10){ .titlebar-min:hover, .titlebar-max:hover, .titlebar-restore:hover, .titlebar-close:hover {
-    border-radius: 4px !important;
+@media (-moz-platform: windows),(-moz-platform: windows){ .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+    border-radius: 8px !important;
     border: 2px solid transparent !important;
+    border-block-width: 3px !important;
+   }}
+@media (-moz-platform: windows),(-moz-platform: windows){ .titlebar-min:hover, .titlebar-max:hover, .titlebar-restore:hover, .titlebar-close:hover {
+    border-radius: 8px !important;
+    border: 2px solid transparent !important;
+    border-block-width: 3px !important;
     background-clip: padding-box !important;
    }}
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+@media (-moz-platform: windows),(-moz-platform: windows) { 
 :root:is([lwtheme-image],[style*="--lwt-additional-images"]) .titlebar-button:hover:not(.titlebar-close){
-    background-color: var(--toolbarbutton-hover-background) !important; color: var(--button-active-bgcolor) !important;
+    background-color: var(--toolbarbutton-background-color-hover) !important; color: var(--button-active-bgcolor) !important;
     }}
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+@media (-moz-platform: windows),(-moz-platform: windows) { 
 :root[lwtheme-image] .titlebar-min:hover { list-style-image: url('../images/minimize.svg') !important;
     -moz-context-properties: fill !important; fill: var(--button-active-bgcolor) !important; }
 }
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+@media (-moz-platform: windows),(-moz-platform: windows) { 
 :root[lwtheme-image] .titlebar-restore:hover { list-style-image: url('../images/restore.svg') !important;
     -moz-context-properties: fill !important; fill: var(--button-active-bgcolor) !important; }
 }
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win10) { 
+@media (-moz-platform: windows),(-moz-platform: windows) { 
 :root[lwtheme-image] .titlebar-max:hover { list-style-image: url('../images/maximize.svg') !important;
     -moz-context-properties: fill !important; fill: var(--button-active-bgcolor) !important; }
 }

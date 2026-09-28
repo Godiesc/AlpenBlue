@@ -233,7 +233,7 @@
     /* _______________________________________________________ Logo & Wordmark _______________________________________________________ 
     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ */
     .logo {
-        background: url("../images/foxlogo.png") no-repeat !important;
+        background: url("../icons/foxlogo.png") no-repeat !important;
         height: 110px !important;
         width: 120px !important;
         background-size: 100% 100% !important;

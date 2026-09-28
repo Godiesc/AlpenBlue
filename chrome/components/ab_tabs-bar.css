@@ -4,6 +4,7 @@
 /* Linea Gradiente Pestaña Activa */
 .tabbrowser-tab[visuallyselected]:not([multiselected]) {
     .tab-background {
+        border-width: 0px !important;
         &::after,
         &::before {
             content: "";
@@ -203,6 +204,7 @@
 #tabbrowser-tabs[orient="vertical"] {
     tab-split-view-wrapper {
         padding: 0px !important;
+        border-radius: var(--tab-border-radius) !important;
         margin-inline: 10px !important;
         gap: 0px !important;
         width: calc(100% - 20px) !important;

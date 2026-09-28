@@ -128,17 +128,17 @@ ________________________________________________________________________________
 
 .tab-icon-image[src="chrome://branding/content/icon32.png"] {
   --my-container-favicon: var(--identity-icon) !important;
-  --my-default-favicon: url("../images/foxlogo.svg") !important;
+  --my-default-favicon: url("../icons/foxlogo.svg") !important;
   content: var(--my-container-favicon, var(--my-default-favicon)) !important;
   fill: var(--identity-icon-color, var(--general-color)) !important;
 }
 
 /* Logo Hamburguer menu */
 #PanelUI-menu-button {
-  list-style-image: url("../images/foxlogo.svg") !important;
+  list-style-image: url("../icons/foxlogo.svg") !important;
 
   &[open="true"] {
-    list-style-image: url("../images/foxfill.svg") !important;
+    list-style-image: url("../icons/foxfill.svg") !important;
   }
 }
 
